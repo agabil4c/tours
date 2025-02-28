@@ -1,5 +1,6 @@
 import Link from "next/link";
 import blogs from "../../../data/blogs";
+import Image from "next/image";
 
 const Blog = () => {
   return (
@@ -12,7 +13,7 @@ const Blog = () => {
           >
             <div className="blogCard__image">
               <div className="ratio ratio-4:3 rounded-4 rounded-8">
-                <img className="img-ratio js-lazy" src={item.img} alt="image" />
+                <Image className="img-ratio js-lazy" src={item.img} alt="image" />
               </div>
             </div>
             <div className="mt-20">
@@ -32,7 +33,7 @@ const Blog = () => {
                 className="blogCard -type-1 d-flex items-center"
               >
                 <div className="blogCard__image size-130 rounded-8">
-                  <img
+                  <Image
                     src={item.img}
                     alt="image"
                     className="object-cover size-130"

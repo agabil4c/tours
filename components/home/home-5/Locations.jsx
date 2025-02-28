@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { destinations6 } from "../../../data/desinations";
+import Image from "next/image";
 
 const Locations = () => {
   return (
@@ -15,7 +16,7 @@ const Locations = () => {
             <div className="row x-gap-20 y-gap-20 items-center">
               <div className="col-auto">
                 <div className="destCard__image rounded-4">
-                  <img
+                  <Image
                     className="size-100 rounded-4"
                     src={item.img}
                     alt="image"

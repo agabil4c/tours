@@ -34,7 +34,7 @@ const TourProperties = ({ tours }) => {
 
   return (
     <>
-      {tourData && tourData.slice(0, 9).map((item) => (
+      {tourData && tourData?.slice(0, 9).map((item) => (
         <div
           className="col-lg-3 col-sm-6"
           key={item?.id}
@@ -42,7 +42,7 @@ const TourProperties = ({ tours }) => {
           data-aos-delay={item?.delayAnimation}
         >
           <Link
-            href={`/tour/tour-single/${tours.toLowerCase()}/${item.title.toLowerCase().replace(/\s+/g, "-")}`}
+            href={`/tour/tour-single/${tours?.toLowerCase()}/${item?.title?.toLowerCase().replace(/\s+/g, "-")}`}
             className="tourCard -type-1 rounded-4 position-relative"
           >
             <div className="tourCard__image">

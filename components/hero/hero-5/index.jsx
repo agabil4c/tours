@@ -1,10 +1,11 @@
+import Image from "next/image";
 import MainFilterSearchBox from "./MainFilterSearchBox";
 
 const Index = () => {
   return (
     <section className="masthead -type-5">
       <div className="masthead__bg">
-        <img alt="image" src="/img/masthead/5/bg.svg" className="js-lazy" />
+        <Image alt="image" src="/img/masthead/5/bg.svg" className="js-lazy" />
       </div>
       {/* End bg image */}
 
@@ -20,7 +21,7 @@ const Index = () => {
               <span className="text-blue-1 relative">
                 Experience{" "}
                 <span className="-line">
-                  <img src="/img/general/line.png" alt="image" />
+                  <Image src="/img/general/line.png" alt="image" />
                 </span>
               </span>
             </h1>
@@ -39,7 +40,7 @@ const Index = () => {
       {/* End .container */}
 
       <div className="masthead__image" data-aos="fade">
-        <img src="/img/masthead/5/1.png" alt="image" />
+        <Image src="/img/masthead/5/1.png" alt="image" />
       </div>
       {/* End .masthead__image */}
     </section>

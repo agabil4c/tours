@@ -1,3 +1,4 @@
+import Image from "next/image";
 import FilterSelect from "./FilterSelect";
 import MainFilterSearchBox from "./MainFilterSearchBox";
 
@@ -41,7 +42,7 @@ const Index = () => {
         >
           <div className="row y-gap-30 flex-nowrap">
             <div className="col-auto">
-              <img
+              <Image
                 src="/img/masthead/10/1.png"
                 alt="image"
                 className="rounded-16"
@@ -50,7 +51,7 @@ const Index = () => {
             {/* End col-auto */}
 
             <div className="col-auto">
-              <img
+              <Image
                 src="/img/masthead/10/2.png"
                 alt="image"
                 className="rounded-16"

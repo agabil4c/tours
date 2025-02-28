@@ -1,6 +1,7 @@
 import { destinations8 } from "../../../data/desinations";
 import Slider from "react-slick";
 import Link from "next/link";
+import Image from "next/image";
 
 const TopDestinations = () => {
   var settings = {
@@ -46,7 +47,7 @@ const TopDestinations = () => {
             className="citiesCard -type-4 d-block text-center"
           >
             <div className="citiesCard__image size-160 rounded-full mx-auto">
-              <img
+              <Image
                 className="object-cover js-lazy"
                 src={item.img}
                 alt="image"

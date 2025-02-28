@@ -12,6 +12,7 @@ import FormReply from "../../../components/blog/blog-details/FormReply";
 import TopComment from "../../../components/blog/blog-details/TopComment";
 import BlogNavigator from "../../../components/blog/blog-details/BlogNavigator";
 import Comments from "../../../components/blog/blog-details/Comments";
+import Image from "next/image";
 
 const BlogSingleDynamic = () => {
   const router = useRouter();
@@ -50,7 +51,7 @@ const BlogSingleDynamic = () => {
               <div className="text-15 text-light-1 mt-10">{blog?.date}</div>
             </div>
             <div className="col-12">
-              <img
+              <Image
                 src={blog?.img}
                 alt={blog?.title}
                 className="col-12 rounded-8 w-100 img_large_details"

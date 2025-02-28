@@ -19,7 +19,7 @@ import { useRouter } from "next/router";
 import { kenyaInfo, rwandaInfo, ugandaInfo } from "../../data/desinations";
 import { useEffect, useState } from "react";
 
-const destination = () => {
+const Destination = () => {
   const router = useRouter();
   const { destinationName } = router.query; 
   const [destinationData, setDestinationData] = useState([]);
@@ -212,4 +212,4 @@ const destination = () => {
       );
 };
 
-export default dynamic(() => Promise.resolve(destination), { ssr: false });
+export default dynamic(() => Promise.resolve(Destination), { ssr: false });

@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs } from "swiper";
 import "swiper/css/thumbs";
 import { testimonial2 } from "../../../data/testimonialData";
+import Image from "next/image";
 
 export default function Testimonials() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -20,7 +21,7 @@ export default function Testimonials() {
           <SwiperSlide key={item.id}>
             <div className="testimonials -type-2 text-center">
               <div className="mb-40">
-                <img src="/img/misc/quote.svg" alt="quote" />
+                <Image src="/img/misc/quote.svg" alt="quote" />
               </div>
               <div className="text-22 md:text-18 fw-600 text-dark-1">
                 {item.text}
@@ -44,7 +45,7 @@ export default function Testimonials() {
             {testimonial2.slice(0, 5).map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="pagination__item">
-                  <img src={item.avatar} alt="image" />
+                  <Image src={item.avatar} alt="image" />
                 </div>
               </SwiperSlide>
             ))}

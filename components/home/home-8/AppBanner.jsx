@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AppBlock from "../../block/AppBlock";
 
 const AppBanner = () => {
@@ -15,7 +16,7 @@ const AppBanner = () => {
           {/* End .col */}
 
           <div className="col-lg-6">
-            <img src="/img/app/1.png" alt="image" />
+            <Image src="/img/app/1.png" alt="image" />
           </div>
           {/* End .col */}
         </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AppBlock from "../../block/AppBlock";
 
 const AppBanner = () => {
@@ -6,7 +7,7 @@ const AppBanner = () => {
       <div className="container">
         <div className="row y-gap-30 items-center justify-between">
           <div className="col-xl-6">
-            <img src="/img/app/2.svg" alt="image" />
+            <Image src="/img/app/2.svg" alt="image" />
           </div>
           {/* End .col for image left */}
 

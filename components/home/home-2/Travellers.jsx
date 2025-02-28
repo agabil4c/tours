@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { destinations3 } from "../../../data/desinations";
 import Link from "next/link";
+import Image from "next/image";
 
 const Travellers = () => {
   return (
@@ -43,7 +44,7 @@ const Travellers = () => {
               data-aos-delay={item.delayAnimation}
             >
               <div className="citiesCard__image rounded-4 ratio ratio-3:4">
-                <img
+                <Image
                   className="img-ratio rounded-4 js-lazy"
                   src={item.img}
                   alt="image"

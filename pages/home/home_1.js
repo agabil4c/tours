@@ -16,6 +16,7 @@ import SelectFilter from "../../components/hotels/filter-tabs/SelectFilter";
 import TourCategories from "../../components/home/home-5/TourCategories";
 import Tours from "../../components/tours/Tours";
 import Tours2 from "../../components/tours/Tours2";
+import Link from "next/link";
 
 const Home_1 = () => {
   return (
@@ -88,13 +89,13 @@ const Home_1 = () => {
               <SelectFilter />
             </div> */}
             <div className="col-auto md:d-none">
-              <a
+              <Link
                 href="/tour/tour-list-v2/east africa-safaris"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 View All Packages
                 <div className="icon-arrow-top-right ml-15" />
-              </a>
+              </Link>
             </div>
           </div>
           {/* End .row */}

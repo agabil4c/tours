@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const DiscountsBanner = () => {
   return (
     <div
@@ -6,7 +8,7 @@ const DiscountsBanner = () => {
       data-aos-dealy="100"
     >
       <div className="ctaCard__image ratio ratio-63:55">
-        <img
+        <Image
           className="img-ratio js-lazy"
           src="/img/backgrounds/6.png"
           alt="image"

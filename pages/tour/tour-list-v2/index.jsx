@@ -9,7 +9,7 @@ import Sidebar from "../../../components/tour-list/tour-list-v2/Sidebar";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const { tourName } = router.query;  // Extract the tourName from the URL
   const [tourData, setTourData] = useState(null);
@@ -89,4 +89,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

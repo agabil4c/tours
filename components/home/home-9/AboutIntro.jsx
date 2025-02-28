@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const AboutIntro = () => {
   return (
     <section className="section-bg layout-pt-lg layout-pb-lg">
@@ -5,12 +7,12 @@ const AboutIntro = () => {
       <div className="section-bg__item -video-left">
         <div className="row y-gap-30">
           <div className="col-sm-6">
-            <img src="/img/video/1.png" alt="image" />
+            <Image src="/img/video/1.png" alt="image" />
           </div>
           {/* End .col */}
 
           <div className="col-sm-6">
-            <img src="/img/video/2.png" alt="image" />
+            <Image src="/img/video/2.png" alt="image" />
           </div>
         </div>
         {/* End .row */}
