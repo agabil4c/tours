@@ -5,7 +5,7 @@ const ImportantInfo = ({tour}) => {
       <div className="col-lg-4 col-md-6">
         <div className="fw-500 mb-10">Inclusions</div>
         {tour?.inclusions?.map((item, index) => (
-          <ul className="list-disc">
+          <ul key={index} className="list-disc">
             <li key={index}>{item}</li>
             
           </ul>
@@ -15,7 +15,7 @@ const ImportantInfo = ({tour}) => {
       <div className="col-lg-4 col-md-6">
         <div className="fw-500 mb-10">Exclusions</div>
         {tour?.exclusions?.map((item, index) => (
-          <ul className="list-disc">
+          <ul key={index} className="list-disc">
             <li key={index}>{item}</li>
             
           </ul>
