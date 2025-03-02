@@ -4,7 +4,7 @@ const TopHeaderFilter = ({country}) => {
       <div className="row y-gap-10 items-center justify-between">
         <div className="col-auto">
           <div className="text-18">
-            <span className="fw-500">Safari Packages</span> in {country.charAt(0).toUpperCase() + country.slice(1)}
+            <span className="fw-500">Safari Packages</span> in {country?.charAt(0).toUpperCase() + country?.slice(1)}
           </div>
         </div>
         {/* End .col */}

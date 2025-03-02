@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import toursData from "../../../data/tours";
+import { toursData } from "../../../data/tours";
 import Link from "next/link";
 
 const TourProperties = () => {

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import toursData from "../../data/tours";
+import { toursData } from "../../data/tours";
 import isTextMatched from "../../utils/isTextMatched";
 
 const Tours2 = () => {

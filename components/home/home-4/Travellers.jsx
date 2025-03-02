@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import { destinations4 } from "../../../data/desinations";
+import { destinations6 } from "../../../data/desinations";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -32,7 +32,7 @@ const Travellers = () => {
           },
         }}
       >
-        {destinations4.map((item) => (
+        {destinations6.map((item) => (
           <SwiperSlide key={item.id}>
             <Link
               href="#"
