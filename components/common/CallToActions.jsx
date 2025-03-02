@@ -1,4 +1,39 @@
+import { useState } from "react";
+
 const CallToActions = () => {
+  const [email, setEmail] = useState('');
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+  
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+  
+      if (response.ok) {
+        alert('Thank you for subscribing!');
+        setEmail(''); // Clear the input field
+      } else {
+        alert('Failed to subscribe. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    }
+  };
+  
   return (
     <section className="layout-pt-md layout-pb-md bg-dark-2">
       <div className="container">
@@ -32,7 +67,7 @@ const CallToActions = () => {
               {/* End email input */}
 
               <div>
-                <button className="button -md h-60 bg-blue-1 text-white">
+                <button className="button -md h-60 bg-blue-1 text-white" onClick={handleSubscribe}>
                   Subscribe
                 </button>
               </div>

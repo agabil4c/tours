@@ -26,7 +26,7 @@ export const destinations2 = [
     id: 1,
     hoverText: "144 mammals - 556 bird species - 51 reptiles - 51 Amphibians - 73 animals species",
     city: "Murchison Falls N.P",
-    img: "/img/destinations/1/8.jpg",
+    img: "/img/destinations/3/uganda/murchison.jpg",
   },
   {
     id: 2,

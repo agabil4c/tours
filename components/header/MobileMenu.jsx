@@ -15,6 +15,9 @@ import {
   pageItems,
   dashboardItems,
   categorieMobileItems,
+  destinationsItems,
+  PackagesItems,
+  activityItems,
 } from "../../data/mainMenuData";
 import {
   isActiveLink,
@@ -31,7 +34,7 @@ const MobileMenu = () => {
     <>
       <div className="pro-header d-flex align-items-center justify-between border-bottom-light">
         <Link href="/">
-          <img src="/img/general/logo-dark.svg" alt="brand" />
+          <img src="/img/general/riverwide_logo.png" alt="brand" style={{width: '150px'}}/>
         </Link>
         {/* End logo */}
 
@@ -49,7 +52,7 @@ const MobileMenu = () => {
       <ProSidebarProvider>
         <Sidebar width="400" backgroundColor="#fff">
           <Menu>
-            <SubMenu label="Home">
+            {/* <SubMenu label="Home">
               {homeItems.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -67,65 +70,49 @@ const MobileMenu = () => {
                   {item.name}
                 </MenuItem>
               ))}
-            </SubMenu>
-            {/* End  All Home Menu */}
-
-            <SubMenu label="Categories">
-              {categorieMobileItems.map((item) => (
-                <SubMenu label={item.title} key={item.id}>
-                  {item.menuItems.map((single) => (
-                    <SubMenu label={single.title} key={single.id}>
-                      {single.menuList.map((menu, i) => (
-                        <MenuItem
-                          key={i}
-                          component={
-                            <Link
-                              href={menu.routePath}
-                              className={
-                                isActiveLink(menu.routePath, router.asPath)
-                                  ? "menu-active-link"
-                                  : ""
-                              }
-                            />
-                          }
-                        >
-                          {menu.name}
-                        </MenuItem>
-                      ))}
-                    </SubMenu>
-                  ))}
-                </SubMenu>
-              ))}
-            </SubMenu>
-            {/* End  All Categories Menu */}
-
+            </SubMenu> */}
             <MenuItem
               component={
                 <Link
-                  href="/destinations"
-                  className={
-                    router.pathname === "/destinations"
-                      ? "menu-active-link"
-                      : ""
-                  }
+                  href="/"
+                  className={router.pathname === "/" ? "current" : ""}
                 />
               }
             >
-              Desitinations
+              Home
             </MenuItem>
-            {/* End  Desitinations Menu */}
+            {/* End  All Home Menu */}
 
-            <SubMenu label="Blog">
-              {blogItems.map((item, i) => (
+            <SubMenu label="Destinations">
+              {destinationsItems.map((menu, i) => (
                 <MenuItem
                   key={i}
                   component={
                     <Link
-                      href={item.routePath}
+                      href={menu.routePath}
                       className={
-                        isActiveLink(item.routePath, router.asPath)
+                        isActiveLink(menu.routePath, router.asPath)
                           ? "menu-active-link"
                           : ""
+                      }
+                    />
+                  }
+                >
+                  {menu.name}
+                </MenuItem>
+              ))}
+            </SubMenu>
+            {/* End  All Categories Menu */}
+
+            <SubMenu label="Safaris">
+              {PackagesItems.map((item, i) => (
+                <MenuItem
+                  key={i}
+                  component={
+                    <Link
+                      href={`/tour/tour-list-v2/${item.name.replace(/\s+/g, '-').toLowerCase()}`}
+                      className={
+                        isActiveLink(`/tour/tour-list-v2/${item.name.replace(/\s+/g, '-').toLowerCase()}`, router.asPath) ? "current" : ""
                       }
                     />
                   }
@@ -136,8 +123,8 @@ const MobileMenu = () => {
             </SubMenu>
             {/* End  All Blog Menu */}
 
-            <SubMenu label="Pages">
-              {pageItems.map((item, i) => (
+            <SubMenu label="Activities">
+              {activityItems.map((item, i) => (
                 <MenuItem
                   key={i}
                   component={
@@ -155,28 +142,19 @@ const MobileMenu = () => {
                 </MenuItem>
               ))}
             </SubMenu>
-            {/* End  All Pages Menu */}
-
-            <SubMenu label="Dashboard">
-              {dashboardItems.map((item, i) => (
-                <MenuItem
-                  key={i}
-                  component={
-                    <Link
-                      href={item.routePath}
-                      className={
-                        isActiveLink(item.routePath, router.asPath)
-                          ? "menu-active-link"
-                          : ""
-                      }
-                    />
+            
+            <MenuItem
+              component={
+                <Link
+                  href="/others-pages/about"
+                  className={
+                    router.pathname === "/others-pages/about" ? "menu-active-link" : ""
                   }
-                >
-                  {item.name}
-                </MenuItem>
-              ))}
-            </SubMenu>
-            {/* End  All Dashboard Menu */}
+                />
+              }
+            >
+              About Us
+            </MenuItem>
 
             <MenuItem
               component={
@@ -195,9 +173,9 @@ const MobileMenu = () => {
         </Sidebar>
       </ProSidebarProvider>
 
-      <div className="mobile-footer px-20 py-5 border-top-light"></div>
+      {/* <div className="mobile-footer px-20 py-5 border-top-light"></div>
 
-      <div className="pro-footer">
+       <div className="pro-footer">
         <ContactInfo />
         <div className="mt-10">
           <h5 className="text-16 fw-500 mb-10">Follow us on social media</h5>
@@ -213,7 +191,7 @@ const MobileMenu = () => {
             Become An Expert
           </Link>
         </div>
-      </div>
+      </div> */}
       {/* End pro-footer */}
     </>
   );
