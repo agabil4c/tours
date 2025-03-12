@@ -70,7 +70,7 @@ const Safari = () => {
                 <TourProperties tours = {tourName} />
               </div>
               {/* End .row */}
-              <Pagination />
+              {/* <Pagination /> */}
             </div>
             {/* End .col for right content */}
           </div>

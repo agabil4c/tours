@@ -108,13 +108,13 @@ const Home_1 = () => {
       </section>
       {/* Recommended Properties */}
 
-      <section className="layout-pt-lg layout-pb-lg bg-blue-2">
+      {/* <section className="layout-pt-lg layout-pb-lg bg-blue-2">
         <div className="container">
           <div className="row y-gap-40 justify-between">
             <div className="col-xl-5 col-lg-6" data-aos="fade-up">
               <TestimonialLeftCol />
             </div>
-            {/* End col */}
+            
 
             <div className="col-lg-6">
               <div
@@ -126,10 +126,10 @@ const Home_1 = () => {
               </div>
             </div>
           </div>
-          {/* End .row */}
+          
         </div>
-        {/* End container */}
-      </section>
+        
+      </section> */}
       {/* End testimonial Section */}
 
       <section className="layout-pt-md layout-pb-lg">
