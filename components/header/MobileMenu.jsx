@@ -123,7 +123,7 @@ const MobileMenu = () => {
             </SubMenu>
             {/* End  All Blog Menu */}
 
-            <SubMenu label="Activities">
+            {/* <SubMenu label="Activities">
               {activityItems.map((item, i) => (
                 <MenuItem
                   key={i}
@@ -141,7 +141,7 @@ const MobileMenu = () => {
                   {item.name}
                 </MenuItem>
               ))}
-            </SubMenu>
+            </SubMenu> */}
             
             <MenuItem
               component={

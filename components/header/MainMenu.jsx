@@ -181,7 +181,7 @@ const MainMenu = ({ style = "" }) => {
             ))}
           </ul>
         </li>
-        <li
+        {/* <li
           className={`${
             isActiveParentChaild(activityItems, router.asPath) ? "current" : ""
           } menu-item-has-children`}
@@ -202,7 +202,7 @@ const MainMenu = ({ style = "" }) => {
               </li>
             ))}
           </ul>
-        </li>
+        </li> */}
         <li className={router.pathname === "/others-pages/about" ? "current" : ""}>
           <Link href="/others-pages/about">About Us</Link>
         </li>
