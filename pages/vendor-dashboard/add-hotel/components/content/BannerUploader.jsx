@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "../../../../../components/image/image";
 
 const BannerUploader = () => {
   const [images, setImages] = useState([]);
@@ -78,7 +79,7 @@ const BannerUploader = () => {
       {images.map((image, index) => (
         <div className="col-auto" key={index}>
           <div className="d-flex ratio ratio-1:1 w-200">
-            <img src={image} alt="image" className="img-ratio rounded-4" />
+            <Image src={image} alt="image" className="img-ratio rounded-4" />
             <div
               className="d-flex justify-end px-10 py-10 h-100 w-1/1 absolute"
               onClick={() => handleRemoveImage(index)}

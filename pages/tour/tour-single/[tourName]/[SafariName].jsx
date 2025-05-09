@@ -1,4 +1,6 @@
 import dynamic from "next/dynamic";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,40 +29,42 @@ import ImportantInfo from "../../../../components/tour-single/ImportantInfo";
 import Image from "next/image";
 import Header1 from "../../../../components/header/header-11";
 
-const TourSingleV1Dynamic = () => {
+const TourSingleV1Dynamic = ({ tour }) => {
   const [isOpen, setOpen] = useState(false);
-  const router = useRouter();
-  const [tour, setTour] = useState({});
-  const {tourName, SafariName} = router.query;
-  useEffect(() => {
-    let data;
-    if (tourName) {
-      // Handle the tour data based on the tourName
+  //const router = useRouter();
+  //const {SafariName} = router.query;
+
+  if (!tour) return <h1>Not Found</h1>;
+
+  // useEffect(() => {
+  //   let data;
+  //   if (tourName) {
+  //     // Handle the tour data based on the tourName
       
-      switch (tourName.toLowerCase()) {
-        case 'kenya-safaris':
-          data = kenyaSafaris;
-          break;
-        case 'uganda-safaris':
-          data = ugandaSafaris;
-          break;
-        case 'rwanda-safaris':
-          data = rwandaSafaris;
-          break;
-        case 'east africa-safaris':
-          data = EASafaris;
-          break;
-        default:
-          data = []; // Or handle a fallback
-          break;
-      }
-    }
-    if (!SafariName) <h1>Loading...</h1>;
+  //     switch (tourName.toLowerCase()) {
+  //       case 'kenya-safaris':
+  //         data = kenyaSafaris;
+  //         break;
+  //       case 'uganda-safaris':
+  //         data = ugandaSafaris;
+  //         break;
+  //       case 'rwanda-safaris':
+  //         data = rwandaSafaris;
+  //         break;
+  //       case 'east africa-safaris':
+  //         data = EASafaris;
+  //         break;
+  //       default:
+  //         data = []; // Or handle a fallback
+  //         break;
+  //     }
+  //   }
+  //   if (!SafariName) <h1>Loading...</h1>;
 
-    else setTour(data.find((item) => item.title.toLowerCase().replace(/\s+/g, "-") === SafariName));
+  //   else setTour(data.find((item) => item.title.toLowerCase().replace(/\s+/g, "-") === SafariName));
 
-    return () => {};
-  }, [tourName, SafariName]);
+  //   return () => {};
+  // }, [tourName, SafariName]);
 
   return (
     
@@ -122,37 +126,14 @@ const TourSingleV1Dynamic = () => {
                       </div>
                     </div>
 
-                    <div className="col-auto">
-                      <button
-                        data-x-click="mapFilter"
-                        className="text-blue-1 text-15 underline"
-                      >
-                        Show on map
-                      </button>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
             </div>
             {/* End .col */}
 
-            <div className="col-auto">
-              <div className="row x-gap-10 y-gap-10">
-                <div className="col-auto">
-                  <button className="button px-15 py-10 -blue-1">
-                    <i className="icon-share mr-10"></i>
-                    Share
-                  </button>
-                </div>
-
-                <div className="col-auto">
-                  <button className="button px-15 py-10 -blue-1 bg-light-2">
-                    <i className="icon-heart mr-10"></i>
-                    Save
-                  </button>
-                </div>
-              </div>
-            </div>
+            
             {/* End .col */}
           </div>
           {/* End .row */}
@@ -233,9 +214,13 @@ const TourSingleV1Dynamic = () => {
               {/* <h3 className="text-22 fw-500 mt-40">Tour snapshot</h3>
               <TourSnapShot /> */}
               {/* End toursnapshot */}
-              <div className="border-top-light mt-40 mb-40"></div>
-                  
-              <Overview tour={tour}/>
+              
+              {tour?.description?.trim() && (
+                <div>
+                  <div className="border-top-light mt-40 mb-40"></div>
+                  <Overview tour={tour} />
+                </div>
+              )}
               {/* End  Overview */}
             </div>
             {/* End .col-xl-8 */}
@@ -250,24 +235,23 @@ const TourSingleV1Dynamic = () => {
         {/* End container */}
       </section>
       {/* End single page content */}
-
-      <section className="pt-40">
-        <div className="container">
-          <div className="pt-40 border-top-light">
-            <div className="row x-gap-40 y-gap-40">
-              <div className="col-auto">
-                <h3 className="text-22 fw-500">Important information</h3>
+      {tour?.inclusions?.length > 0 && tour?.inclusions?.length > 0  && (          
+        <section className="pt-40">
+          <div className="container">
+            <div className="pt-40 border-top-light">
+              <div className="row x-gap-40 y-gap-40">
+                <div className="col-auto">
+                  <h3 className="text-22 fw-500">Important information</h3>
+                </div>
               </div>
+              {/* End row */}
+              <ImportantInfo tour={tour} />
             </div>
-            {/* End row */}
-            <ImportantInfo tour={tour} />
+            {/* End pt-40 */}
           </div>
-          {/* End pt-40 */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End important info */}
-
+          {/* End .container */}
+        </section>
+      )}
       <section className="border-top-light  mt-40 pt-40">
         <div className="container">
           <h3 className="text-22 fw-500 mb-20">Itinerary</h3>
@@ -276,45 +260,13 @@ const TourSingleV1Dynamic = () => {
       </section>
       {/* End Itinerary */}
 
-      <section className="mt-40 border-top-light pt-40">
-        <div className="container">
-          <div className="row y-gap-30 justify-between">
-            <div className="col-xl-3">
-              <div className="row">
-                <div className="col-auto">
-                  <h3 className="text-22 fw-500">Leave a Reply</h3>
-                  <p className="text-15 text-dark-1 mt-5">
-                    Your email address will not be published.
-                  </p>
-                </div>
-              </div>
-              {/* End .row */}
-
-              <ReplyFormReview2 />
-              {/* End ReplyFormReview */}
-            </div>
-            {/* End .col-xl-3 */}
-
-            <div className="col-xl-8">
-              <ReplyForm />
-            </div>
-            {/* End .col-xl-8 */}
-          </div>
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End Reply Comment box section */}
-
       <section className="layout-pt-lg layout-pb-lg mt-50 border-top-light">
         <div className="container">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
                 <h2 className="sectionTitle__title">Most Popular Tours</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  Interdum et malesuada fames ac ante ipsum
-                </p>
+                
               </div>
             </div>
             {/* End .col */}
@@ -348,6 +300,74 @@ const TourSingleV1Dynamic = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(TourSingleV1Dynamic), {
-  ssr: false,
-});
+export async function getStaticPaths() {
+  const locales = ['en', 'fr', 'de'];
+  const tourData = {
+    'kenya-safaris': kenyaSafaris,
+    'uganda-safaris': ugandaSafaris,
+    'rwanda-safaris': rwandaSafaris,
+    'east africa-safaris': EASafaris,
+  };
+
+  const paths = [];
+
+  for (const locale of locales) {
+    for (const [tourKey, safaris] of Object.entries(tourData)) {
+      for (const safari of safaris) {
+        const slug = safari.title.toLowerCase().replace(/\s+/g, '-');
+        paths.push({
+          params: {
+            tourName: tourKey,
+            SafariName: slug,
+          },
+          locale,
+        });
+      }
+    }
+  }
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params, locale }) {
+  const { tourName, SafariName } = params;
+
+  let data = [];
+  switch (tourName.toLowerCase()) {
+    case 'kenya-safaris':
+      data = kenyaSafaris;
+      break;
+    case 'uganda-safaris':
+      data = ugandaSafaris;
+      break;
+    case 'rwanda-safaris':
+      data = rwandaSafaris;
+      break;
+    case 'east africa-safaris':
+      data = EASafaris;
+      break;
+    default:
+      data = [];
+      break;
+  }
+
+  const tour = data.find(
+    (item) => item.title.toLowerCase().replace(/\s+/g, '-') === SafariName
+  );
+
+  if (!tour) {
+    return { notFound: true };
+  }
+
+  return {
+    props: {
+      tour,
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+}
+
+export default TourSingleV1Dynamic;

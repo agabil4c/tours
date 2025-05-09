@@ -1,4 +1,5 @@
 import AppBlock from "../../block/AppBlock";
+import Image from "../../image/image";
 
 const AppBanner = () => {
   return (
@@ -14,7 +15,7 @@ const AppBanner = () => {
           {/* End .col */}
 
           <div className="col-lg-6">
-            <img src="/img/app/1.png" alt="image" />
+            <Image src="/img/app/1.png"  alt="image" />
           </div>
           {/* End .col */}
         </div>

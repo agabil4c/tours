@@ -2,10 +2,33 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import { toursData } from "../../data/tours";
+import { kenyaSafaris, rwandaSafaris, ugandaSafaris } from "../../data/tours";
+import { useEffect, useState } from "react";
 import isTextMatched from "../../utils/isTextMatched";
 
-const Tours2 = () => {
+const Tours2 = ({ destination }) => {
+  const [tourData, setTourData] = useState(null);
+  console.log(destination)
+    useEffect(() => {
+      if (destination) {
+        // Handle the tour data based on the tourName
+        switch (destination?.toLowerCase()) {
+          case 'kenya':
+            setTourData(kenyaSafaris);
+            break;
+          case 'uganda':
+            setTourData(ugandaSafaris);
+            break;
+          case 'rwanda':
+            setTourData(rwandaSafaris);
+            break;
+          
+          default:
+            setTourData([]); // Or handle a fallback
+            break;
+        }
+      }
+    }, [destination]);
   return (
     <>
       <Swiper
@@ -36,7 +59,7 @@ const Tours2 = () => {
           },
         }}
       >
-        {toursData.slice(0, 6).map((item) => (
+        {tourData?.slice(0, 6).map((item) => (
           <SwiperSlide key={item.id}>
             <div
               key={item?.id}
@@ -44,7 +67,8 @@ const Tours2 = () => {
               data-aos-delay={item?.delayAnimation}
             >
               <Link
-                href={`/tour/tour-single/${item.id}`}
+                //href={`/tour/tour-single/${item.id}`}
+                href={`tour/tour-list-v2/${destination?.toLowerCase()}-safaris/${item?.title.toLowerCase().replace(/\s+/g, "-")}`}
                 className="tourCard -type-1 rounded-4"
               >
                 <div className="tourCard__image">
@@ -75,13 +99,13 @@ const Tours2 = () => {
                     </div>
                   </div>
 
-                  <div className="cardImage__wishlist">
+                  {/* <div className="cardImage__wishlist">
                     <button className="button -blue-1 bg-white size-30 rounded-full shadow-2">
                       <i className="icon-heart text-12" />
                     </button>
-                  </div>
+                  </div> */}
 
-                  <div className="cardImage__leftBadge">
+                  {/* <div className="cardImage__leftBadge">
                     <div
                       className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
                         isTextMatched(item?.tag, "likely to sell out*")
@@ -99,17 +123,17 @@ const Tours2 = () => {
                     >
                       {item.tag}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 {/* End .tourCard__image */}
 
                 <div className="tourCard__content mt-10">
                   <div className="d-flex items-center lh-14 mb-5">
                     <div className="text-14 text-light-1">
-                      {item?.duration}+ hours
+                      {item?.tourType}
                     </div>
                     <div className="size-3 bg-light-1 rounded-full ml-10 mr-10" />
-                    <div className="text-14 text-light-1">{item?.tourType}</div>
+                    {/* <div className="text-14 text-light-1">{item?.tourType}</div> */}
                   </div>
                   <h4 className="tourCard__title text-dark-1 text-18 lh-16 fw-500">
                     <span>{item?.title}</span>
@@ -118,7 +142,7 @@ const Tours2 = () => {
                     {item?.location}
                   </p>
 
-                  <div className="row justify-between items-center pt-15">
+                  {/* <div className="row justify-between items-center pt-15">
                     <div className="col-auto">
                       <div className="d-flex items-center">
                         <div className="d-flex items-center x-gap-5">
@@ -128,7 +152,7 @@ const Tours2 = () => {
                           <div className="icon-star text-yellow-1 text-10" />
                           <div className="icon-star text-yellow-1 text-10" />
                         </div>
-                        {/* End ratings */}
+                        
 
                         <div className="text-14 text-light-1 ml-10">
                           {item?.numberOfReviews} reviews
@@ -144,7 +168,7 @@ const Tours2 = () => {
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </Link>
             </div>

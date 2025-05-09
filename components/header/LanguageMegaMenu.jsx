@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const LanguageMegaMenu = ({ textClass }) => {
   const [click, setClick] = useState(false);
   const handleCurrency = () => setClick((prevState) => !prevState);
+  const router = useRouter();
 
   const languageContent = [
     { id: 1, language: "English", country: "United States" },
@@ -28,6 +30,25 @@ const LanguageMegaMenu = ({ textClass }) => {
     { id: 20, language: "English", country: "Belize" },
   ];
 
+  const languages = [
+    { id: 1, label: "English", code: "en", flag: "/img/flags/flag.png" },
+    { id: 2, label: "Français", code: "fr", flag: "/img/flags/france.png" },
+    { id: 3, label: "Deutsch", code: "de", flag: "/img/flags/german-flag.png" },
+  ];
+
+  const [isOpen, setIsOpen] = useState(false);
+  //const [selected, setSelected] = useState(languages[0]);
+  const [selected, setSelected] = useState(
+    languages.find((l) => l.code === router.locale) || languages[0]
+  );
+  const toggleDropdown = () => setIsOpen(!isOpen);
+  const handleSelect = (lang) => {
+    console.log("Switching to:", lang.code);
+    setSelected(lang);
+    setIsOpen(false);
+    router.push(router.pathname, router.asPath, { locale: lang.code });
+  };
+
   const [selectedCurrency, setSelectedCurrency] = useState(languageContent[0]);
 
   const handleItemClick = (item) => {
@@ -36,65 +57,45 @@ const LanguageMegaMenu = ({ textClass }) => {
   };
 
   return (
-    <>
-      {/* Start language currency Selector */}
-      <div className="col-auto">
-        <button
-          className={`d-flex items-center text-14 ${textClass}`}
-          onClick={handleCurrency}
-        >
-          <Image
-            width={20}
-            height={20}
-            src="/img/general/lang.png"
-            alt="image"
-            className="rounded-full mr-10"
-          />
-          <span className="js-language-mainTitle">
-            {" "}
-            {selectedCurrency.country}
-          </span>
-          <i className="icon-chevron-sm-down text-7 ml-15" />
-        </button>
-      </div>
-      {/* End language currency Selector */}
+    <div className="relative inline-block text-left">
+      <button
+        className={`d-flex items-center text-14 ${textClass}`}
+        onClick={toggleDropdown}
+      >
+        <Image
+          src={selected.flag}
+          alt={selected.label}
+          width={20}
+          height={20}
+          className="rounded-full mr-10"
+        />
+        {selected.label}
+        <i className="icon-chevron-sm-down text-7 ml-10" />
+      </button>
 
-      <div className={`langMenu js-langMenu ${click ? "" : "is-hidden"}`}>
-        <div className="currencyMenu__bg" onClick={handleCurrency}></div>
-        <div className="langMenu__content bg-white rounded-4">
-          <div className="d-flex items-center justify-between px-30 py-20 sm:px-15 border-bottom-light">
-            <div className="text-20 fw-500 lh-15">Select your language</div>
-            {/* End title */}
-            <button className="pointer" onClick={handleCurrency}>
-              <i className="icon-close" />
-            </button>
-            {/* End colse button */}
-          </div>
-          {/* Emd flex-wrapper */}
-          <ul className="modalGrid px-30 py-30 sm:px-15 sm:py-15">
-            {languageContent.map((item) => (
+      {isOpen && (
+        <div className="absolute z-10 mt-2 w-40 rounded-md bg-white shadow-lg">
+          <ul className="py-1 text-sm text-gray-700">
+            {languages.map((lang) => (
               <li
-                className={`modalGrid__item js-item ${
-                  selectedCurrency.country === item.country ? "active" : ""
-                }`}
-                key={item.id}
-                onClick={() => handleItemClick(item)}
+                key={lang.id}
+                onClick={() => handleSelect(lang)}
+                className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
               >
-                <div className="py-10 px-15 sm:px-5 sm:py-5">
-                  <div className="text-15 lh-15 fw-500 text-dark-1">
-                    {item.language}
-                  </div>
-                  <div className="text-14 lh-15 mt-5 js-title">
-                    {item.country}
-                  </div>
-                </div>
+                <Image
+                  src={lang.flag}
+                  alt={lang.label}
+                  width={18}
+                  height={18}
+                  className="rounded-full mr-4"
+                />
+                {lang.label}
               </li>
             ))}
           </ul>
         </div>
-        {/* End langMenu */}
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 

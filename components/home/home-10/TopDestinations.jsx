@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { destinations10 } from "../../../data/desinations";
+import Image from "../../image/image";
 
 const TopDestinations = () => {
   return (
@@ -38,7 +39,7 @@ const TopDestinations = () => {
               className="citiesCard -type-3 d-block h-full rounded-4 "
             >
               <div className="citiesCard__image ratio ratio-1:1">
-                <img className="col-12 js-lazy" src={item.img} alt="image" />
+                <Image className="col-12 js-lazy" src={item.img} alt="image" />
               </div>
               <div className="citiesCard__content px-30 py-30">
                 <h4 className="text-26 fw-600 text-white text-capitalize">

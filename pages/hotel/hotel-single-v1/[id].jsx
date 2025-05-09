@@ -140,7 +140,7 @@ const HotelSingleV1Dynamic = () => {
                   height={660}
                 >
                   {({ ref, open }) => (
-                    <img
+                    <Image
                       src={hotel?.img}
                       ref={ref}
                       onClick={open}
@@ -166,7 +166,7 @@ const HotelSingleV1Dynamic = () => {
                   height={375}
                 >
                   {({ ref, open }) => (
-                    <img
+                    <Image
                       ref={ref}
                       onClick={open}
                       src="/img/gallery/1/2.png"
@@ -180,7 +180,7 @@ const HotelSingleV1Dynamic = () => {
               {/* End .galleryGrid__item */}
 
               <div className="galleryGrid__item relative d-flex">
-                <img
+                <Image
                   src="/img/gallery/1/3.png"
                   alt="image"
                   className="rounded-4"
@@ -206,7 +206,7 @@ const HotelSingleV1Dynamic = () => {
                   height={375}
                 >
                   {({ ref, open }) => (
-                    <img
+                    <Image
                       ref={ref}
                       onClick={open}
                       src="/img/gallery/1/4.png"
@@ -220,7 +220,7 @@ const HotelSingleV1Dynamic = () => {
               {/* End .galleryGrid__item */}
 
               <div className="galleryGrid__item relative d-flex">
-                <img
+                <Image
                   src="/img/gallery/1/5.png"
                   alt="image"
                   className="rounded-4"

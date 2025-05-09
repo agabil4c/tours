@@ -4,6 +4,7 @@ import PricingSummary from "./sidebar/PricingSummary";
 import PaymentSchedule from "./sidebar/PaymentSchedule";
 import PromoCode from "./sidebar/PromoCode";
 import RatingInfo from "./RatingInfo";
+import Image from "../image/image";
 
 const PaymentInfo = () => {
   const [itemsTabs, setItemsTabs] = useState(1);
@@ -90,7 +91,7 @@ const PaymentInfo = () => {
                 </div>
                 {/* End col */}
                 <div className="col-md-6">
-                  <img
+                  <Image
                     src="/img/booking-pages/card.png"
                     alt="image"
                     className="h-full"

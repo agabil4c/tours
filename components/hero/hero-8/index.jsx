@@ -1,13 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import MainFilterSearchBox from "./MainFilterSearchBox";
+import Image from "../../image/image";
 
 const index = () => {
   return (
     <>
       <section className="masthead -type-8">
         <div className="masthead__bg">
-          <img
+          <Image
             src="/img/masthead/8/bg.png"
             alt="image"
             className="col-12 h-full object-cover"
@@ -58,7 +59,7 @@ const index = () => {
               }}
             >
               <SwiperSlide>
-                <img src="/img/masthead/8/1.png" alt="image" />
+                <Image src="/img/masthead/8/1.png"  alt="image" />
               </SwiperSlide>
             </Swiper>
 

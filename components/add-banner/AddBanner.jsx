@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 const AddBanner = () => {
+  const { t } = useTranslation('common');
   // const addContent = [
   //   {
   //     id: 1,
@@ -72,33 +74,16 @@ const AddBanner = () => {
             />
           </div>
           <div className="ctaCard__content py-70 px-70 lg:py-30 lg:px-30">
-            
+              <h4 className="text-30 lg:text-26 text-white">
+              {t('line1')} 
+              </h4>
 
-            <h4 className="text-30 lg:text-26 text-white">We give you the East African  <br /> Experience</h4>
-            <div className="d-inline-block mt-30">
-              
-              <div className="text-15 fw-500 text-white mb-10">
-                <ul className="text-15 pt-10">
-                  <li className="d-flex items-center">
-                    <i className="icon-check text-10 mr-20" />
-                    Culture
-                  </li>
-                  <li className="d-flex items-center">
-                    <i className="icon-check text-10 mr-20" />
-                    Culture
-                  </li>
-                  <li className="d-flex items-center">
-                    <i className="icon-check text-10 mr-20" />
-                    Culture
-                  </li>
-                  <li className="d-flex items-center">
-                    <i className="icon-check text-10 mr-20" />
-                    Culture
-                  </li>
-                </ul>
+              <div className="mt-30">
+                <p className="text-20 lg:text-24 text-white mb-2">{t('line2')}</p>
+                <p className="text-20 lg:text-24 text-white mb-2">{t('line3')}</p>
+                <p className="text-20 lg:text-24 text-white">{t('line4')}</p>
               </div>
             </div>
-          </div>
         </div>
       </div>
       <div
@@ -135,7 +120,7 @@ const AddBanner = () => {
                     >
                       See more
                     </Link> */}
-                    <a class="button h-50 px-24 -dark-1 bg-blue-1 text-white" href={item.routerPath}>See More <div class="icon-arrow-top-right ml-15"></div></a>
+                    <a class="button h-50 px-24 -dark-1 bg-blue-1 text-white" href={item.routerPath}>{t('seeMore')} <div class="icon-arrow-top-right ml-15"></div></a>
                   </div>
                 </div>
               </div>

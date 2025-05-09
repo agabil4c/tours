@@ -1,51 +1,48 @@
 import dynamic from "next/dynamic";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import CallToActions from "../../components/common/CallToActions";
 import Seo from "../../components/common/Seo";
 import DefaultHeader from "../../components/header/default-header";
 import DefaultFooter from "../../components/footer/default";
 import TopDestinations2 from "../../components/destinations/TopDestinations2";
-import Faq from "../../components/faq/Faq";
-import TestimonialLeftCol from "../../components/home/home-1/TestimonialLeftCol";
-import Testimonial from "../../components/home/home-1/Testimonial";
-import Link from "next/link";
-import Slights from "../../components/block/Slights";
-import Blog from "../../components/blog/Blog3";
 import LocationTopBar from "../../components/common/LocationTopBar";
 import Banner from "../../components/destinations/components/Banner";
-import kenyaMap from "./../../public/img/pages/destinations/Kenya map.gif";
-import ugandaMap from "./../../public/img/pages/destinations/Uganda map.jpg";
-import rwandaMap from "./../../public/img/pages/destinations/Rwanda map.png";
 import { useRouter } from "next/router";
 import { kenyaInfo, rwandaInfo, ugandaInfo } from "../../data/desinations";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
-const Destination = () => {
-  const router = useRouter();
-  const { destinationName } = router.query; 
-  const [destinationData, setDestinationData] = useState([]);
-  const [destinationMap, setDestinationMap] = useState("");
-  useEffect(() => {
-    if (destinationName) {
-      // Handle the tour data based on the tourName
-      switch (destinationName.toLowerCase()) {
-        case 'uganda':
-          setDestinationData(ugandaInfo);
-          setDestinationMap("Uganda map.jpg");
-          break;
-        case 'kenya':
-          setDestinationData(kenyaInfo);
-          setDestinationMap("Kenya map.gif");
-          break;
-        case 'rwanda':
-          setDestinationData(rwandaInfo);
-          setDestinationMap("Rwanda map.png");
-          break;
-        default:
-          setDestinationData([]); // Or handle a fallback
-          break;
-      }
-    }
-  }, [destinationName]);
+
+const DynamicMap = dynamic(() => import("../../components/common/MapView"), {
+  ssr: false,
+});
+
+const Destination = ({ destinationData, destinationName }) => {
+  const { t } = useTranslation('common');
+  // const router = useRouter();
+  // const { destinationName } = router.query; 
+  // useEffect(() => {
+  //   if (!router.isReady) return;
+
+  //   if (destinationName) {
+  //     // Handle the tour data based on the tourName
+  //     switch ((destinationName || "").toLowerCase()) {
+  //       case 'uganda':
+  //         setDestinationData(ugandaInfo);
+  //         break;
+  //       case 'kenya':
+  //         setDestinationData(kenyaInfo);
+  //         break;
+  //       case 'rwanda':
+  //         setDestinationData(rwandaInfo);
+  //         break;
+  //       default:
+  //         setDestinationData([]); // Or handle a fallback
+  //         break;
+  //     }
+  //   }
+  // }, [destinationName, router.isReady]);
 
     return (
         <>
@@ -73,7 +70,7 @@ const Destination = () => {
               </div> */}
               {/* End .row */}
     
-              <div className="row y-gap-20 pt-40">
+              <div className="row y-gap-20 pt-20">
                 <div className="col-auto">
                   <h2>What to know before visiting {destinationName}</h2>
                 </div>
@@ -100,7 +97,7 @@ const Destination = () => {
     
                   <div className="col-xl-4">
                     <div className="relative d-flex ml-35 xl:ml-0">
-                      <img
+                      {/* <Image
                           src={`/img/pages/destinations/${destinationMap}`}
                           alt="image"
                           className="col-12 rounded-4"
@@ -110,7 +107,15 @@ const Destination = () => {
                           <i className="icon-eye text-18 mr-10" />
                           See popular activities on the map
                           </button>
-                      </div>
+                      </div> */}
+                      {destinationData.map((item, index) => (
+                        <DynamicMap
+                          key={index}
+                          lat={item?.lat}
+                          lng={item?.lng}
+                          name={destinationName}
+                        />
+                      ))}
                     </div>
                   </div>
               </div>
@@ -212,4 +217,59 @@ const Destination = () => {
       );
 };
 
-export default dynamic(() => Promise.resolve(Destination), { ssr: false });
+export async function getStaticPaths() {
+  const destinations = ['Kenya', 'Uganda', 'Rwanda'];
+
+  const locales = ['en', 'de', 'fr'];
+  const paths = [];
+
+  for (const locale of locales) {
+    for (const destination of destinations) {
+      paths.push({
+        params: { destinationName: destination },
+        locale,
+      });
+    }
+  }
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+
+export const getStaticProps = async ({ params, locale }) => {
+  const { destinationName } = params;
+
+  let destinationData = [];
+  let destinationMap = ""; // add logic if needed
+
+  switch (destinationName.toLowerCase()) {
+    case 'uganda':
+      destinationData = ugandaInfo;
+      break;
+    case 'kenya':
+      destinationData = kenyaInfo;
+      break;
+    case 'rwanda':
+      destinationData = rwandaInfo;
+      break;
+    default:
+      destinationData = [];
+      break;
+  }
+
+  return {
+    props: {
+      destinationName,
+      destinationData,
+      destinationMap,
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+};
+
+export default Destination;
+
+//export default dynamic(() => Promise.resolve(Destination), { ssr: false });

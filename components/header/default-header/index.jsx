@@ -5,6 +5,7 @@ import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
 import LanguageMegaMenu from "../LanguageMegaMenu";
 
 import MobileMenu from "../MobileMenu";
+import Image from "next/image";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
@@ -28,56 +29,28 @@ const Header1 = () => {
           <div className="row justify-between items-center">
             <div className="col-auto">
               <div className="d-flex items-center">
-                <Link href="/" className="header-logo mr-50">
-                  <img src="/img/general/riverwide_logo.png" alt="logo icon" style={{width: '250px'}}/>
-                  <img src="/img/general/logo-dark.svg" alt="logo icon" />
+                <Link href="/" className="header-logo mr-50" >
+                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" style={{width: '250px'}}/>
+                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" />
                 </Link>
                 {/* End logo */}
-
+              </div>
+            </div>
+            <div className="col-auto">
+              <div className="d-flex items-center">
                 <div className="header-menu">
                   <div className="header-menu__content">
                     <MainMenu style="text-dark-1" />
                   </div>
                 </div>
-                {/* End header-menu */}
-              </div>
-              {/* End d-flex */}
-            </div>
-            {/* End col */}
-
-            <div className="col-auto">
-              <div className="d-flex items-center">
-                {/* <div className="row x-gap-20 items-center xxl:d-none">
-                  <CurrenctyMegaMenu textClass="text-dark-1" />
-                  
-                </div> */}
-                {/* End language and currency selector */}
-
-                {/* Start btn-group */}
-                <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                  {/* <Link
-                    href="/others-pages/login"
-                    className="button px-30 fw-400 text-14 -blue-1 bg-blue-1 h-50 text-white"
-                  >
-                    Become An Expert
-                  </Link> */}
-                  {/* <Link
-                    href="/others-pages/signup"
-                    className="button px-30 fw-400 text-14 -outline-blue-1 h-50 text-blue-1 ml-20"
-                  >
-                    Sign In / Register
-                  </Link> */}
-                </div>
-                {/* End btn-group */}
-
-                {/* Start mobile menu icon */}
-                <div className="d-none xl:d-flex x-gap-20 items-center pl-30 text-dark-1">
-                  <div>
+                
+                <div className="d-none xl:d-flex x-gap-20 items-center pl-20 text-white">
+                  {/* <div>
                     <Link
                       href="/others-pages/login"
                       className="d-flex items-center icon-user text-inherit text-22"
                     />
-                  </div>
+                  </div> */}
                   <div>
                     <button
                       className="d-flex items-center icon-menu text-inherit text-20"
@@ -98,10 +71,12 @@ const Header1 = () => {
                     </div>
                   </div>
                 </div>
-                {/* End mobile menu icon */}
               </div>
+              {/* End d-flex */}
             </div>
-            {/* End col-auto */}
+            {/* End col */}
+
+            
           </div>
           {/* End .row */}
         </div>

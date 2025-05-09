@@ -1,3 +1,5 @@
+import Image from "../../../../components/image/image";
+
 const data = [
   {
     title: "Pending",
@@ -40,7 +42,7 @@ const DashboardCard = () => {
                 </div>
               </div>
               <div className="col-auto">
-                <img src={item.icon} alt="icon" />
+                <Image src={item.icon} alt="icon" />
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Seo from "../../components/common/Seo";
+import Image from "../../components/image/image";
 
 const Invoice = () => {
   return (
@@ -28,7 +29,7 @@ const Invoice = () => {
                 <div className="layout-pt-lg layout-pb-lg px-50">
                   <div className="row justify-between">
                     <div className="col-auto">
-                      <img src="/img/general/logo-dark.svg" alt="logo icon" />
+                      <Image src="/img/general/logo-dark.svg"  alt="logo icon" />
                     </div>
                     <div className="col-xl-4">
                       <div className="row justify-between items-center">

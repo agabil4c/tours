@@ -35,7 +35,7 @@ const CallToActions = () => {
   };
   
   return (
-    <section className="layout-pt-md layout-pb-md bg-dark-2">
+    <section className="layout-pt-md layout-pb-md bg-dark-3">
       <div className="container">
         <div className="row y-gap-30 justify-between items-center">
           <div className="col-auto">

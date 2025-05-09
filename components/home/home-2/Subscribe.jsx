@@ -1,10 +1,12 @@
+import Image from "../../image/image";
+
 const Subscribe = () => {
   return (
     <section className="layout-pt-md layout-pb-md" data-aos="fade-up">
       <div className="container">
         <div className="row ml-0 mr-0 items-center justify-between">
           <div className="col-xl-5 px-0">
-            <img
+            <Image
               className="col-12 h-400"
               src="/img/newsletter/1.png"
               alt="image"

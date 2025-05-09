@@ -2,27 +2,31 @@ const ImportantInfo = ({tour}) => {
   console.log(tour)
   return (
     <div className="row x-gap-40 y-gap-40 justify-between pt-20">
-      <div className="col-lg-4 col-md-6">
-        <div className="fw-500 mb-10">Inclusions</div>
-        {tour?.inclusions?.map((item, index) => (
-          <ul key={index} className="list-disc">
-            <li key={index}>{item}</li>
-            
-          </ul>
-        ))}
-      </div>
+      {tour?.inclusions?.length > 0 && (
+        <div className="col-lg-4 col-md-6">
+          <div className="fw-500 mb-10">Inclusions</div>
+          {tour?.inclusions?.map((item, index) => (
+            <ul key={index} className="list-disc">
+              <li key={index}>{item}</li>
+              
+            </ul>
+          ))}
+        </div>
+      )}
 
+      {tour?.inclusions?.length > 0 && (
+        <div className="col-lg-4 col-md-6">
+          <div className="fw-500 mb-10">Exclusions</div>
+          {tour?.exclusions?.map((item, index) => (
+            <ul key={index} className="list-disc">
+              <li key={index}>{item}</li>
+              
+            </ul>
+          ))}
+        </div>
+      )}
+      
       <div className="col-lg-4 col-md-6">
-        <div className="fw-500 mb-10">Exclusions</div>
-        {tour?.exclusions?.map((item, index) => (
-          <ul key={index} className="list-disc">
-            <li key={index}>{item}</li>
-            
-          </ul>
-        ))}
-      </div>
-
-      <div className="col-lg-3 col-md-6">
         <div className="fw-500 mb-10">Additional information</div>
         <ul className="list-disc">
           <li>Confirmation will be received at time of booking</li>

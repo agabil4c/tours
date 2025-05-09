@@ -5,7 +5,7 @@ const ContactInfo = () => {
     <div className="row x-gap-15 y-gap-15 items-center">
       <div className="col-auto md:d-none">
         <a href="tel:+(1) 123 456 7890" className="text-12 text-white">
-          +(1) 123 456 7890
+          +(256) 702 791899
         </a>
       </div>
       {/* End .col-auto */}
@@ -15,7 +15,7 @@ const ContactInfo = () => {
       {/* End .col-auto */}
       <div className="col-auto">
         <a href="mailto:xyz@abc.com" className="text-12 text-white">
-          hi@gotrip.com
+          info@riverwidesafaris.com
         </a>
       </div>
       {/* End .col-auto */}

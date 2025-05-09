@@ -21,6 +21,7 @@ import Tours from "../components/tours/Tours";
 import Activity from "../components/activity/Activity";
 import Rentals from "../components/rentals/Rentals";
 import Hotels from "../components/hotels/Hotels2";
+import Image from "../components/image/image";
 
 const DestinationsRW = () => {
   return (
@@ -97,7 +98,7 @@ const DestinationsRW = () => {
 
             <div className="col-xl-4">
                 <div className="relative d-flex ml-35 xl:ml-0">
-                <img
+                <Image
                     src="/img/pages/destinations/Rwanda map.png"
                     alt="image"
                     className="col-12 rounded-4"

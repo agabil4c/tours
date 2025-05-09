@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Gallery, Item } from "react-photoswipe-gallery";
+import Image from "../image/image";
 
 const SlideGallery = () => {
   const sliderImg = [
@@ -43,7 +44,7 @@ const SlideGallery = () => {
           {sliderImg.map((img, i) => (
             <SwiperSlide key={i}>
               <div className="ratio ratio-64:45">
-                <img src={img} alt="image" className="rounded-4 img-ratio" />
+                <Image src={img} alt="image" className="rounded-4 img-ratio" />
               </div>
             </SwiperSlide>
           ))}

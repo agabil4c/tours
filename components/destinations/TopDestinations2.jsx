@@ -100,7 +100,7 @@ const TopDestinations2 = ({destination}) => {
           data-aos-delay={item.delayAnimation}
         >
           <Link
-            href={`/hotel/hotel-single-v1/${item.id}`}
+            href={`/destination/${destination?.toLowerCase()}/${item?.location?.toLowerCase().replace(/\s+/g, "-")}`}
             className="hotelsCard -type-1 hover-inside-slider"
           >
             <div className="hotelsCard__image">

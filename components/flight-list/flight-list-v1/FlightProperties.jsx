@@ -1,4 +1,5 @@
 import flightsData from "../../../data/flights";
+import Image from "../../image/image";
 
 const FlightProperties = () => {
   return (
@@ -10,7 +11,7 @@ const FlightProperties = () => {
               <div className="col">
                 <div className="row y-gap-10 items-center">
                   <div className="col-sm-auto">
-                    <img
+                    <Image
                       className="size-40"
                       src="/img/flightIcons/1.png"
                       alt="image"
@@ -45,7 +46,7 @@ const FlightProperties = () => {
                 </div>
                 <div className="row y-gap-10 items-center pt-30">
                   <div className="col-sm-auto">
-                    <img
+                    <Image
                       className="size-40"
                       src="/img/flightIcons/2.png"
                       alt="image"
@@ -124,7 +125,7 @@ const FlightProperties = () => {
                     <div className="col-auto">
                       <div className="d-flex items-center mb-15">
                         <div className="w-28 d-flex justify-center mr-15">
-                          <img src="/img/flights/1.png" alt="image" />
+                          <Image src="/img/flights/1.png"  alt="image" />
                         </div>
                         <div className="text-14 text-light-1">
                           Pegasus Airlines 1169
@@ -149,7 +150,7 @@ const FlightProperties = () => {
                         </div>
                         <div className="d-flex items-center mt-15">
                           <div className="w-28 d-flex justify-center mr-15">
-                            <img src="/img/flights/plane.svg" alt="image" />
+                            <Image src="/img/flights/plane.svg"  alt="image" />
                           </div>
                           <div className="text-14 text-light-1">4h 05m</div>
                         </div>
@@ -201,7 +202,7 @@ const FlightProperties = () => {
                     <div className="col-auto">
                       <div className="d-flex items-center mb-15">
                         <div className="w-28 d-flex justify-center mr-15">
-                          <img src="/img/flights/1.png" alt="image" />
+                          <Image src="/img/flights/1.png"  alt="image" />
                         </div>
                         <div className="text-14 text-light-1">
                           Pegasus Airlines 1169
@@ -226,7 +227,7 @@ const FlightProperties = () => {
                         </div>
                         <div className="d-flex items-center mt-15">
                           <div className="w-28 d-flex justify-center mr-15">
-                            <img src="/img/flights/plane.svg" alt="image" />
+                            <Image src="/img/flights/plane.svg"  alt="image" />
                           </div>
                           <div className="text-14 text-light-1">4h 05m</div>
                         </div>

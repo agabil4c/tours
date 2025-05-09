@@ -51,11 +51,11 @@ const Copyright = () => {
           </div> */}
           {/* End .col */}
 
-          <div className="col-auto">
+          {/* <div className="col-auto">
             <div className="d-flex x-gap-20 items-center">
               <Social />
             </div>
-          </div>
+          </div> */}
           {/* End .col */}
         </div>
       </div>

@@ -4,6 +4,7 @@ import MainMenu from "../MainMenu";
 import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
 import LanguageMegaMenu from "../LanguageMegaMenu";
 import MobileMenu from "../MobileMenu";
+import Image from "next/image";
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
@@ -22,50 +23,27 @@ const Header1 = () => {
 
   return (
     <>
-      <header className={`header ${navbar ? "bg-dark-1 is-sticky" : ""}`}>
-        <div className="header__container px-30 sm:px-20">
+      <header className={`header mt-40 ${navbar ? "is-sticky bg-dark-2" : ""}`}>
+        <div className="header__container container">
           <div className="row justify-between items-center">
             <div className="col-auto">
               <div className="d-flex items-center">
                 <Link href="/" className="header-logo mr-50" >
-                  <img src="/img/general/riverwide_logo.png" alt="logo icon" style={{width: '250px'}}/>
-                  <img src="/img/general/riverwide_logo.png" alt="logo icon" />
+                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" style={{width: '250px'}}/>
+                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" />
                 </Link>
                 {/* End logo */}
-
+              </div>
+            </div>
+            <div className="col-auto">
+              <div className="d-flex items-center">
                 <div className="header-menu">
                   <div className="header-menu__content">
                     <MainMenu style="text-white" />
                   </div>
                 </div>
-                {/* End header-menu */}
-              </div>
-              {/* End d-flex */}
-            </div>
-            {/* End col */}
 
-            <div className="col-auto">
-              <div className="d-flex items-center">
-                {/* <div className="row x-gap-20 items-center xxl:d-none">
-                  <CurrenctyMegaMenu textClass="text-white" />
-                  
-                </div> */}
-                {/* End language and currency selector */}
-
-                {/* Start btn-group */}
-                {/* <div className="d-flex items-center ml-20 is-menu-opened-hide md:d-none">
-                  
-                  <Link
-                    href="/others-pages/signup"
-                    className="button px-30 fw-400 text-14 border-white -outline-white h-50 text-white ml-20"
-                  >
-                    Sign In / Register
-                  </Link>
-                </div> */}
-                {/* End btn-group */}
-
-                {/* Start mobile menu icon */}
-                <div className="d-none xl:d-flex x-gap-20 items-center pl-30 text-white">
+                <div className="d-none xl:d-flex x-gap-20 items-center pl-20 text-white">
                   {/* <div>
                     <Link
                       href="/others-pages/login"
@@ -81,7 +59,7 @@ const Header1 = () => {
                     />
 
                     <div
-                      className="offcanvas offcanvas-start  mobile_menu-contnet "
+                      className="offcanvas offcanvas-start  mobile_menu-contnet"
                       tabIndex="-1"
                       id="mobile-sidebar_menu"
                       aria-labelledby="offcanvasMenuLabel"
@@ -92,10 +70,8 @@ const Header1 = () => {
                     </div>
                   </div>
                 </div>
-                {/* End mobile menu icon */}
               </div>
             </div>
-            {/* End col-auto */}
           </div>
           {/* End .row */}
         </div>

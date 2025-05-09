@@ -1,3 +1,5 @@
+import Image from "../../image/image";
+
 const BlogNavigator = () => {
   return (
     <div className="row y-gap-30 justify-between">
@@ -14,7 +16,7 @@ const BlogNavigator = () => {
         </a>
       </div>
       <div className="col-auto">
-        <img src="/img/general/menu.svg" alt="image" className="pt-20" />
+        <Image src="/img/general/menu.svg"  alt="image" className="pt-20" />
       </div>
       <div className="col-auto text-right">
         <a href="#">

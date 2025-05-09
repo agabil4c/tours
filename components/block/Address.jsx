@@ -5,16 +5,16 @@ const Address = () => {
       colClass: "col-lg-3",
       title: "Address",
       content: (
-        <>328 Queensberry Street, North Melbourne VIC 3051, Australia.</>
+        <>Namugongo, Nsawo estate road, Wakiso Uganda.</>
       ),
     },
     {
       id: 2,
       colClass: "col-auto",
-      title: "Toll Free Customer Care",
+      title: "Dial Us At",
       content: (
         <>
-          <a href="tel:+4733378901">+47 333 78 901</a>
+          <a href="tel:+4733378901">+(256) 702 791899</a>
         </>
       ),
     },
@@ -25,7 +25,7 @@ const Address = () => {
       content: (
         <>
           {" "}
-          <a href="mailto:i@gotrip.com">hi@gotrip.com</a>
+          <a href="mailto:info@riverwidesafaris.com">info@riverwidesafaris.com</a>
         </>
       ),
     },

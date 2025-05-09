@@ -1,12 +1,14 @@
+import Image from "next/image";
+
 const Banner = ({ destination }) => {
   return (
     <div className="col-12">
       <div className="relative d-flex">
-        <img
+        <Image
           src={`/img/pages/destinations/${destination}.jpg`}
           alt="image"
           className="col-12 rounded-4"
-          style={{ minHeight: " 300px" }}
+          style={{ width: '100%', height: 'auto' }}
         />
         <div className="absolute z-2 px-50 py-60 md:py-20 md:px-30">
           <h1 className="text-50 fw-600 text-white lg:text-40 md:text-30">

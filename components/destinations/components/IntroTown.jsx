@@ -1,3 +1,5 @@
+import Image from "../../image/image";
+
 const IntroTown = () => {
   return (
     <>
@@ -43,7 +45,7 @@ const IntroTown = () => {
 
       <div className="col-xl-4">
         <div className="relative d-flex ml-35 xl:ml-0">
-          <img
+          <Image
             src="/img/pages/destinations/Rwanda map.png"
             alt="image"
             className="col-12 rounded-4"

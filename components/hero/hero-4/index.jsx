@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import MainFilterSearchBox from "./MainFilterSearchBox";
+import Image from "../../image/image";
 
 const index = () => {
   return (
@@ -18,7 +19,7 @@ const index = () => {
           >
             <SwiperSlide>
               <div className="masthead__image">
-                <img alt="image" src="/img/masthead/4/bg.png" />
+                <Image src="/img/masthead/4/bg.png" alt="image" />
               </div>
             </SwiperSlide>
           </Swiper>

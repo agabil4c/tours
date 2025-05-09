@@ -412,112 +412,466 @@ export const rwandaSafaris = [
 export const kenyaSafaris = [
   {
     id: 1,
-    tag: "LIKELY TO SELL OUT*",
-    slideImg: ["/img/tours/1.png"],
-    title: "Stonehenge, Windsor Castle and Bath with Pub Lunch in Lacock",
-    location: "Westminster Borough, London",
-    duration: "16",
-    numberOfReviews: "3014",
+    tag: "",
+    slideImg: ["/img/tours/masai mara-2.jpg"],
+    title: "3-Day Masai Mara Safari",
+    location: "Masai Mara",
+    duration: "72",
+    numberOfReviews: "5",
     price: "72",
-    tourType: "Full-day Tours",
+    tourType: "Safari Tours",
     delayAnimation: "100",
+    description: "Going on a 3-day Masai Mara safari is an awe-inspiring adventure. The Masai Mara is richly endowed with all the wildlife one would hope to see on an African safari. From large prides of lions to large herds of elephants, huge herds of wildebeest, giraffes, hippos, zebras, cheetahs, leopards, a variety of bird species, and much more. The Masai Mara is also famous for hosting the annual Great Wildebeest Migration. It is located in southwestern Kenya, about 270 km from Nairobi, the capital city of Kenya. The 3-day Masai Mara safari will involve game drives to spot animals and a visit to Masai Mara communities for cultural encounters. If time permits, you can opt for a hot air balloon ride before returning to Nairobi.",
+    itinerary: [
+      {
+        title: "Day 1: Travel to Masai Mara Game Reserve from Nairobi",
+        desc: "Departure from Nairobi at 7:30 a.m. Travel south, passing the Rift Valley Viewpoint, admiring the escarpment and other magnificent landscapes along the way. Lunch will be at a local restaurant in Narok, a small Maasai town renowned for its beautiful sights. Continue to the Mara Reserve, arriving in the late afternoon/early evening. Check in to the lodge and relax in the evening or go on an evening game drive. Visit the Maasai community for a cultural exploration."
+      },
+      {
+        title: "Day 2: Full day safari in the Masai Mara Game Reserve",
+        desc: "A full day in the Mara begins with an early breakfast at your lodge. On morning and afternoon game drives, you'll explore the Mara's vast plains and riverine vegetation in search of the reserve's abundant game. Your grassy lunch near the Mara River is an opportunity to observe migrating animals if you visit between July and September. There's also the chance to get a bird's-eye view of the Mara on a hot air balloon safari. Return to the lodge in the evening for dinner and an overnight stay."
+      },
+      {
+        title: "Day 3: Masai Mara – Nairobi",
+        desc: "Start with an early breakfast at the lodge, check out, and visit the Maasai communities near the park for a cultural exploration. Begin the return journey to Nairobi with lunch en route. A drop-off at your chosen location in Nairobi marks the end of the 3-day Masai Mara safari."
+      },
+      
+    ],
+    inclusions: [
+      
+
+    ],
+    exclusions: [
+      
+    ]
   },
   {
     id: 2,
     tag: "",
-    slideImg: ["/img/tours/2.png", "/img/tours/1.png", "/img/tours/3.png"],
-    title: "Westminster Walking Tour & Westminster Abbey Entry",
-    location: "Ciutat Vella, Barcelona",
-    duration: "14",
-    numberOfReviews: "2045",
-    price: "65",
-    tourType: "Attractions & Museums",
-    delayAnimation: "200",
+    slideImg: ["/img/tours/masai mara-1.jpg"],
+    title: "5 Days Safari to Lake Nakuru and Masai Mara",
+    location: "Lake Nakuru & Masai Mara",
+    duration: "72",
+    numberOfReviews: "5",
+    price: "72",
+    tourType: "Safari Tours",
+    delayAnimation: "100",
+    description: "The 5-day Lake Nakuru and Masai Mara safari is an opportunity to explore Kenya's famous Masai Mara and Lake Nakuru game parks and experience exciting wildlife encounters. The tour begins and ends in Nairobi city.",
+    itinerary: [
+      {
+        title: "Day 1: Arrival in Nairobi",
+        desc: "Upon arrival in Nairobi (Jomo Kenyatta International Airport), you will be met by a representative from Nsiko Adventures who will transfer you to your hotel to relax before your safari begins the next day. Stay at the Boma Inn. <br/> Meal plan: Half board – Dinner and breakfast."
+      },
+      {
+        title: "Day 2: Nairobi – Lake Nakuru",
+        desc: "Depart early in the morning from Nairobi and drive to Lake Nakuru National Park, stopping at the Rift Valley escarpment to admire the scenery. Along the road are two Rift Valley lakes: Naivasha, a freshwater lake, and Elmentaita, a soda lake, the smallest of the Rift Valley lakes. Lake Nakuru National Park is approximately 156 kilometers (3.5 hours' drive) from Nairobi. You'll arrive in time for lunch and check into the Hill Court Inn. Later, after a short rest, you'll head out for an evening game drive. <br/> Meals – Full board."
+      },
+      {
+        title: "Day 3: Lake Nakuru – Masai Mara",
+        desc: "The journey between Lake Nakuru and the Masai Mara is 280 kilometers (5.5 hours). Departure after breakfast for the famous Masai Mara. Arrive at Mara Fisi Camp in time for lunch. Departure at 4:00 p.m. for a night game drive. Return to the lodge for dinner and overnight stay. <br/> Meals – Full board."
+      },
+      {
+        title: "Day 4: Masai Mara",
+        desc: "We'll maximize our time in the Masai Mara with a morning and afternoon game drive. This will be a full day exploring the vast plains of the Mara Serengeti ecosystem. Return to Mara Fisi Lodge in the evening for dinner and a night's rest."
+      },
+      {
+        title: "Day 5: Masai Mara – Nairobi",
+        desc: "Early in the morning, after breakfast, depart from the lodge and visit the Masai farms for a cultural experience, then depart for Nairobi, arriving in the afternoon. The distance between Masai Mara and Nairobi is approximately 260 kilometers, which takes about 5 hours to drive."
+      },
+      
+    ],
+    inclusions: [
+      "Pick-up and drop-off in Nairobi",
+      "Full board accommodation during the safari",
+      "Transportation in a good 4X4 safari vehicle",
+      "All park entrance fees and government taxes",
+      "Unlimited mileage on safari",
+      "Services of an English speaking driver-guide."
+
+    ],
+    exclusions: [
+      "Any expenses of a purely personal nature",
+      "Items not mentioned in the inclusions",
+      "Travel and medical insurance",
+      "Airline tickets – domestic and international",
+      "Visa/entry permit fees."
+    ]
   },
 
   {
     id: 3,
-    tag: "best seller",
-    slideImg: ["/img/tours/3.png"],
-    title: "High-Speed Thames River RIB Cruise in London",
-    location: "Manhattan, New York",
-    duration: "18",
-    numberOfReviews: "2163",
-    price: "87",
-    tourType: "Private and Luxury",
-    delayAnimation: "300",
+    tag: "",
+    slideImg: ["/img/tours/diani-1.jpg"],
+    title: "5 Day Diani Wildlife and Beach Safari in Kenya",
+    location: "Diani Beach",
+    duration: "72",
+    numberOfReviews: "5",
+    price: "72",
+    tourType: "Safari Tours",
+    delayAnimation: "100",
+    description: "The 5-day Diani Wildlife and Beach Safari in Kenya will include wildlife viewing in Amboseli National Park and a beach holiday in Mombasa. Amboseli is famous for its large wildlife and scenic beauty. It covers 392 km² with a landscape dominated by the majestic Mount Kilimanjaro. The majesty of this tropical mountain makes Amboseli an ideal photographer's paradise, providing a spectacular backdrop for wildlife and panoramic photography. From Amboseli, you will continue to Mombasa, a sun-drenched city located on the shores of the Indian Ocean.",
+    itinerary: [
+      {
+        title: "Day 1: Nairobi to Amboseli National Park",
+        desc: "As mentioned earlier, Amboseli is a gem nestled just beneath the skirts of Mount Kilimanjaro. You'll get a glimpse of Africa's highest mountain as you spot animals like giraffes, elephants, wildebeest, zebras, and other predators. The journey takes about 6 hours, so you'll arrive at the lodge in time for lunch. Then, head out for an evening game drive at 4:00 p.m. Return to your lodge for dinner and overnight stay."
+      },
+      {
+        title: "Day 2: Full day safari in Amboseli National Park",
+        desc: "It's best to start the day before sunrise to get a magnificent view of Mount Kilimanjaro before the clouds form over the summit. At the same time, we'll set off on another extended game drive to spot the animals that inhabit this swampy park. Herds of elephants, giraffes, zebras, cheetahs, lions, and numerous birds will be spotted during the game drive. Lunch will be enjoyed on the grass and return to the lodge in the evening for dinner and an overnight stay."
+      },
+      {
+        title: "Day 3: Safari and transfer to Diani Beach in Mombasa",
+        desc: "We'll wake up at dawn and head out for an early morning wildlife viewing expedition before embarking on our journey to Mombasa. Cross an arm of the Indian Ocean by ferry and continue to Diani Beach. Check in to your lodge for dinner and an overnight stay."
+      },
+      {
+        title: "Day 4: Full day of relaxation at the Diani Beach resort",
+        desc: "Explore part of the Kenyan coast alongside relaxing moments at the beach resort."
+      },
+      {
+        title: "Day 5: Transfer to Nairobi or Mombasa airport for your return flight",
+        desc: "Depart your hotel after breakfast for a drive to Nairobi, arriving in the late afternoon. Alternatively, you can plan a flight to your next destination from Mombasa Airport instead of Nairobi Airport. This concludes your 5-day Diani Wildlife and Beach Safari in Kenya."
+      },
+      
+    ],
+    inclusions: [
+      
+    ],
+    exclusions: [
+      
+    ]
   },
   {
     id: 4,
-    tag: "top rated",
-    slideImg: ["/img/tours/4.png"],
-    title: "Edinburgh Darkside Walking Tour: Mysteries, Murder and Legends",
-    location: "Vaticano Prati, Rome",
-    duration: "20",
-    numberOfReviews: "1458",
-    price: "99",
-    tourType: "Bus Tours",
-    delayAnimation: "400",
+    tag: "",
+    slideImg: ["/img/tours/Samburu-3.jpg"],
+    title: "8 Days Adventure Travel in Kenya",
+    location: "Kenya",
+    duration: "72",
+    numberOfReviews: "5",
+    price: "72",
+    tourType: "Safari Tours",
+    delayAnimation: "100",
+    description: "Visit the Masai Mara Game Reserve, Aberdare National Park, Samburu Game Reserve, and Lake Nakuru Park on our 8-day Kenya adventure tour. The Masai Mara is home to a typical tree-lined savannah landscape and a multitude of wildlife species. You'll have unlimited game drives and a cultural experience with the Masai people. Aberdare is famous for the African golden cat, the bongo, the Aberdare Ranges, and the magnificent waterfalls. Samburu National Reserve is the best place in the world to see elephants roaming free. Lake Nakuru is home to a rhino sanctuary and is home to millions of flamingos, as well as over 400 other bird species.",
+    itinerary: [
+      {
+        title: "Day 1: Nairobi to Aberdare National Park",
+        desc: "Aberdare is located 150 km from Nairobi. With a morning pickup from your Nairobi hotel, plan to arrive at the park in time for lunch. You'll then head out on an afternoon game drive in search of leopards, the rare black rhino, and primates such as baboons and colobus monkeys. Aberdare is much cooler than the savannah, located above the tree line, with spectacular mountain scenery and dense rainforest. This offers a completely different perspective on the country. Return to your lodge in the evening for dinner and an overnight stay."
+      },
+      {
+        title: "Day 2: Aberdare – Samburu National Reserve",
+        desc: "Aberdare National Park to Samburu is a 4-hour drive. Early breakfast at your lodge, followed by a short game drive from Aberdare to Samburu. You will stop at the Equator line in Nanyuki, near Mount Kenya. Arrive at your lodge in Samburu in time for lunch. Afternoon game drive through the park to observe unique wildlife species such as the reticulated giraffe, Beisa oryx, Somali blue-footed ostrich, and Grevy's zebra. Dinner and overnight at your lodge."
+      },
+      {
+        title: "Day 3: Samburu National Reserve",
+        desc: "Early breakfast at the lodge. Head out for a full day of game drives to observe the rare wildlife of the semi-arid Samburu Reserve. Game drives and birdwatching are the most ideal ways to explore the park's native wildlife. You'll likely encounter the long-necked gerenuk, reticulated giraffes, leopards, Beisa oryx, and numerous birds, among others. Return to the lodge in the evening for dinner and overnight stay."
+      },
+      {
+        title: "Day 4: From Samburu to Sweet Waters Reserve",
+        desc: "Depart Samburu Game Reserve after breakfast and drive to Sweet Waters Game Reserve. Head to Sweet Waters Tented Camp, located on a private ranch with a 22,000-acre sanctuary for rhinos and chimpanzees on Ol Pejeta Ranch. In the late afternoon, observe a variety of animals such as giraffes, rhinos, buffalo, and others. Dinner and overnight at Sweet Waters Tented Camp."
+      },
+      {
+        title: "Day 5: From Sweet Waters to Lake Nakuru",
+        desc: "Depart on a game drive after breakfast from Sweet Waters Lodge and travel to Lake Nakuru National Park. This 5-hour drive across the Rift Valley escarpment will bring you to your lodge just in time for lunch. Take an afternoon game drive around the lake and spot rhinos, lions, flamingos, and other wildlife that call the park home."
+      },
+      {
+        title: "Day 6: Lake Nakuru – Masai Mara Reserve",
+        desc: "Depart early in the morning from Lake Nakuru for the Masai Mara Reserve via the town of Narok. Arrive at the lodge in the early afternoon, check-in, and have lunch. Afternoon game drive through the park in search of lions, cheetahs, buffalo, and elephants, and a visit to the Mara River."
+      },
+      {
+        title: "Day 7: Full day of safari in Masai Mara",
+        desc: "After breakfast, pick up your packed lunches at the lodge and head out for a full-day safari in the Masai Mara Reserve. You'll experience incredible wildlife sightings as you travel along an extensive network of roads and tracks. Take a break for your picnic lunch by the hippo pool, admiring the hippos and crocodiles. Dinner and overnight at the lodge."
+      },
+      {
+        title: "Day 8: Masai Mara – Nairobi",
+        desc: "Morning safari at the lodge. Depending on your flight schedule, you may have some time for a final safari in the Masai Mara, or you can begin a leisurely return to Nairobi for your flight home."
+      }
+    ],
+    inclusions: [
+      
+    ],
+    exclusions: [
+      
+    ]
   },
   {
     id: 5,
     tag: "LIKELY TO SELL OUT*",
-    slideImg: ["/img/tours/5.png"],
-    title: "Stonehenge, Windsor Castle and Bath with Pub Lunch in Lacock",
-    location: "Westminster Borough, London",
-    duration: "16",
-    numberOfReviews: "3014",
+    slideImg: ["/img/tours/amboseli-2.jpg"],
+    title: "10 Days Kenya Safari",
+    location: "Kenya",
+    duration: "72",
+    numberOfReviews: "5",
     price: "72",
-    tourType: "Full-day Tours",
+    tourType: "Safari Tours",
     delayAnimation: "100",
+    description: "Visit Kenya's five main national parks and reserves in 10 days. The 10-day Kenya safari begins with Samburu National Reserve, home to five of the most extraordinary animal species. These include the Beisa oryx, reticulated giraffe, Somali ostrich, Grevy's zebra, and gerenuk. This tour also takes you to Aberdare National Park, famous for its peaks, moorland, and waterfalls. You'll have the opportunity to visit Lake Nakuru National Park, home to thousands of flamingos and other bird species. Visit Masai Mara, a world-famous reserve that hosts the great wildebeest migration and abundant wildlife. Our 10-day Kenya safari concludes with a visit to Amboseli National Park, home to a unique ecosystem. It is also the best place in the world to get close to elephants in the wild and offers great opportunities to observe other African animal species.",
+    itinerary: [
+      {
+        title: "Day 1: Arrival in Nairobi",
+        desc: "Upon arrival at Jomo Kenyatta Airport in Nairobi, our professional guide will welcome you in Kenya, transfer you to the hotel and brief you on your 10-day Kenya safari. <br/>Meal Plan: Half Board"
+      },
+      {
+        title: "Day 2: Transfer to Sambura National Reserve, Evening Game Drive",
+        desc: "After breakfast, check out of the lodge and transfer to Sambura National Reserve, famous for its diversity of unique animal species, including Grevy's zebra, Somali ostrich, reticulated giraffe, gerenuk, and Beisa oryx. It is also home to a huge elephant population. You will have lunch en route. Upon arrival, you will head to the reserve for a night game drive, where you can see the Big Four and the five special animals of Samburur. The latter are easily spotted near the Ewaso Nyiro River. Then, drive to your booked lodge. Dinner and overnight stay."
+      },
+      {
+        title: "Day 3: Safari and transfer to Aberdare National Park (4 hours)",
+        desc: "After breakfast served with delicious snacks, depart for a game drive. Aberdare National Park is an area famous for its Big Five animals: elephants, lions, black rhinos, buffaloes and leopards. It is also home to majestic peaks, moorland, dizzying waterfalls, rare species like the shy bongo as well as primates. Arrive at the park, check into the lodge and enjoy lunch before preparing for the evening game drive. Return to the lodge after the game drive."
+      },
+      {
+        title: "Day 4: Game Drive and Transfer to Lake Nakuru National Park (4 hours)",
+        desc: "Transfer to Lake Nakuru; after an early breakfast, you will go on a game drive en route which will allow you to see the animals missed during the evening game drive. After the game drive, you will head to Lake Nakuru National Park, home to thousands of flamingos. Upon arrival, have lunch at the lodge and rest. Later, you will go to the lake for bird watching and you will also be able to see a large population of rhinos, giraffes as well as primates like monkeys and baboons. Return to the lodge."
+      },
+      {
+        title: "Day 5: Transfer to the Masai Mara National Reserve (4 hours)",
+        desc: "After an early breakfast, you will meet your driver-guide and depart towards the Masai Mara National Reserve, the most visited and touristic destination in Kenya. The journey is by road and takes you through the vast landscapes of the Kenyan countryside. Upon arrival at the lodge, you will be warmly welcomed with a glass of fruit juice and lunch. After lunch, you will embark on an evening game drive. Then return to the lodge for dinner and overnight stay."
+      },
+      {
+        title: "Day 6: Full Day Masai Mara Safari",
+        desc: "You will wake up and have breakfast before heading out for a full day of game viewing in the famous Masai Mara National Reserve. The lodge will serve you a packed lunch, and then you will drive into the reserve for a full day of game viewing. Expect an adventure in search of large herds of lions, leopards, elephants, Thomson's gazelles, wildebeest, buffalo, the elusive cheetah, impalas, topi, spotted hyenas, zebras, baboons, and graceful giraffes. The wildlife adventure will conclude in the evening with a transfer to the lodge for dinner and overnight stay."
+      },
+      {
+        title: "Day 7: Transfer to Lake Naivasha National Park 3 to 4 hours",
+        desc: "After breakfast at your lodge in the Masai Mara, you will check out of the lodge and go on a game drive en route to leave the game park. Continue your journey to Lake Naivasha National Park. You will arrive at the park in time for lunch, check in, and have lunch. After lunch, you will drive around the national park and have the opportunity to encounter wildlife. Expect to see hippos, zebras, water pigs, impalas, buffaloes, and many more during the night game drive. You will also enjoy the various attractions of the park, such as Lake Naivasha, and take a boat ride across the lake to Crescent Island for a better view of the wildlife. After this magnificent experience, you will return to your lodge for dinner and an overnight stay."
+      },
+      {
+        title: "Day 8: Transfer to Amboseli National Park, 5 to 6 hours",
+        desc: "After breakfast, you will check out of the lodge and continue your drive to Amboseli National Park. Upon arrival at the park, you will check in and have lunch at the lodge. After lunch, you will go on a night game drive where you will be able to observe different animal species while enjoying a magnificent sunset and the magnificent Mount Kilimanjaro as a backdrop. After the evening game drive, return to your lodge."
+      },
+      {
+        title: "Day 9: Morning and Afternoon Game Drive in Amboseli National Park",
+        desc: "Wake up and enjoy breakfast at your lodge in Amboseli National Park before getting ready for your morning game drive. You will be able to spot many animal species during your morning game drive. Big cats like lions, leopards, and hyenas can be spotted before they return to their hideouts. Other animals to be seen include giraffes, hippos, buffalo, and many more. You will return to the lodge for lunch and relaxation. In the evening, you will be able to observe other animals and bird species, as well as other attractions of Amboseli National Park, around the lookout point. After the evening game drive, return to the lodge."
+      },
+      {
+        title: "Day 10: Departure to Nairobi 3 – 4 hours",
+        desc: "You will have breakfast and check out of the lodge. Departure to Nairobi with lunch en route. Departure to Nairobi after lunch. You will be dropped off at your chosen location, marking the end of your safari."
+      }
+    ],
+    inclusions: [
+      
+    ],
+    exclusions: [
+      
+    ]
   },
   {
     id: 6,
     tag: "",
-    slideImg: ["/img/tours/6.png", "/img/tours/7.png", "/img/tours/8.png"],
-    title: "Westminster Walking Tour & Westminster Abbey Entry",
-    location: "Ciutat Vella, Barcelona",
-    duration: "14",
-    numberOfReviews: "2045",
-    price: "65",
-    tourType: "Attractions & Museums",
-    delayAnimation: "200",
+    slideImg: ["/img/tours/Samburu-2.jpg"],
+    title: "14 Days Big Five Safari in Kenya",
+    location: "Kenya",
+    duration: "72",
+    numberOfReviews: "5",
+    price: "72",
+    tourType: "Safari Tours",
+    delayAnimation: "100",
+    description: "The 14-day Big Five safari in Kenya is one of the best safaris organized by thousands of tourists in Kenya. This safari includes unbeatable destinations that offer remarkable attractions and activities. You will visit Amboseli National Park, Aberdere Ranges National Park, Samburu National Reserve, Lake Nakuru National Park, Mount Kenya, and the Masai Mara National Reserve.",
+    itinerary: [
+      {
+        title: "Day 1: Arrival at Jomo Kenyatta Airport in Nairobi",
+        desc: "On the first day of this 14-day Kenya safari, you will be met by our guide who will provide you with information about the safari. Transfer and check-in at your booked hotel in Nairobi. If you have time, you can opt for a Nairobi city tour where you can visit fabulous sites such as the Giraffe Center, the National Museum of Kenya, the David Sheldrick Wildlife Trust, the Bomas of Kenya, the Karen Blixen Coffee Garden, among others."
+      },
+      {
+        title: "Day 2: Transfer to Amboseli National Park",
+        desc: "After your morning tea/coffee served with delicious snacks, you will be picked up by your driver-guide. Drive south through the Maasai community towards Amboseli National Park. You will have the opportunity to admire Africa's highest mountain, Kilimanjaro. Upon arrival in the park, you will settle into your safari lodge for lunch. After lunch, you will embark on a game drive through the scenic plains of Amboseli National Park. Amboseli is home to the largest elephant population in the world. Elephants and other animals such as lions, leopards, gazelles, and wildebeests can be observed up close during your evening game drive. Return to your lodge for dinner and overnight stay."
+      },
+      {
+        title: "Day 3: Exploring the park",
+        desc: "After breakfast, you'll head into the park for a full day of exploration, combining morning and afternoon game drives. This day, you'll have ample time to explore the park and expect to see an abundance of wildlife such as the Big Four, lions, leopards, Cape buffalo, elephants, and other animal species. You'll then enjoy a picnic lunch around the viewing hill, taking in the beauty of the entire park. <br/> After enjoying lunch, you will head out to explore the animals. You will visit Lake Amboseli, a great place for animal watching, the Sinet Delta, a great site for bird watching, and Africa's highest peak, Kilimanjaro. Other animal species you will see during this second session include: cheetah, African wild dog, zebra, serval cat, caracal, duiker, antelope, capercaillie, gerenuk, baboon, peacock, wildebeest, and many more. Afterwards, you will return to the lodge to freshen up. Dinner and overnight stay."
+      },
+      {
+        title: "Day 4: Transfer to Aberdare",
+        desc: "After breakfast, you'll depart the lodge and head to Aberdare, with a game drive en route. Aberdare National Park is famous for hosting Queen Elizabeth of England. She used to stay at the Treetops Hotel, and it was there that she learned of the death of her father, King George VI. The park is also renowned as a sanctuary for rhinos and the elusive bongo, which you're sure to spot during your safari. <br/>Arrive, settle into the lodge for lunch, and then head into the park for the afternoon game drive. You'll have a great chance to explore a range of wildlife found in the park and other attractions like waterfalls. Later, return to the lodge for dinner and overnight stay."
+      },
+      {
+        title: "Day 5: Drive to Samburu National Reserve",
+        desc: "Wake up, have breakfast, check out of the lodge, and depart for a morning safari heading north, across the equator to the northern border. You'll arrive in time for lunch at your lodge and a rest to prepare for the activity. You'll head to the park to observe the animals and enjoy a sunset. Return to the lodge for dinner and overnight stay. <br/> Samburu National Reserve is an iconic safari destination located in Samburu County, Kenya, spanning a small area of ​​approximately 165 square kilometers. This park is home to a wide variety of wildlife, including lions, cheetahs, African leopards, elephants, Cape buffalo, hippos, gerenuks, Grevy's zebras, gemsboks, reticulated giraffes, and other mammal species such as olive baboon, warthog, Grant's gazelle, Kirk's dik-dik, impala, and capercaillie. Many other species are also found here, as well as providing habitat for over 350 bird species."
+      },
+      {
+        title: "Day 6: Full day of exploration in the Samburu National Reserve",
+        desc: "After breakfast, you will embark on a journey to the plains of Samburu National Reserve for a full day exploring nature, wildlife, and other attractions. During the safari, you will be able to observe several animals that live in Samburu. These include species such as rare Grevy's zebras, gerenuk antelopes, Somali ostriches with their distinctive blue feet, shy oryx, elephants, leopards, and crocodiles around the Ewaso Ng'iro River. Bird species are also plentiful, such as sunbirds, the grey-headed kingfisher, the tawny eagle, Verreaux's eagle, the bateleur, the yellow-collared great spotted owl, the secretary bird, among others. Later, return to your lodge for dinner and overnight stay."
+      },
+      {
+        title: "Day 7: Drive to the mountains of Kenya",
+        desc: "You'll wake up early and head to the reserve for a morning game drive, then return to the lodge for a late breakfast. You'll check out of your lodge and head to Mount Kenya. Arrive at the lodge for lunch and rest. You'll then visit Sweetwater Reserve, the only place in Kenya where chimpanzees can be seen. Two groups of chimpanzees live here, and it's also a breeding ground for black rhinos."
+      },
+      {
+        title: "Day 8: Lake Baringo via Lake Bogoria – Guided Nature Hike",
+        desc: "Breakfast, check-out, and a visit to Nyahururu Falls for a spectacular view of the falls and the picturesque landscape. Lake Bogoria is where you can observe various bird species. Return to the lodge for lunch and spend the rest of the evening relaxing or taking a birdwatching walk."
+      },
+      {
+        title: "Day 9: Transfer to Lake Nakuru National Park",
+        desc: "Lake Nakuru National Park is one of the most visited national parks on a Kenyan safari. It is home to millions of flamingos and lesser flamingos that nest on its shores. The park is located south of Nakuru in Kenya's Rift Valley and covers an area of ​​approximately 188 square kilometers. <br/> After breakfast, you will depart the lodge and head to Lake Nakuru National Park. Upon arrival at the park, you will take a boat cruise on Lake Nakuru where you will see aquatic species such as hippos, crocodiles, and a variety of bird species such as flamingos, fish eagles, Goliath herons, hamerkops, kingfishers, Verreaux's eagles, and others. Then, return to the lodge for lunch. There are high chances of spotting animals such as black and white rhinos, waterbucks, pythons, Rothschild's giraffes, warthogs, and baboons."
+      },
+      {
+        title: "Day 10: Departure from Lake Nakuru for the Masai Mara National Reserve",
+        desc: "The Masai Mara National Reserve is an incredible safari destination in Kenya spanning approximately 1,510 square kilometers of protected land. It encompasses vast landscapes, fertile rivers, and forests home to a large population of animal species. It is also known for being home to big cats and a magnificent ecosystem. Some of the animals to see in the Masai Mara include Masai giraffes, baboons, warthogs, bat-eared foxes, gray jackals, spotted hyenas, topi, hartebeest, wildebeest, elephants, buffalo, zebras, hippos, and many more. <br/> You will have breakfast and then depart from Lake Nakuru National Park to the Masai Mara National Reserve via the magnificent Great Rift Valley, where you will enjoy spectacular views. You will arrive at the lodge in time for lunch. After lunch, depart for an afternoon safari exploring the reserve's plains where you can see a list of animals such as dik-dik, klipspringer, oribi, antelopes, leopards, lions, herds of elephants, buffalo, rhinoceroses, gazelles and many more. Return for dinner and overnight stay."
+      },
+      {
+        title: "Day 11-12: Exploration safari in the Masai Mara National Reserve",
+        desc: "You'll spend these two days in the Masai Mara exploring the reserve on game drives. If you're interested in seeing the wildebeest migration, the best time to visit is from July to early October. Besides the game drives, you can also opt for a hot air balloon ride and a cultural tour of the Maasai villages, where you'll get a perfect insight into Maasai culture while enjoying their unique traditional dances and songs. You'll also be able to admire the sunsets and sundowners in the park."
+      },
+      {
+        title: "Day 13: Departure for Nairobi",
+        desc: "Wake up to a leisurely breakfast and depart the lodge. Depart for Nairobi with lunch en route. Continue your journey to Nairobi. Arrive at your hotel in Nairobi, check in, and enjoy a relaxing evening. Dinner and overnight stay."
+      },
+      {
+        title: "Day 14: Departure",
+        desc: "On the final day of your two-week Kenyan safari, you'll check out of your hotel and be transferred to the airport for your departure flight. You can opt for a city tour."
+      }
+
+    ],
+    inclusions: [
+      "Park entrance fees",
+      "All activities “unless indicated as optional”.",
+      "All accommodations as indicated in the itinerary",
+      "A competent English and French speaking guide",
+      "All ground transportation in a good 4×4 safari vehicle",
+      "All taxes/VAT",
+      "Return airport transfer",
+      "All meals as indicated",
+      "Bottled mineral water during the safari"
+    ],
+    exclusions: [
+      "International and domestic flights",
+      "Additional accommodation before and at the end of the tour",
+      "Tips for guides and hotel staff",
+      "Personal expenses: souvenirs, travel insurance, visa fees, etc.",
+      "Increased taxes or park entrance fees imposed by the government."
+    ]
   },
   {
     id: 7,
-    tag: "best seller",
-    slideImg: ["/img/tours/7.png"],
-    title: "High-Speed Thames River RIB Cruise in London",
-    location: "Manhattan, New York",
-    duration: "18",
-    numberOfReviews: "2163",
-    price: "87",
-    tourType: "Private and Luxury",
-    delayAnimation: "300",
+    tag: "",
+    slideImg: ["/img/tours/tsavo-ws2.jpg"],
+    title: "5 Day Safari to Tsavo West and Amboseli",
+    location: "Tsavo",
+    duration: "72",
+    numberOfReviews: "5",
+    price: "72",
+    tourType: "Safari Tours",
+    delayAnimation: "100",
+    description: "",
+    itinerary: [
+      {
+        title: "Day 1: Nairobi to Tsavo West",
+        desc: "We depart by road to Tsavo West National Park, arriving in time for lunch. In the afternoon, you can enjoy an optional game drive, either in the afternoon or evening. Tsavo West is the most popular part of Tsavo National Park, offering many attractions in addition to its diverse wildlife. One of the highlights is the famous Mzima Spring, where 227.3 million liters of fresh, crystal-clear water flow from the ground through porous volcanic rocks. It is believed that this water originates in the Chyulu Hills and travels underground. Return to your accommodation for dinner and overnight stay."
+      },
+      {
+        title: "Day 2: Tsavo West National Park",
+        desc: "After breakfast, we embark on a full-day game drive with a packed lunch. Key attractions include the Roaring Rocks, named after the winds that gust across them, offering breathtaking views of Tsavo from a 98-meter-high cliff. Similar panoramic views can be enjoyed from Poacher's Lookout. Another interesting site is the Chaimu volcanic crater, less than 200 years old and composed of black lava rocks, which can be climbed for those who wish. The area is a prime spot for spotting the klipspringer, a small, agile antelope whose Swahili name, mbuzi mawe (mountain goat), reflects its agility. Southwest of Tsavo West, Lake Jipe straddles the Kenya-Tanzania border. After exploring, return to your accommodation for dinner and an overnight stay."
+      },
+      {
+        title: "Day 3: Tsavo West to Amboseli",
+        desc: "Start your day early with a drive to Amboseli National Park. Upon arrival, check into your accommodation and enjoy the rest of the day to relax. Amboseli, located south of Nairobi, is dominated by an ancient dry lakebed surrounded by fragile grasslands and patches of acacia forest. The southern part of the park features small, rocky volcanic hills, while the Ol Okenya, Ol Tukai, and Enkongo Narok swamps feature lush vegetation with yellow-barked acacias and phoenix palms. Return to your accommodation for dinner and overnight stay."
+      },
+      {
+        title: "Day 4: Amboseli National Park",
+        desc: "Wake up early to enjoy the best views of Kilimanjaro before the summit is covered in clouds, followed by breakfast and packed lunch. You can also opt to visit a Maasai village, where you can experience their traditional songs, dances, and sacred rituals. Visiting their homes offers a unique insight into their social structure and daily life. Despite its varied habitats, Amboseli is one of the best places in Africa to observe elephants up close, especially as they feed and bathe in the marshes, safe from the threat of poaching. Return to your accommodation for dinner and overnight stay."
+      },
+      {
+        title: "Day 5: Amboseli – Nairobi",
+        desc: "After a morning game drive, return to your accommodation for breakfast. After breakfast, you will be transferred to your hotel or Nairobi Airport."
+      },
+      
+
+    ],
+    inclusions: [
+      
+    ],
+    exclusions: [
+      
+    ]
   },
   {
     id: 8,
-    tag: "top rated",
-    slideImg: ["/img/tours/8.png"],
-    title: "Edinburgh Darkside Walking Tour: Mysteries, Murder and Legends",
-    location: "Vaticano Prati, Rome",
-    duration: "20",
-    numberOfReviews: "1458",
-    price: "99",
-    tourType: "Bus Tours",
-    delayAnimation: "400",
+    tag: "",
+    slideImg: ["/img/tours/amboseli-4.jpg"],
+    title: "5 days Masai Mara, Lake Naivasha and Amboseli",
+    location: "Kenya",
+    duration: "72",
+    numberOfReviews: "5",
+    price: "72",
+    tourType: "Safari Tours",
+    delayAnimation: "100",
+    description: "",
+    itinerary: [
+      {
+        title: "Day 1: Nairobi / Masai Mara National Reserve",
+        desc: "Begin your journey with an early morning departure to the Masai Mara National Reserve, one of the few places on Earth where wildlife continues to thrive undisturbed, recalling the days when vast herds roamed the plains and forests of Africa. The northernmost part of the Serengeti ecosystem, the Mara is famous for hosting the spectacular seasonal migration of thousands of wildebeest, zebras, and their predators. Arrive in time for lunch, followed by an afternoon game drive."
+      },
+      {
+        title: "Day 2: Masai Mara National Reserve",
+        desc: "After breakfast, you'll enjoy a full-day game drive with a packed lunch provided. The Masai Mara is renowned for its black-maned lions and abundant wildlife. It's one of the few places where you can potentially spot the Big Five in a single morning. Cheetahs are often so accustomed to vehicles that they may seek shade underneath or even climb onto the roof to get a better look at potential prey. Bird lovers will also be delighted, as nearly 500 species have been recorded, including 16 species of eagles, several hawks and falcons, 6 types of vultures, 8 species of storks, 4 types of bustards (including the Kori bustard, the world's heaviest flying bird), and 9 species of sunbirds."
+      },
+      {
+        title: "Day 3: Masai Mara National Reserve / Lake Naivasha",
+        desc: "Departure for Lake Naivasha in the early morning. This lake, the highest and most picturesque in the Rift Valley at an altitude of 1,910 meters (6,200 feet), is a freshwater oasis lined with dense papyrus reeds. Kingfishers perch on the reeds, while herons search for their food in their shelter. Lake Naivasha is a birdwatcher's paradise, with over 400 recorded species. It is also a popular retreat for Nairobi residents who come here to sail, waterski, and fish. There are no crocodiles in the lake due to its cold temperature, but hippos are common. Along the lake's shores, local vineyards produce grapes for Kenya's nascent wine industry. Dinner and overnight at a campsite or lodge."
+      },
+      {
+        title: "Day 4: Lake Naivasha / Amboseli National Park",
+        desc: "Early morning departure for Amboseli National Park. After check-in and lunch at your accommodation, you can enjoy an afternoon game drive. Located south of Nairobi, Amboseli is characterized by an ancient dry lakebed surrounded by fragile grasslands and patches of acacia forest. The southern region of the park features volcanic hills, while lush vegetation thrives around the Ol Kenya, Ol Tukai, and Enkongo Narok swamps, with yellow-barked acacia and phoenix palm trees adding to the scenery."
+      },
+      {
+        title: "Day 5: Amboseli National Park / Nairobi",
+        desc: "Start the day with a safari in Amboseli. In the afternoon, transfer to Nairobi, with lunch en route, arriving around 5 p.m."
+      },
+      
+
+    ],
+    inclusions: [
+      
+    ],
+    exclusions: [
+      
+    ]
   },
   {
     id: 9,
-    tag: "best seller",
-    slideImg: ["/img/tours/9.png"],
-    title: "High-Speed Thames River RIB Cruise in London",
-    location: "Manhattan, New York",
-    duration: "18",
-    numberOfReviews: "2163",
-    price: "87",
-    tourType: "Private and Luxury",
-    delayAnimation: "500",
+    tag: "",
+    slideImg: ["/img/tours/lamu-3.jpg"],
+    title: "6-Day Kenya Walking Safari and Cultural Experience",
+    location: "Kenya",
+    duration: "72",
+    numberOfReviews: "5",
+    price: "72",
+    tourType: "Safari Tours",
+    delayAnimation: "100",
+    description: "",
+    itinerary: [
+      {
+        title: "Day 1: Nairobi to Nanyuki",
+        desc: "ou begin your journey in Nairobi, departing from the airport or your hotel, and travel to Nanyuki, passing through Kenya's Central Province, where there is much to see along the way. You will arrive in Nanyuki around lunchtime, check in, and enjoy a relaxing afternoon. At 4 p.m., you will depart for a late afternoon game drive on the vast Ol Pejeta Plains, home to the Big Five, the endangered black rhinos, and the chimpanzees of the Sweetwaters Sanctuary. Afterward, return to camp for dinner and overnight stay."
+      },
+      {
+        title: "Day 2: Ol Pejeta Conservancy",
+        desc: "This day is spent exploring the Ol Pejeta Conservancy. You'll enjoy game drives and visit Baraka, a blind black rhino whose name means 'blessing.' You'll also stop at the chimpanzee sanctuary at no extra cost. Ol Pejeta is home to the Big Five, numerous rhinos, and a wide variety of other animals. As you travel through plains, acacia woodlands, and riverine forests, you'll see elephants, lions, cheetahs, and herds grazing, all with Mount Kenya as a backdrop. Keep an eye out for rare species such as Grevy's zebra and Jackson's hartebeest. With its abundant wildlife and breathtaking scenery, a full-day safari at Ol Pejeta offers an unforgettable safari experience."
+      },
+      {
+        title: "Day 3: From Ol Pejeta to Ol Gaboli",
+        desc: "After breakfast and check-out from the lodge, you will enjoy a final game drive as you leave the reserve. You will then travel to Ol Gaboli Bandas, an eco-friendly camp run by local Maasai women who support their community. Here, you can participate in walking safaris, nature walks, dinners, and breakfasts in the African savannah. These unique activities offer a deep connection with nature, allowing you to explore the landscape on foot, guided by expert rangers, and dine under the stars, surrounded by nature."
+      },
+      {
+        title: "Day 4: Ol Gaboli",
+        desc: "Begin your day with a peaceful yet adventurous morning walking safari. As the golden sunrise illuminates the savannah, you will be guided by knowledgeable rangers through the wilderness. This intimate experience allows you to observe wildlife up close and discover the rich biodiversity of the Laikipia Plateau. After the morning's adventure, you will enjoy a delicious breakfast al fresco, surrounded by breathtaking views. At the end of the day, watch the magnificent African sunset cast a warm glow over the landscape, creating the perfect conclusion to a magical day in nature."
+      },
+      {
+        title: "Day 5: Ol Gaboli",
+        desc: "Spend another beautiful day on a walking safari, visiting a local Maasai village and connecting with the community. You'll have the opportunity to stop at a nearby school and interact with the children. If you'd like to contribute, consider bringing gifts such as clothes, shoes, or toys for the children. This experience allows you to immerse yourself in Maasai culture while making a meaningful impact. Afterward, you'll enjoy breakfast in the bush, followed by a leisurely lunch and dinner at camp, rounding off a day full of adventure, cultural exchange, and heartfelt moments."
+      },
+      {
+        title: "Day 6: Ol Gaboli to Nairobi",
+        desc: "On your final day, enjoy a leisurely breakfast before departing camp and beginning your return journey to Nairobi. If you're not quite ready to end your adventure, you have the option to extend your safari and explore other breathtaking destinations in magical Kenya."
+      },
+      
+
+    ],
+    inclusions: [
+      
+    ],
+    exclusions: [
+      
+    ]
   },
 ];
 
@@ -913,18 +1267,7 @@ export const ugandaSafaris = [
 
     ]
   },
-  {
-    id: 9,
-    tag: "best seller",
-    slideImg: ["/img/tours/9.png"],
-    title: "10 Day Safari in Uganda",
-    location: "",
-    duration: "240",
-    numberOfReviews: "",
-    price: "87",
-    tourType: "Safari",
-    delayAnimation: "500",
-  },
+  
 ];
 
 export const EASafaris = [

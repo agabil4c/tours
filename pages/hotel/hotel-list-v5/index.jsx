@@ -6,6 +6,7 @@ import MainFilterSearchBox from "../../../components/hotel-list/hotel-list-v5/Ma
 import Pagination from "../../../components/hotel-list/common/Pagination";
 import HotelProperties from "../../../components/hotel-list/hotel-list-v5/HotelProperties";
 import DropdownSelelctBar from "../../../components/hotel-list/common/DropdownSelelctBar";
+import Image from "../../../components/image/image";
 
 const index = () => {
   return (
@@ -21,7 +22,7 @@ const index = () => {
 
       <section className="section-bg pt-40 pb-40 relative z-5">
         <div className="section-bg__item col-12">
-          <img
+          <Image
             src="/img/misc/bg-1.png"
             alt="image"
             className="w-full h-full object-cover"

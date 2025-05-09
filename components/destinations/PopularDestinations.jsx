@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslation } from 'next-i18next';
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
@@ -6,6 +7,7 @@ import { Scrollbar } from "swiper";
 import { destinations2 } from "../../data/desinations";
 
 const PopularDestinations = () => {
+  const { t } = useTranslation('common');
   return (
     <>
       <Swiper
@@ -63,7 +65,7 @@ const PopularDestinations = () => {
                     {item.city}
                   </h4>
                   <button className="button col-12 h-60 -blue-1 bg-white text-dark-1">
-                    Discover
+                  {t('discover')}
                   </button>
                 </div>
               </div>

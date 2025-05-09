@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import FilterBox2 from "./filter-box-2";
-const StickyHeader2 = ({ hotel }) => {
+const StickyHeader2 = ({ place }) => {
   const [header, setHeader] = useState(false);
 
   const changeBackground = () => {
@@ -17,19 +17,7 @@ const StickyHeader2 = ({ hotel }) => {
 
   return (
     <div className={`singleMenu js-singleMenu ${header ? "-is-active" : ""}`}>
-      <div className="col-12">
-        <div className="py-10 bg-dark-2">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <FilterBox2 />
-              </div>
-            </div>
-          </div>
-          {/* End .contaienr */}
-        </div>
-        {/* End Search filter top */}
-
+      <div className="col-12">       
         <div className="singleMenu__content">
           <div className="container">
             <div className="row y-gap-20 justify-between items-center">
@@ -39,13 +27,13 @@ const StickyHeader2 = ({ hotel }) => {
                     <a href="#overview">Overview</a>
                   </div>
                   <div className="col-auto">
-                    <a href="#rooms">Rooms</a>
+                    <a href="#attractions">Attractions</a>
                   </div>
                   <div className="col-auto">
-                    <a href="#reviews">Reviews</a>
+                    <a href="#transport">How to get there</a>
                   </div>
                   <div className="col-auto">
-                    <a href="#facilities">Facilities</a>
+                    <a href="#facilities">Safaris</a>
                   </div>
                   <div className="col-auto">
                     <a href="#faq">Faq</a>
@@ -54,7 +42,7 @@ const StickyHeader2 = ({ hotel }) => {
               </div>
               {/* End .col */}
 
-              <div className="col-auto">
+              {/* <div className="col-auto">
                 <div className="row x-gap-15 y-gap-15 items-center">
                   <div className="col-auto">
                     <div className="text-14">
@@ -73,7 +61,7 @@ const StickyHeader2 = ({ hotel }) => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* End .col */}
             </div>
             {/* End .row */}

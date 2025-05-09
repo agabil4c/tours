@@ -15,6 +15,7 @@ import Counter3 from "../../components/counter/Counter3";
 import WhyChooseUs from "../../components/home/home-5/WhyChooseUs";
 import Testimonial from "../../components/home/home-5/Testimonial";
 import Brand2 from "../../components/brand/Brand2";
+import Image from "../../components/image/image";
 
 const home_5 = () => {
   return (
@@ -212,7 +213,7 @@ const home_5 = () => {
 
       <section className="section-bg layout-pt-lg">
         <div className="section-bg__item col-12">
-          <img src="/img/backgrounds/testimonials/bg.png" alt="image" />
+          <Image src="/img/backgrounds/testimonials/bg.png"  alt="image" />
         </div>
         {/* End bg image */}
 

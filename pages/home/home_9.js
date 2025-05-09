@@ -13,6 +13,7 @@ import AboutIntro from "../../components/home/home-9/AboutIntro";
 import WhyChoose from "../../components/home/home-9/WhyChoose";
 import Cruise3 from "../../components/cruise/Cruise3";
 import SearchBoxContent from "../../components/hero/hero-9/SearchBoxContent";
+import Image from "../../components/image/image";
 
 const home_9 = () => {
   return (
@@ -175,7 +176,7 @@ const home_9 = () => {
 
       <section className="section-bg layout-pt-lg layout-pb-lg bg-light-2">
         <div className="section-bg__item col-12">
-          <img src="/img/backgrounds/11.png" alt="image" />
+          <Image src="/img/backgrounds/11.png"  alt="image" />
         </div>
         {/* End section bg */}
 

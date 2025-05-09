@@ -1,8 +1,13 @@
 @each $name, $color in $colors {
   .bg-#{$name} {
-    background-color: #05103669 !important;
+    background-color: #05103669 #0d2857 !important;
     
   }
+}
+//#05103669
+
+.bg-dark-3 {
+  background-color: #0d2857 !important;
 }
 
 .bg-blue-1-05 {

@@ -22,6 +22,7 @@ import Activity from "../components/activity/Activity";
 import Rentals from "../components/rentals/Rentals";
 import Hotels from "../components/hotels/Hotels2";
 import TopDestinations from "../components/destinations/TopDestinations";
+import Image from "../components/image/image";
 
 const DestinationsUG = () => {
     return (
@@ -103,7 +104,7 @@ const DestinationsUG = () => {
     
                 <div className="col-xl-4">
                     <div className="relative d-flex ml-35 xl:ml-0">
-                    <img
+                    <Image
                         src="/img/pages/destinations/Uganda map.jpg"
                         alt="image"
                         className="col-12 rounded-4"

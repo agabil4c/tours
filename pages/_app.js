@@ -10,12 +10,13 @@ import "aos/dist/aos.css";
 import "../styles/index.scss";
 import { Provider } from "react-redux";
 import { store } from "../app/store";
+import { appWithTranslation } from 'next-i18next';
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   useEffect(() => {
     Aos.init({
       duration: 1200,
@@ -32,3 +33,5 @@ export default function App({ Component, pageProps }) {
     </main>
   );
 }
+
+export default appWithTranslation(App);

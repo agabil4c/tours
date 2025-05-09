@@ -26,6 +26,7 @@ import {
 } from "../../utils/linkActiveChecker";
 import Social from "../common/social/Social";
 import ContactInfo from "./ContactInfo";
+import Image from "../image/image";
 
 const MobileMenu = () => {
   const router = useRouter();
@@ -34,7 +35,7 @@ const MobileMenu = () => {
     <>
       <div className="pro-header d-flex align-items-center justify-between border-bottom-light">
         <Link href="/">
-          <img src="/img/general/riverwide_logo.png" alt="brand" style={{width: '150px'}}/>
+          <Image src="/img/general/riverwide_logo.png"  alt="brand" style={{width: '150px'}} />
         </Link>
         {/* End logo */}
 

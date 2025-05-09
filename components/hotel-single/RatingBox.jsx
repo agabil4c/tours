@@ -1,4 +1,4 @@
-const RatingBox = ({ hotel }) => {
+const RatingBox = ({ place }) => {
   const recommendRatings = [
     {
       id: 1,
@@ -21,12 +21,12 @@ const RatingBox = ({ hotel }) => {
     <div className="px-30 py-30 border-light rounded-4 mt-30">
       <div className="d-flex items-center">
         <div className="size-40 flex-center bg-blue-1 rounded-4">
-          <div className="text-14 fw-600 text-white">{hotel?.ratings}</div>
+          <div className="text-14 fw-600 text-white">{place?.ratings}</div>
         </div>
         <div className="text-14 ml-10">
           <div className="lh-15 fw-500">Exceptional</div>
           <div className="lh-15 text-light-1">
-            {hotel?.numberOfReviews} reviews
+            {place?.numberOfReviews} reviews
           </div>
         </div>
       </div>

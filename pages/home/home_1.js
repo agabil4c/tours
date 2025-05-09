@@ -1,9 +1,11 @@
 import dynamic from "next/dynamic";
+import { useTranslation } from 'next-i18next';
 import AddBanner from "../../components/add-banner/AddBanner";
 import Seo from "../../components/common/Seo";
 import PopularDestinations from "../../components/destinations/PopularDestinations";
 import DefaultFooter from "../../components/footer/default";
 import Header1 from "../../components/header/header-1";
+import TopHeader from "../../components/header/header-9/top-header";
 import Hero1 from "../../components/hero/hero-1";
 import BlockGuide from "../../components/block/BlockGuide";
 import Blog from "../../components/blog/Blog3";
@@ -19,13 +21,18 @@ import Tours2 from "../../components/tours/Tours2";
 import Link from "next/link";
 
 const Home_1 = () => {
+  const { t } = useTranslation('common');
   return (
     <>
       <Seo pageTitle="Riverwide Trekkers Safaris" />
       {/* End Page Title */}
 
+      <TopHeader />
+      {/* End Header top Banner */}
+
       <Header1 />
       {/* End Header 1 */}
+      
 
       <Hero1 />
       {/* End Hero 1 */}
@@ -35,9 +42,9 @@ const Home_1 = () => {
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Popular Destinations</h2>
+                <h2 className="sectionTitle__title">{t('popularDestinations')}</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  We recommend you start your visits here..
+                {t('startVisitsHere')}
                 </p>
               </div>
             </div>
@@ -48,7 +55,8 @@ const Home_1 = () => {
                 href="#"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
-                View All Destinations
+                {t('viewAllDestinations')}
+                
                 <div className="icon-arrow-top-right ml-15" />
               </a>
             </div>
@@ -67,7 +75,7 @@ const Home_1 = () => {
       <section className="layout-pt-sm layout-pb-sm">
         <div className="container">
           <div className="row y-gap-20">
-            <AddBanner />
+            <AddBanner/>
           </div>
         </div>
         {/* End .container */}
@@ -79,9 +87,10 @@ const Home_1 = () => {
           <div className="row y-gap-10 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">Recommended Packages</h2>
+                <h2 className="sectionTitle__title">{t('recommendedPackages')}</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  You can start your tour with these..
+                  {t('startTourHere')}
+                  
                 </p>
               </div>
             </div>
@@ -93,7 +102,8 @@ const Home_1 = () => {
                 href="/tour/tour-list-v2/east africa-safaris"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
-                View All Packages
+                {t('viewAllPackages')}
+                
                 <div className="icon-arrow-top-right ml-15" />
               </Link>
             </div>

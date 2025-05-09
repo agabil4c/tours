@@ -76,7 +76,7 @@ const Tours = () => {
             data-aos-delay={item?.delayAnimation}
           >
             <Link
-              href={`tour/tour-list-v2/east africa-safaris/${item?.title.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/tour/tour-single/east africa-safaris/${item?.title.toLowerCase().replace(/\s+/g, "-")}`}
               className="tourCard -type-1 rounded-4 hover-inside-slider"
             >
               <div className="tourCard__image position-relative">

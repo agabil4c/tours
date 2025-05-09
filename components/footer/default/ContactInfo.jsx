@@ -29,6 +29,7 @@ const ContactInfo = () => {
             {item.text}
           </a>
         </div>
+        
       ))}
     </>
   );

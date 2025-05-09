@@ -72,7 +72,7 @@ const TourProperties = ({ tours }) => {
                   </div>
                 </div>
               </div>
-              <div className="cardImage__leftBadge">
+              {/* <div className="cardImage__leftBadge">
                 <div
                   className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
                     isTextMatched(item?.tag, "likely to sell out*")
@@ -90,16 +90,16 @@ const TourProperties = ({ tours }) => {
                 >
                   {item.tag}
                 </div>
-              </div>
+              </div> */}
             </div>
             {/* End .tourCard__image */}
 
             <div className="tourCard__content mt-2">
               <div className="d-flex items-center lh-14 mb-5">
-                <div className="text-14 text-light-1">
+                {/* <div className="text-14 text-light-1">
                   {item?.duration}+ hours
-                </div>
-                <div className="size-3 bg-light-1 rounded-full ml-10 mr-10" />
+                </div> 
+                <div className="size-3 bg-light-1 rounded-full ml-10 mr-10" />*/}
                 <div className="text-14 text-light-1">{item?.tourType}</div>
               </div>
               <h4 className="tourCard__title text-dark-1 text-18 lh-16 fw-500">

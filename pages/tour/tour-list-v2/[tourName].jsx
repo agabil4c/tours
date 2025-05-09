@@ -1,5 +1,7 @@
 import CallToActions from "../../../components/common/CallToActions";
 import Seo from "../../../components/common/Seo";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import DefaultFooter from "../../../components/footer/default";
 import TopHeaderFilter from "../../../components/tour-list/tour-list-v2/TopHeaderFilter";
 import TourProperties from "../../../components/tour-list/tour-list-v2/TourProperties";
@@ -10,10 +12,10 @@ import Header1 from "../../../components/header/header-11";
 import DefaultHeader from "../../../components/header/default-header";
 
 const Safari = () => {
+  const { t } = useTranslation('common');
   const router = useRouter();
   const { tourName } = router.query;  // Extract the tourName from the URL
   const countryName = tourName ? tourName.split('-')[0] : '';
-  console.log(tourName)
   return (
     <>
       <Seo pageTitle={`${countryName.charAt(0).toUpperCase() + countryName.slice(1)} Safaris`}/>
@@ -87,5 +89,33 @@ const Safari = () => {
     </>
   );
 };
+
+export async function getStaticPaths() {
+  const items = ['uganda-safaris', 'kenya-safaris', 'rwanda-safaris'];
+  const locales = ['en', 'de', 'fr'];
+  const paths = [];
+
+  for (const locale of locales) {
+    for (const item of items) {
+      paths.push({
+        params: { tourName: item },
+        locale,
+      });
+    }
+  }
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+}
 
 export default Safari;

@@ -1,7 +1,9 @@
+import Image from "next/image";
 import AppButton from "./AppButton";
 import ContactInfo from "./ContactInfo";
 import Copyright from "./Copyright";
 import FooterContent from "./FooterContent";
+import Social from "../../common/social/Social";
 
 const index = () => {
   return (
@@ -9,23 +11,26 @@ const index = () => {
       <div className="container">
         <div className="pt-60 pb-60">
           <div className="row y-gap-40 justify-between xl:justify-start">
-            <div className="col-xl-2 col-lg-4 col-sm-6">
-              <h5 className="text-16 fw-500 mb-30">Riverwide Trekkers Safaris</h5>
+            <div className="col-xl-2 col-lg-3 col-sm-6">
               
+              <Image src="/img/general/riverwide_logo.png"  alt="image" />
+              <div className="mt-60">
+                <h5 className="text-16 fw-500 mb-10">
+                  Follow us on social media
+                </h5>
+                <div className="d-flex x-gap-20 items-center">
+                  <Social />
+                </div>
+              </div>
             </div>
             {/* End col */}
 
-            <FooterContent />
-            {/* End footer menu content */}
-
-            {/* <div className="col-xl-2 col-lg-4 col-sm-6">
-              <h5 className="text-16 fw-500 mb-30">Mobile</h5>
-              <AppButton />
-            </div> */}
-            <div className="col-xl-2 col-lg-4 col-sm-6">
+            <div className="col-xl-2 col-lg-3 col-sm-6">
               <h5 className="text-16 fw-500 mb-30">Contact Us</h5>
               <ContactInfo />
             </div>
+
+            <FooterContent />
           </div>
         </div>
         {/* End footer top */}

@@ -1,24 +1,35 @@
+import Image from "next/image";
+import { useTranslation } from 'next-i18next';
+
 const BlockGuide = () => {
+  const { t } = useTranslation('common');
   const blockContent = [
     {
       id: 1,
       icon: "/img/featureIcons/1/2.svg ",
-      title: "Wide range of safaris",
-      text: `Choose from a variety of tailor-made safari packages.`,
+      title: "sustainability",
+      text: "sustainability_desc",
       delayAnim: "100",
     },
     {
       id: 2,
       icon: "/img/featureIcons/1/3.svg",
-      title: "Experienced safari guides",
-      text: `Our guides offer precise and excellence memorable service.`,
+      title: "communityEmpowerment",
+      text: "communityEmpowerment_desc",
       delayAnim: "200",
     },
     {
       id: 3,
       icon: "/img/featureIcons/1/1.svg",
-      title: "Safety and responsible tourism practices",
-      text: `Your safety is our priority as you enjoy your adventures.`,
+      title: "excellence",
+      text: "excellence_desc",
+      delayAnim: "300",
+    },
+    {
+      id: 4,
+      icon: "/img/featureIcons/1/1.svg",
+      title: "responsibility",
+      text: "responsibility_desc",
       delayAnim: "300",
     },
   ];
@@ -33,11 +44,11 @@ const BlockGuide = () => {
         >
           <div className="featureIcon -type-1 ">
             <div className="d-flex justify-center">
-              <img src={item.icon} alt="image" className="js-lazy" />
+              <Image src={item.icon} alt="image" className="js-lazy" />
             </div>
             <div className="text-center mt-30">
-              <h4 className="text-18 fw-500">{item.title}</h4>
-              <p className="text-15 mt-10">{item.text}</p>
+              <h4 className="text-18 fw-500">{t(item.title)}</h4>
+              <p className="text-15 mt-10">{t(item.text)}</p>
             </div>
           </div>
         </div>

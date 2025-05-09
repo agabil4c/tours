@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 
 import {
   homeItems,
@@ -19,58 +20,23 @@ import { useRouter } from "next/router";
 
 const MainMenu = ({ style = "" }) => {
   const router = useRouter();
+  const { t } = useTranslation('common');
 
   return (
     <nav className="menu js-navList">
       <ul className={`menu__nav ${style} -is-active`}>
-        {/* <li
-          className={`${
-            isActiveParentChaild(homeItems, router.asPath) ? "current" : ""
-          } menu-item-has-children`}
-        >
-          <a href="#">
-            <span className="mr-10">Home</span>
-            <i className="icon icon-chevron-sm-down" />
-          </a>
-          <ul className="subnav">
-            {homeItems.map((menu, i) => (
-              <li
-                key={i}
-                className={
-                  isActiveLink(menu.routePath, router.asPath) ? "current" : ""
-                }
-              >
-                <Link href={menu.routePath}>{menu.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </li> */}
+        
         <li className={router.pathname === "/" ? "current" : ""}>
-          <Link href="/">Home</Link>
+          <Link href="/">{t('home')}</Link>
         </li>
-        {/* End home page menu */}
-
-        {/* <li className="menu-item-has-children -has-mega-menu">
-          <a href="#">
-            <span className="mr-10">Categories</span>
-            <i className="icon icon-chevron-sm-down" />
-          </a>
-          <div className="mega">
-            <CategoriesMegaMenu />
-          </div>
-        </li> */}
-        {/* End categories menu items */}
-
-        {/* <li className={router.pathname === "/destinations" ? "current" : ""}>
-          <Link href="/destinations">Destinations</Link>
-        </li> */}
+        
         <li
           className={`${
             isActiveParentChaild(destinationsItems, router.asPath) ? "current" : ""
           } menu-item-has-children`}
         >
           <a href="#">
-            <span className="mr-10">Destinations</span>
+            <span className="mr-10">{t('destinations')}</span>
             <i className="icon icon-chevron-sm-down" />
           </a>
           <ul className="subnav">
@@ -86,78 +52,7 @@ const MainMenu = ({ style = "" }) => {
             ))}
           </ul>
         </li>
-        {/* End Destinatinos single menu */}
-
-        {/* <li
-          className={`${
-            isActiveParentChaild(blogItems, router.asPath) ? "current" : ""
-          } menu-item-has-children`}
-        >
-          <a href="#">
-            <span className="mr-10">Blog</span>
-            <i className="icon icon-chevron-sm-down" />
-          </a>
-          <ul className="subnav">
-            {blogItems.map((menu, i) => (
-              <li
-                key={i}
-                className={
-                  isActiveLink(menu.routePath, router.asPath) ? "current" : ""
-                }
-              >
-                <Link href={menu.routePath}>{menu.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </li> */}
-        {/* End blogIems */}
-
-        {/* <li
-          className={`${
-            isActiveParentChaild(pageItems, router.asPath) ? "current" : ""
-          } menu-item-has-children`}
-        >
-          <a href="#">
-            <span className="mr-10">Pages</span>
-            <i className="icon icon-chevron-sm-down" />
-          </a>
-          <ul className="subnav">
-            {pageItems.map((menu, i) => (
-              <li
-                key={i}
-                className={
-                  isActiveLink(menu.routePath, router.asPath) ? "current" : ""
-                }
-              >
-                <Link href={menu.routePath}>{menu.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </li> */}
-        {/* End pages items */}
-
-        {/* <li
-          className={`${
-            isActiveParentChaild(dashboardItems, router.asPath) ? "current" : ""
-          } menu-item-has-children`}
-        >
-          <a href="#">
-            <span className="mr-10">Dashboard</span>
-            <i className="icon icon-chevron-sm-down" />
-          </a>
-          <ul className="subnav ">
-            {dashboardItems.map((menu, i) => (
-              <li
-                key={i}
-                className={
-                  isActiveLink(menu.routePath, router.asPath) ? "current" : ""
-                }
-              >
-                <Link href={menu.routePath}>{menu.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </li> */}
+        
         
         <li
           className={`${
@@ -165,7 +60,7 @@ const MainMenu = ({ style = "" }) => {
           } menu-item-has-children`}
         >
           <a href="#">
-            <span className="mr-10">Safaris</span>
+            <span className="mr-10">{t('safaris')}</span>
             <i className="icon icon-chevron-sm-down" />
           </a>
           <ul className="subnav">
@@ -181,33 +76,12 @@ const MainMenu = ({ style = "" }) => {
             ))}
           </ul>
         </li>
-        {/* <li
-          className={`${
-            isActiveParentChaild(activityItems, router.asPath) ? "current" : ""
-          } menu-item-has-children`}
-        >
-          <a href="#">
-            <span className="mr-10">Activities</span>
-            <i className="icon icon-chevron-sm-down" />
-          </a>
-          <ul className="subnav">
-            {activityItems.map((menu, i) => (
-              <li
-                key={i}
-                className={
-                  isActiveLink(menu.routePath, router.asPath) ? "current" : ""
-                }
-              >
-                <Link href={menu.routePath}>{menu.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </li> */}
+        
         <li className={router.pathname === "/others-pages/about" ? "current" : ""}>
-          <Link href="/others-pages/about">About Us</Link>
+          <Link href="/others-pages/about">{t('aboutUs')}</Link>
         </li>
         <li className={router.pathname === "/contact" ? "current" : ""}>
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact">{t('contact')}</Link>
         </li>
       </ul>
     </nav>

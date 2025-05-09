@@ -1,10 +1,11 @@
+import Image from "../../image/image";
 import MainFilterSearchBox from "./MainFilterSearchBox";
 
 const index = () => {
   return (
     <section className="masthead -type-6">
       <div className="masthead__bg bg-dark-3">
-        <img alt="image" src="/img/masthead/6/bg.png" className="js-lazy" />
+        <Image src="/img/masthead/6/bg.png" alt="image"  className="js-lazy" />
       </div>
 
       <div className="container">

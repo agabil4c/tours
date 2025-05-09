@@ -18,7 +18,6 @@ import DetailsReview2 from "../../../components/hotel-single/guest-reviews/Detai
 import ReplyForm from "../../../components/hotel-single/ReplyForm";
 import ReplyFormReview2 from "../../../components/hotel-single/ReplyFormReview2";
 import Facilities from "../../../components/hotel-single/Facilities";
-import Image from "next/image";
 import Surroundings from "../../../components/hotel-single/Surroundings";
 import HelpfulFacts from "../../../components/hotel-single/HelpfulFacts";
 import Faq from "../../../components/faq/Faq";
@@ -29,6 +28,7 @@ import FilterBox2 from "../../../components/hotel-single/filter-box-2";
 import StickyHeader2 from "../../../components/hotel-single/StickyHeader2";
 import RatingBox from "../../../components/hotel-single/RatingBox";
 import PropertyHighlights2 from "../../../components/hotel-single/PropertyHighlights2";
+import Image from "../../../components/image/image";
 
 const HotelSingleV2Dynamic = () => {
   const [isOpen, setOpen] = useState(false);
@@ -94,7 +94,7 @@ const HotelSingleV2Dynamic = () => {
                       height={660}
                     >
                       {({ ref, open }) => (
-                        <img
+                        <Image
                           src={hotel?.img}
                           ref={ref}
                           onClick={open}
@@ -120,7 +120,7 @@ const HotelSingleV2Dynamic = () => {
                       height={375}
                     >
                       {({ ref, open }) => (
-                        <img
+                        <Image
                           ref={ref}
                           onClick={open}
                           src="/img/gallery/1/2.png"
@@ -141,7 +141,7 @@ const HotelSingleV2Dynamic = () => {
                       height={375}
                     >
                       {({ ref, open }) => (
-                        <img
+                        <Image
                           ref={ref}
                           onClick={open}
                           src="/img/gallery/1/3.png"
@@ -155,7 +155,7 @@ const HotelSingleV2Dynamic = () => {
                   {/* End .galleryGrid__item */}
 
                   <div className="galleryGrid__item relative d-flex justify-end items-end">
-                    <img
+                    <Image
                       src="/img/gallery/1/4.png"
                       alt="image"
                       className="rounded-4"

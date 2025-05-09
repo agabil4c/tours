@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs, Mousewheel } from "swiper";
 import { useState } from "react";
+import Image from "../image/image";
 
 const slides = [
   "/img/cars/slides/1.png",
@@ -36,7 +37,7 @@ export default function SlideGallery() {
                 return (
                   <SwiperSlide key={index}>
                     <div className="slider__image">
-                      <img src={slide} alt="" />
+                      <Image src={slide} alt="" />
                     </div>
                   </SwiperSlide>
                 );
@@ -67,7 +68,7 @@ export default function SlideGallery() {
               return (
                 <SwiperSlide key={index}>
                   <div className="slider__image">
-                    <img src={slide} alt="" />
+                    <Image src={slide} alt="" />
                   </div>
                 </SwiperSlide>
               );
