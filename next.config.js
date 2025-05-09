@@ -5,9 +5,9 @@ const { i18n } = require('./next-i18next.config');
 const nextConfig = {
   //output: 'export',
   reactStrictMode: false,
-  images: {
-    unoptimized: true,
-  },
+  // images: {
+  //   unoptimized: true,
+  // },
   i18n
 };
 
