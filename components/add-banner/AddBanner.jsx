@@ -47,7 +47,7 @@ const AddBanner = () => {
       delayAnimation: "300",
     },
     {
-      id: 3,
+      id: 4,
       img: "/img/destinations/3/kenya/tz.jpg",
       title: "Visit Tanzania",
       meta: "Enjoy Summer Deals",
@@ -120,7 +120,7 @@ const AddBanner = () => {
                     >
                       See more
                     </Link> */}
-                    <a class="button h-50 px-24 -dark-1 bg-blue-1 text-white" href={item.routerPath}>{t('seeMore')} <div class="icon-arrow-top-right ml-15"></div></a>
+                    <a className="button h-50 px-24 -dark-1 bg-blue-1 text-white" href={item.routerPath}>{t('seeMore')} <div className="icon-arrow-top-right ml-15"></div></a>
                   </div>
                 </div>
               </div>

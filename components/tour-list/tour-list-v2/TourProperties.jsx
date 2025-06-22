@@ -34,7 +34,7 @@ const TourProperties = ({ tours }) => {
 
   return (
     <>
-      {tourData && tourData?.slice(0, 9).map((item) => (
+      {tourData && tourData.map((item) => (
         <div
           className="col-lg-3 col-sm-6"
           key={item?.id}
@@ -45,7 +45,7 @@ const TourProperties = ({ tours }) => {
             href={`/tour/tour-single/${tours?.toLowerCase()}/${item?.title?.toLowerCase().replace(/\s+/g, "-")}`}
             className="tourCard -type-1 rounded-4 position-relative"
           >
-            <div className="tourCard__image">
+            {/* <div className="tourCard__image">
               <div className="cardImage ratio ratio-1:1">
                 <div className="cardImage__content">
                   <div className="cardImage-slider rounded-4 overflow-hidden custom_inside-slider">
@@ -72,29 +72,35 @@ const TourProperties = ({ tours }) => {
                   </div>
                 </div>
               </div>
-              {/* <div className="cardImage__leftBadge">
-                <div
-                  className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
-                    isTextMatched(item?.tag, "likely to sell out*")
-                      ? "bg-dark-1 text-white"
-                      : ""
-                  } ${
-                    isTextMatched(item?.tag, "best seller")
-                      ? "bg-blue-1 text-white"
-                      : ""
-                  }  ${
-                    isTextMatched(item?.tag, "top rated")
-                      ? "bg-yellow-1 text-dark-1"
-                      : ""
-                  }`}
-                >
-                  {item.tag}
+              
+            </div> */}
+            <div className="tourCard__image position-relative">
+                <div className="inside-slider">
+                  <Swiper
+                      className="mySwiper"
+                      modules={[Pagination, Navigation]}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      navigation={true}
+                    >
+                      {item?.slideImg?.map((slide, i) => (
+                        <SwiperSlide key={i}>
+                          <Image
+                            width={300}
+                            height={300}
+                            className="rounded-4 col-12 js-lazy"
+                            src={slide}
+                            alt="image"
+                          />
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
                 </div>
-              </div> */}
             </div>
             {/* End .tourCard__image */}
 
-            <div className="tourCard__content mt-2">
+            <div className="tourCard__content mt-10">
               <div className="d-flex items-center lh-14 mb-5">
                 {/* <div className="text-14 text-light-1">
                   {item?.duration}+ hours

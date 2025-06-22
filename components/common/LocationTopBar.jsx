@@ -21,16 +21,16 @@ const LocationTopBar = ({ destination }) => {
                 <div>&gt;</div>
               </div>
               <div className="col-auto">
-                <div className="text-dark-1">{destination &&
-          `${destination}`}</div>
+                <div className="text-dark-1">{destination ?
+          `${destination}`:"Uganda"}</div>
               </div>
             </div>
           </div>
           <div className="col-auto">
             <a href="#" className="text-14 text-light-1">
             {destination &&
-          `${destination}`} Tourism: Best of {destination &&
-            `${destination}`}
+          `${destination}`} Tourism: Best of {destination ?
+          `${destination}`:"Uganda"}
             </a>
           </div>
         </div>

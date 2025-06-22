@@ -3,10 +3,6 @@ import { useState } from "react";
 const CallToActions = () => {
   const [email, setEmail] = useState('');
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
   const handleSubscribe = async () => {
     if (!email) {
       alert('Please enter a valid email address.');
@@ -62,6 +58,9 @@ const CallToActions = () => {
                   className="bg-white h-60"
                   type="text"
                   placeholder="Your Email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               {/* End email input */}

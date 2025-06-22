@@ -6,7 +6,7 @@ const BlockGuide = () => {
   const blockContent = [
     {
       id: 1,
-      icon: "/img/featureIcons/1/2.svg ",
+      icon: "/img/featureIcons/1/2.svg",
       title: "sustainability",
       text: "sustainability_desc",
       delayAnim: "100",
@@ -44,7 +44,7 @@ const BlockGuide = () => {
         >
           <div className="featureIcon -type-1 ">
             <div className="d-flex justify-center">
-              <Image src={item.icon} alt="image" className="js-lazy" />
+              <Image src={item.icon} width="50" height="50" alt="image" className="js-lazy" />
             </div>
             <div className="text-center mt-30">
               <h4 className="text-18 fw-500">{t(item.title)}</h4>

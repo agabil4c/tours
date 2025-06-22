@@ -35,7 +35,7 @@ const BlockGuide = () => {
         >
           <div className="d-flex pr-30">
             <div className="d-flex justify-center">
-              <Image src={item.icon} alt="image" className="size-50" />
+              <Image src={item.icon} width="50" height="50" alt="image" className="size-50" />
             </div>
             <div className="ml-15">
               <h4 className="text-18 fw-500">{item.title}</h4>

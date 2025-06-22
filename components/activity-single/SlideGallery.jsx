@@ -44,7 +44,8 @@ const SlideGallery = () => {
           {sliderImg.map((img, i) => (
             <SwiperSlide key={i}>
               <div className="ratio ratio-64:45">
-                <Image src={img} alt="image" className="rounded-4 img-ratio" />
+                <Image src={img} width={60}
+              height={60} alt="image" className="rounded-4 img-ratio" />
               </div>
             </SwiperSlide>
           ))}

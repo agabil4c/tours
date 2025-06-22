@@ -114,6 +114,8 @@ const HotelSingleV1Dynamic = ({ place }) => {
                           alt="image"
                           role="button"
                           className="rounded-4"
+                          width={660}
+                          height={660}
                         />
                       )}
                     </Item>
@@ -135,6 +137,8 @@ const HotelSingleV1Dynamic = ({ place }) => {
                             src={img}
                             alt={`image ${index + 1}`}
                             className="rounded-4"
+                            width={450}
+                            height={375}
                             role="button"
                           />
                         )}
@@ -148,6 +152,8 @@ const HotelSingleV1Dynamic = ({ place }) => {
                         src={place.slideImg[2]}
                         alt="image 3"
                         className="rounded-4"
+                        width={362}
+                        height={302}
                       />
                       <div className="absolute px-10 py-10 col-12 h-full d-flex justify-end items-end">
                         <Item
@@ -161,6 +167,8 @@ const HotelSingleV1Dynamic = ({ place }) => {
                               ref={ref}
                               onClick={open}
                               src={place.slideImg[2]}
+                              width={362}
+                              height={302}
                               //alt={`image ${index + 1}`}
                               className="rounded-4"
                               role="button"

@@ -30,8 +30,8 @@ const Header1 = () => {
             <div className="col-auto">
               <div className="d-flex items-center">
                 <Link href="/" className="header-logo mr-50" >
-                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" style={{width: '250px'}}/>
-                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" />
+                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" width={250} height={300}/>
+                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" width={250} height={300}/>
                 </Link>
                 {/* End logo */}
               </div>

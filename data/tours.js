@@ -1267,7 +1267,768 @@ export const ugandaSafaris = [
 
     ]
   },
-  
+  {
+    id: 9,
+    tag: "",
+    slideImg: ["/img/tours/mgahinga.avif"],
+    title: "4-Day Gorilla Tracking Safari Itinerary",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "",
+    itinerary: [
+      {
+        title: "Day 1: Transfer from Kampala to Kisoro via Masaka & Kayabwe",
+        desc: "Depart Kampala early morning. Drive southwest through Masaka, with a brief stop at the Equator in Kayabwe for photos and a quick stretch.Continue to Igongo Cultural Centre (Mbarara) for lunch—enjoy a mix of traditional and modern Ugandan cuisine. Proceed through the lush countryside and terraced hills of Kisoro District, arriving in the evening. Check in at your lodge in Kisoro, have dinner, and rest.Overnight: Lodge in Kisoro Meals: Lunch & Dinner"
+      },
+      {
+        title: "Day 2: Gorilla Tracking in Mgahinga & Transfer to Lake Mutanda",
+        desc: "Early morning coffee/tea at your lodge. <br/> Depart with packed breakfast for Mgahinga Gorilla National Park. Register at the Park Reception Centre, followed by a comprehensive pre-tracking briefing by Uganda Wildlife Authority (UWA) rangers. <br/><br/>🦍 Gorilla Tracking Experience <br/> Begin your trek into the virgin montane forests of Mgahinga, home to the Nyakagezi gorilla family. Trek duration can range from 2 to 6 hours, depending on gorilla location and terrain. Once located, you’ll spend 1 magical hour with the gorillas—observing their behavior, interactions, and social structure. After the trek, return to Kisoro, then transfer to Lake Mutanda.<br/><br/> 🌿 Lake Mutanda Experience <br/>Check in at Mutanda Lake Resort, nestled between volcanoes with panoramic views of the Virunga range. Optional boat ride on the serene lake, surrounded by islands and misty peaks—perfect for birdwatching or photography. Relax and unwind with a lakeside dinner.<br/><br/>Overnight: Mutanda Lake Resort<br/> Meals: Breakfast, Lunch & Dinner"
+      },
+      {
+        title: "Day 3: Transfer to Lake Mburo National Park for Night Game Drive",
+        desc: "After breakfast, depart for Lake Mburo National Park. <br/>Lunch: At Igongo cultural center <br/> Arrive and check in at your lodge. In the evening, head out for a night game drive—a rare chance to spot nocturnal wildlife. Track the elusive leopard, bush babies, and hyenas under expert guidance. Overnight and dinner: At the lodgeL in or near Lake Mburo."
+      },
+      {
+        title: "Day 4: Transfer Back to Kampala",
+        desc: "Enjoy a relaxed breakfast and start your journey back to Kampala. Stop at selected points for refreshments or local crafts along the way. Drop-off in Kampala in the afternoon/evening."
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "A gorilla tracking permit.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 10,
+    tag: "",
+    slideImg: ["/img/tours/ziwa.jpg"],
+    title: "3-Day Murchison Falls Safari",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "",
+    itinerary: [
+      {
+        title: "Day 1: Kampala – Ziwa Rhino Sanctuary – Murchison Falls National Park",
+        desc: "Early morning: Depart Kampala by 6:00 AM. Breakfast stop: Nakasongola town. Mid-morning: Arrive at Ziwa Rhino Sanctuary for rhino tracking on foot with a guide (approx. 2 hours). Lunch: At the sanctuary or en route. Afternoon: Continue to Murchison Falls National Park. Visit: Top of the Falls — experience the thunderous power of the Nile as it squeezes through a 7-meter gorge. Evening: Transfer to your lodge, check-in, relax.Dinner & overnight: At the lodge inside or near the park."
+      },
+      {
+        title: "Day 2: Game Drive & Boat Safari on the Nile",
+        desc: "Early morning: Depart for a game drive in the northern sector of the park (Paara area) with packed breakfast. Wildlife sightings may include: Lions, leopards, elephants, giraffes, buffalos, hartebeests, oribis, hyenas, and warthogs. Lunch: Return to lodge for lunch at around 1:00 PM. Afternoon: Enjoy a boat cruise on the Nile to the base of the falls. Highlights include: Nile crocodiles, hippos, elephants along the banks. Bird species: African fish eagle, pied kingfisher, bee-eaters, saddle-billed stork, and the rare shoebill (if lucky). Evening: Return to the lodge. Dinner & overnight: At the lodge."
+      },
+      {
+        title: "Day 3: Return to Kampala via the Park",
+        desc: "Morning: Breakfast at the lodge. Scenic drive through the park for a final glimpse of wildlife. Optional: Stop at local craft markets en route. Lunch: On the way. Afternoon: Arrive in Kampala by late afternoon/evening."
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+     
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 11,
+    tag: "",
+    slideImg: ["/img/tours/queen elizabeth.jpg"],
+    title: "3 Days Queen Elizabeth N.P Safari",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "",
+    itinerary: [
+      {
+        title: "Day 1: Kampala – Queen Elizabeth National Park (via Masaka – Mbarara – Bushenyi)",
+        desc: "Early Morning Departure <br/> Begin your journey from Kampala at dawn to make the most of your day. Drive through Masaka and stop at the Equator crossing in Kayabwe for a photo moment and quick refreshments. Enjoy some coffee and witness a water experiment demonstrating the Coriolis effect. <br/> Lunch Stop – Igongo Cultural Centre (Mbarara)<br/> Stop for a delicious local buffet lunch at Igongo Cultural Centre, an ideal place to stretch, refuel, and get a glimpse of Ankole culture. <br/> Scenic Drive to the Park<br/> Continue through Bushenyi, descending into the rift valley with views of tea estates, crater lakes, and lush savannah as you approach Queen Elizabeth National Park. <br/> Arrival & Check-in at the Lodge<br/> Arrive at your lodge. Unwind, enjoy the sunset over the plains, and prepare for the next day’s adventure. <br/> Dinner & Overnight<br/> Enjoy dinner at the lodge. Sleep to the sounds of the African wild."
+      },
+      {
+        title: "Day 2: Game Drives, Boat Cruise, and Kyambura Gorge Visit",
+        desc: "Early Morning Game Drive (Kasenyi Plains)<br/>After a warm cup of coffee or tea and parked breakfast head out on a sunrise game drive through the Kasenyi plains, known for large herds of Ugandan kob, buffaloes, elephants, and frequent sightings of lions. Look out for warthogs, hyenas, and if lucky, leopards in the trees. <br/> Afternoon Boat Cruise on Kazinga Channel<br/> After lunch, embark on a 2-hour boat safari along the famous Kazinga Channel, which links Lake Edward and Lake George. This cruise offers some of the best wildlife viewing in East Africa, featuring: <br/>Huge pods of hippos<br/> Nile crocodiles basking on the banks<br/> Herds of elephants and buffaloes drinking and cooling off<br/> Numerous bird species including African fish eagles, kingfishers, pelicans, and cormorants <br/> Evening Game Drive – Channel Track<br/> After the cruise, enjoy a short evening game drive along the Channel Track, where you may encounter animals heading to the water before nightfall. Ideal for golden hour photography. <br/> Visit to Kyambura Gorge (if time allows)<br/> Take a quick detour to Kyambura Gorge, also known as the “Valley of Apes.” It’s a dramatic landscape home to a small community of chimpanzees, and offers a contrasting view of the lush forest within the vast savannah. <br/> Dinner & Overnight at the Lodge<br/> Return to the lodge for dinner and a relaxed evening."
+      },
+      {
+        title: "Day 3: Queen Elizabeth – Kampala",
+        desc: "Breakfast & Scenic Transfer Back to Kampala <br/>After breakfast, check out and begin your journey back to Kampala, enjoying scenic views of the rift valley, crater lakes, and rural Uganda along the way. Optional stopovers for crafts or local snacks en route. Estimated Arrival<br/> Arrive in Kampala in the late afternoon or early evening, depending on stopovers and traffic.<br/><br/> Optional Add-Ons<br/> Chimpanzee tracking in Kyambura Gorge (requires advance booking)<br/> Crater Lake exploration<br/> Birdwatching walks (Queen Elizabeth NP has over 600 bird species!)"
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 12,
+    tag: "",
+    slideImg: ["/img/tours/ziwa.jpg"],
+    title: "2-Day Rhino Adventure at Ziwa Rhino Sanctuary",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Experience the majesty of Uganda’s southern white rhinos in their natural habitat",
+    itinerary: [
+      {
+        title: "Day 1: Kampala – Nakasongola – Ziwa Rhino Sanctuary",
+        desc: "Depart Kampala and enjoy a scenic drive through the heart of Uganda, passing verdant countryside and rural landscapes. Stop over in Nakasongola town for a hearty Ugandan breakfast, a perfect start to the adventure. Arrive at Ziwa Rhino Sanctuary as the rhinos begin their day. Be welcomed by the incredible sight of rhinos feeding near the reception area—an awe-inspiring first encounter. Join a guided rhino tracking experience with expert rangers. Walk through the bush and observe these magnificent creatures up close in their natural habitat, while learning about the sanctuary’s critical conservation work. After tracking, enjoy a delicious lunch at the Ziwa Sanctuary Restaurant, surrounded by nature and fresh air. Check in at the lodge inside the sanctuary. Spend the afternoon relaxing, swimming, or simply soaking in the peaceful ambiance of the wild. As evening falls, dinner is served at the lodge restaurant. Dine under the stars with the distant calls of the bush adding to the magical atmosphere. Overnight at Ziwa Rhino Sanctuary Lodge."
+      },
+      {
+        title: "Day 2: Breakfast with Rhinos – Return to Kampala",
+        desc: "Wake up to the calming sounds of the sanctuary—rustling trees, birdsong, and perhaps even a rhino nearby. Enjoy breakfast with a view of the rhino territory. It’s a rare and unforgettable way to start the day. After breakfast, there’s time for a short nature walk or birdwatching for those who wish to explore more of the sanctuary’s biodiversity. Later, begin the return journey to Kampala, leaving with cherished memories of your up-close encounter with Uganda’s iconic rhinos."
+      },
+      
+    ],
+    inclusions: [
+      "Rhino tracking experience with expert guides",
+      "1 night full-board accommodation at Ziwa Rhino Sanctuary Lodge",
+      "All meals as specified",
+      "Transfers in a private, comfortable vehicle"
+
+
+    ],
+    exclusions: [
+      "Personal expenses",
+      "Tips and gratuities",
+      "Alcoholic beverages"
+    ]
+  },
+  {
+    id: 13,
+    tag: "",
+    slideImg: ["/img/tours/kibale.jpg"],
+    title: "3-Day Deluxe Chimpanzee Tracking Safari – Kibale Forest National Park",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Experience the thrill of tracking wild chimpanzees in the lush rainforests of Kibale National Park — home to one of the highest primate densities in Africa. This deluxe safari blends luxury, nature, and cultural immersion with gourmet meals, stylish accommodations, and expert-guided excursions.",
+    itinerary: [
+      {
+        title: "Day 1: Arrival & Scenic Transfer to Kibale via Fort Portal",
+        desc: "Morning: Depart Kampala in a comfortable 4x4 luxury Land Cruiser with your professional driver-guide. Enjoy scenic views of Uganda’s countryside, tea plantations, and rolling hills en route to the Fort Portal region (approx. 5–6 hours drive). <br/> Lunch Stop: <br/> Indulge in a gourmet lunch at The Gardens Restaurant in Fort Portal — a tranquil setting known for its botanical surroundings and fresh local cuisine. <br/> Afternoon: <br/> Continue the drive to your exclusive forest lodge near Kibale National Park. Check in and relax in your well-appointed cottage with views of the forest canopy. <br/> Evening: <br/> Enjoy sundowners around the fire followed by a 3-course candle-lit dinner at the lodge’s restaurant featuring organic ingredients and local flavors. <br/> Overnight: Luxury Eco-Lodge near Kibale <br/> Meal Plan: Lunch & Dinner"
+      },
+      {
+        title: "Day 2: Chimpanzee Tracking & Bigodi Wetland Walk",
+        desc: "Early Morning: Wake up to birdsong and forest sounds. After a hearty breakfast, transfer to the Kibale National Park Visitor Information Centre for a short briefing. <br/>Chimpanzee Tracking Experience:<br/>Venture into the tropical forest with expert trackers to find chimpanzees in their natural habitat. Watch them as they groom, forage, call, and swing through the treetops. Chimpanzees share about 98.7% of human DNA, making them our closest living relatives. Kibale Forest is home to over 1,500 chimpanzees, as well as 12 other primate species, including red colobus and L’Hoest’s monkeys. Late Morning: After 2–4 hours of tracking (depending on location), return to the lodge to unwind and enjoy a freshly prepared lunch. <br/>Afternoon Excursion: Bigodi Wetland Sanctuary & Crater Lakes Take a guided nature walk through the Bigodi Wetland Sanctuary, a community-run eco-project known for its rich biodiversity. Spot monkeys, rare bird species like the Great Blue Turaco, and learn about medicinal plants. Afterward, visit the nearby crater lakes, formed by ancient volcanic activity. Enjoy panoramic views and photo stops at serene lake viewpoints. <br/> Evening:<br/> Return to the lodge for relaxation, followed by a gourmet dinner under the stars. <br/> Overnight: Luxury Eco-Lodge near Kibale <br/> Meal Plan: Breakfast, Lunch & Dinner"
+      },
+      {
+        title: "Day 3: Leisurely Return to Kampala",
+        desc: "Morning: After a relaxed breakfast, check out and begin your scenic drive back to Kampala. Optional brief stops along the way for local crafts or tea plantation views. <br/> Afternoon:<br/> Arrive in Kampala in the late afternoon or early evening. Drop-off at your hotel or Entebbe International Airport for onward travel. <br/> Meal Plan: Breakfast & Lunch en route"
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "A chimpanzee tracking permit.",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 14,
+    tag: "",
+    slideImg: ["/img/tours/mburo.jpeg"],
+    title: "2 Days Lake Mburo Safari",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "A two-day safari to Lake Mburo National Park offers a compact yet enriching wildlife experience, ideal for travelers based in Kampala or Entebbe. The park is renowned for its diverse fauna, including zebras, impalas, elands, buffaloes, hippos, crocodiles, and over 300 bird species.",
+    itinerary: [
+      {
+        title: "Day 1: Departure from Kampala – Arrival at Lake Mburo",
+        desc: "Morning: Depart Kampala after breakfast, heading southwest via Masaka and Lyantonde. En route, stop at the Equator in Kayabwe for photos. <br/>Midday: Arrive at Lake Mburo National Park around midday. Check into your lodge and enjoy lunch. <br/> Afternoon: Embark on a boat cruise on Lake Mburo. Expect sightings of hippos, crocodiles, and a variety of bird species such as the African fish eagles and kingfishers. <br/> Evening: night game drive where we get a change to track the leopards. Get back to the lodge. Have dinner and overnight stay."
+      },
+      {
+        title: "Day 2: Game Drive – Return to Kampala",
+        desc: "Morning: Wake to a relaxing morning. Have breakfast, then we set out for Kampala through the park's savannah landscapes. Look out for zebras, impalas, elands, buffaloes different bird species. <br/> Afternoon: Arrive in Kampala."
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 15,
+    tag: "",
+    slideImg: ["/img/destinations/3/uganda/jinja-2.jpg"],
+    title: "Jinja Day Trip: Adventure to the Source of the Nile",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "",
+    itinerary: [
+      {
+        title: "",
+        desc: `🚐 Departure: 6:30 AM – Kampala to Jinja<br/> Kick off the day with an early morning drive from Kampala to Jinja — Uganda’s ultimate playground! Watch the sunrise as we cruise past sugarcane fields, rolling hills, and charming roadside markets. <br/><br/>☕ 8:00 AM – Breakfast at Java House, Jinja<br/> Once in Jinja, we’ll stop for a leisurely breakfast at Java House. Whether you're in the mood for a stacked pancake plate, eggs your way, or a full breakfast spread, you’ll find it here — all paired with smooth, aromatic coffee that’s a perfect wake-up call. <br/><br/> 🌊 9:30 AM – Visit Busowoko Falls<br/> Experience the raw beauty of Busowoko Falls, a breathtaking spot along the Nile. With its rushing rapids, lush surroundings, and peaceful atmosphere, it’s ideal for photo ops, light hikes, or simply enjoying nature's soundtrack. <br/><br/> 🎯 Optional Activities (Choose Your Adventure!)<br/> From 11:00 AM onwards, pick your thrill: <br/><br/> 🚤 Boat Ride to the Source of the Nile<br/> Glide gently over the Nile to its mythical source. Watch for fish eagles, kingfishers, cormorants, and playful otters as your guide shares stories of this legendary river. <br/><br/>🌊 White Water Rafting<br/> Get your heart pumping with world-class rafting on Grade 3 to 5 rapids. It’s wet, wild, and unforgettable. <br/><br/> 🛟 Tubing on the Nile<br/> Prefer a slower splash? Float gently on an inner tube as the river carries you downstream — pure bliss with a side of laughter. <br/><br/> 🏍️ Quad Biking<br/> Ride off the beaten path through rural trails, sugarcane fields, and muddy tracks. Dusty, thrilling, and highly photogenic. <br/><br/> 🙃 Bungee Jumping<br/> For the ultimate adrenaline rush, take the plunge off the Nile High Bungee platform — and bounce back with a brag-worthy story! <br/> Note: Activities can be pre-booked or coordinated on-site depending on group preferences and time. <br/><br/> 🍽️ 1:30 PM – Lunch at Jinja Sailing Club<br/> After your adventure (or before, depending on activity timing), unwind with a lakeside lunch at the serene Jinja Sailing Club. Enjoy fresh tilapia, burgers, or grilled meats with panoramic lake views and a cool breeze. <br/><br/> 🌇 4:30 PM – Depart for Kampala<br/> With your heart full and your camera roll packed, we’ll begin our drive back to Kampala — tired, happy, and already planning the next trip. <br/><br/> 🎉 ETA: 7:00 PM – Arrive in Kampala<br/> Home sweet home after an unforgettable day on and around the Nile.`
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 16,
+    tag: "",
+    slideImg: ["/img/tours/Sipi-Falls.jpg"],
+    title: "3-Day Sipi Falls Getaway",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Hike to all 3 waterfalls with a local guide. <br/> Explore the origin of Uganda’s finest Arabica coffee. <br/> Enjoy personalized cultural experiences in Eastern Uganda. <br/> Balanced mix of nature, culture, and relaxation.",
+    itinerary: [
+      {
+        title: "Day 1: Journey to the Foothills",
+        desc: "Morning <br/> Depart Kampala after an early breakfast. <br/> Enjoy a scenic drive through Mabira Forest and past sugarcane plantations en route to Jinja (approx. 2 hrs). <br/> Midday <br/> Lunch in Jinja — try a riverside restaurant overlooking the Source of the Nile, a perfect spot for photos and a bit of history. <br/> Afternoon <br/> Continue the drive through Mbale, with views of Mount Elgon, arriving in Kapchorwa by late afternoon (total drive time ~6–7 hrs). <br/> Evening <br/> Check into your lodge in Kapchorwa — unwind with sunset views over the valley. <br/> Dinner at the lodge, featuring local Ugandan dishes and fresh produce from the region. <br/> Tip: Some lodges offer bonfire nights — a perfect chance to mingle and listen to local folktales or sip some fresh Sipi Arabica coffee."
+      },
+      {
+        title: "🥾 Day 2: Explore Sipi Falls",
+        desc: `Early Morning <br/> Hearty breakfast at the lodge to fuel your adventure. Set off on a guided hike to explore the three-tiered Sipi Falls system. <br/> Daytime <br/> Hike through coffee plantations, local villages, and lush greenery with your packed lunch. <br/> Visit all three waterfalls (ranging from 65m to 100m high). <br/> Optional add-ons: abseiling, rock climbing, or a coffee tour with a local farmer. <br/> Evening <br/> Return to the lodge for a hot shower and rest. <br/>Dinner at the lodge, perhaps with a storytelling session or stargazing on a clear night. <br/> Educational Insight: <br/> Sipi Falls lies on the edge of Mount Elgon National Park in Eastern Uganda. The name "Sipi" is derived from a local plant called sep, a wild banana used for medicinal purposes. The region is home to the Sebei people, known for their rich culture and traditional farming practices. <br/> Sipi Falls is one of Uganda’s top spots for hiking, bird watching, and coffee tourism.`
+      },
+      {
+        title: "🚐 Day 3: Return to Kampala",
+        desc: "Morning <br/>After a leisurely breakfast, check out and begin your return journey. <br/> Midday <br/> Lunch stop in Jinja — enjoy a different restaurant, perhaps try local tilapia or a Nile-perch fillet. <br/> Afternoon <br/> Continue back to Kampala, arriving by early evening. <br/> Optional: Add a stop at the Uganda Equator line for a quick photo op and local crafts shopping."
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 17,
+    tag: "",
+    slideImg: ["/img/tours/mgahinga.avif"],
+    title: "4-Day Virunga Hiking",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Mount Sabinyo – Mount Muhavura – Mount Gahinga <br/> Explore the Virunga ranges on foot. Wild terrain, misty peaks, and unforgettable lake views await.",
+    itinerary: [
+      {
+        title: "Day 1: Transfer from Kampala to Kisoro via Masaka – Mbarara",
+        desc: "Distance: ~470 km | Travel Time: ~9–10 hours <br/> Route: Kampala – Kayabwe – Masaka – Mbarara – Kabale – Kisoro <br/><br/> Highlights: <br/> Brief stop at Kayabwe (Equator line) for a photo and quick refreshments. <br/> Drive through lush rolling hills and banana plantations. <br/> Lunch at Igongo Cultural Centre (Mbarara) <br/> A great spot to sample local dishes like eshabwe and millet bread. <br/> Visit the mini-museum if time allows – it celebrates Ankole culture and history. <br/> Evening Arrival in Kisoro: <br/> Check-in and dinner at a cozy lodge nestled in the highlands of Kisoro. <br/>Altitude: ~1,900m – start acclimatizing for the hikes."
+      },
+      {
+        title: "Day 2: Hike Day – Mount Muhavura / Gahinga / Sabinyo (choose one)",
+        desc: `Early Breakfast<br/> Transfer to Mgahinga Gorilla National Park Headquarters (~30 mins from Kisoro town) for registration and pre-hike briefing (start time: 7:00 AM). <br/> Packed lunch provided. <br/><br/> 🏔️ Hiking Options (Choose based on your group's energy & adventure level):<br/> 1. Mount Muhavura (4,127m) – "The Guide of the Mountains"<br/> Elevation gain: ~1,700m<br/> Duration: 8–10 hours (round trip)<br/> Terrain: Steep, volcanic, rewarding<br/> At the summit: Crater lake, panoramic views into Rwanda, DRC, and Uganda.<br/> Wildlife: Duikers, golden monkeys, sunbirds, and alpine vegetation.<br/><br/> 2. Mount Gahinga (3,474m) – "The Smallest but Beautifully Forested"<br/> Elevation gain: ~1,100m<br/> Duration: 5–6 hours<br/> Terrain: Moderate trail, bamboo forests<br/> At the summit: Swamp-filled crater<br/> Wildlife: Golden monkeys, bushbucks, forest elephants (rare), and colorful turacos.<br/><br/> 3. Mount Sabinyo (3,669m) – "The Old Man's Teeth"<br/> Elevation gain: ~1,300m<br/> Duration: 7–8 hours<br/> Terrain: Rugged, ladders and ridgelines<br/> At the summit: Stand in three countries (Uganda, Rwanda, DRC) at once!<br/> Wildlife: Golden monkeys, duikers, lots of bird species (including the Rwenzori turaco).<br/><br/> Post-Hike Transfer to Mutanda Lake Resort<br/>Dinner and Overnight at Mutanda Lake Resort<br/> Overlooks stunning Lake Mutanda with the backdrop of the Virunga Volcanoes.`
+      },
+      {
+        title: "Day 3: Relaxation at Lake Mutanda",
+        desc: "Slow morning after intense hiking<br/> Optional boat ride on Lake Mutanda – glide over calm waters with views of the volcanoes.<br/> Birdwatching around the lake or short walk through surrounding communities.<br/> Lunch & Dinner at Mutanda Lake Resort<br/> Fresh tilapia, garden vegetables, and mountain-view dining."
+      },
+      {
+        title: "Day 4: Return Journey to Kampala",
+        desc: "Breakfast and Early Departure<br/> Stop for lunch at Igongo Cultural Centre (Mbarara) – recharge with hearty Ugandan cuisine. <br/> Arrival in Kampala by evening (~6–7 PM depending on traffic). <br/><br/>Packing Tips:<br/> Waterproof hiking boots & walking stick <br/> Layers (weather is cool but variable) <br/> Rain jacket, gloves, and hat <br/> Headlamp for early starts or late finishes <br/> Refillable water bottle & energy snacks"
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 18,
+    tag: "",
+    slideImg: ["/img/tours/mount-elgon.avif"],
+    title: "6-Day Mount Elgon Hiking",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Route: Kampala – Jinja – Mbale – Kapchorwa – Mount Elgon (Sasa Trail) – Return via same route <br/>Target Group: Professional hikers<br/><br/>Summary of Campsites and Elevations <br/> Day	Camp	Altitude (m)	Elevation Gain	Notes<br/> 1	Kapchorwa Lodge	1,800	-	Transfer day<br/> 2	Sasa River Camp	2,900	+1,650m	Steep ascent<br/> 3	Mude Cave Camp	3,500	+600m	Acclimatization<br/> 4	Wagagai Summit	4,321 (peak)	+820m / -1,420m	Summit + descent<br/> 5	Budadiri Trailhead	1,250	-1,650m	Exit day<br/><br/> Optional Add-ons (Pre/Post-Hike):<br/> Sipi Falls day hike<br/> Coffee farm tour in Kapchorwa<br/> White water rafting in Jinja<br/>  Cultural exchange with Sebei community",
+    itinerary: [
+      {
+        title: "Day 1: Transfer to Kapchorwa (via Jinja & Mbale)",
+        desc: "0700hrs: Departure from Kampala. <br/> Stopover in Jinja: Optional short break or quick sightseeing at the Source of the Nile. <br/> 1230hrs: Lunch in Mbale at [recommended restaurant: Mount Elgon Hotel or Endiro Coffee]. <br/> 1500hrs: Continue to Kapchorwa via Sironko, arrive by evening. <br/> 1800hrs: Check-in and dinner. <br/> Accommodation: Lodge (altitude ~1,800m) <br/> Meal Plan: Lunch en route, Dinner at lodge <br/> Insight: Kapchorwa is a scenic town at the base of Mount Elgon, known for the famous Sipi Falls. Early arrival allows for gear checks and acclimatization."
+      },
+      {
+        title: "Day 2: Hike Start – Budadiri to Sasa River Camp",
+        desc: `0600hrs: Breakfast and pack-up <br/> 0700hrs: Drive to Budadiri trailhead (1,250m) for park registration and briefing. <br/> Porters and two UWA ranger guides assigned <br/> 0830hrs: Begin ascent via the Sasa Trail <br/> Hike through local farmland and pass through the “Wall of Death” – a steep, rocky section with ladders and handholds. <br/> Enter the montane forest zone and climb to Sasa River Camp (2,900m). <br/> Packed Lunch en route <br/> Estimated Distance: 8–9 km <br/> Elevation Gain: ~1,650m <br/> Duration: 6–7 hours <br/> Accommodation: Sasa River Camp (tents) <br/> Trail Highlight: The hike rapidly transitions from cultivated land to dense bamboo and tropical montane forest. The “Wall of Death” offers the first real test of endurance and elevation gain.`
+      },
+      {
+        title: "Day 3: Sasa River Camp to Mude Cave Camp",
+        desc: "0700hrs: Breakfast and break camp <br/> 0800hrs: Depart for Mude Cave Camp (3,500m) <br/> Trail passes through giant heather, afro-alpine vegetation, and moss-draped forest. <br/> Occasional sightings of colobus monkeys, turacos, and endemic birdlife. <br/> Estimated Distance: 7–8 km <br/> Elevation Gain: ~600m <br/> Duration: 4–5 hours <br/> Lunch: Hot meal upon arrival or packed depending on weather <br/> Accommodation: Mude Cave Camp (tents) <br/> Trail Highlight: Mude Camp sits just below the caldera rim and offers beautiful views across the valleys. The temperature drops significantly; prepare for cold nights."
+      },
+      {
+        title: "Day 4: Summit Wagagai Peak (4,321m) and Descend to Sasa River Camp",
+        desc: "0500hrs: Early breakfast <br/> 0530hrs: Begin summit push to Wagagai Peak (4,321m) <br/> Traverse the alpine zone through the caldera ridge with sparse vegetation and occasional giant lobelias <br/> Short break at Jackson's Pool, a small crater lake en route <br/> Estimated Distance (round-trip): ~18 km <br/> Elevation Gain (to summit): ~820m <br/> Duration: 8–10 hours (round trip) <br/> Descend to: Sasa River Camp (2,900m) for overnight <br/> Accommodation: Sasa River Camp (tents) <br/> Trail Highlight: Wagagai Peak is the highest point on the Uganda side of Mount Elgon. The crater is one of the largest intact volcanic calderas in the world. Views extend to Kenya on clear days."
+      },
+      {
+        title: "Day 5: Final Descent",
+        desc: "0700hrs: Breakfast and break camp <br/> 0800hrs: Descend from Sasa River Camp to Budadiri trailhead (1,250m) <br/> Estimated Distance: 8–9 km <br/> Duration: 4–5 hours <br/> Trail Highlight: The descent retraces the original trail through the bamboo zone, providing a second opportunity to appreciate the rich biodiversity and local community encounters."
+      },
+      {
+        title: "Day 6: Transfer to Kampala",
+        desc: "Transfer to Kampala with lunch en route in Jinja at Java House or Jinja Sailing Club <br/> Evening arrival in Kampala (~1900hrs) <br/> Meal Plan: Breakfast at the lodge, Lunch in Jinja"
+      },
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 19,
+    tag: "",
+    slideImg: ["/img/tours/moroto.jpeg"],
+    title: "5-Day Mount Moroto Hiking",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Route: Kampala – Moroto – Mount Moroto (via Tapac/Tepeth Trail) – Return <br/> Target Group: Experienced hikers and adventure travelers<br/> Summary of Campsites and Elevation Profile<br/> Day	Camp	Altitude (m)	Elevation Gain/Loss	Description<br/> 1	Moroto Lodge	~1,400	-	Arrival Day<br/> 2	Suku Camp	~2,200	+500m	Forested plateau<br/> 3	Tepeth Camp	~2,500	+800m / -500m	Near summit ridge<br/> 4	Moroto Lodge	~1,400	-1,100m	Base lodge<br/> 5	Kampala	-	-	Travel Day <br/><br/> Optional Add-ons (Pre/Post-Hike):<br/><br/> Kidepo Valley National Park (3–4 hours from Moroto) <br/> Sipi Falls en route <br/> Traditional homestead visit with Tepeth or Matheniko communities <br/> Karamoja cultural dance & storytelling evening <br/> Additional Notes for Professional Hikers<br/> Navigation: Guided only; GPS maps limited. Use of local Tepeth guides crucial. <br/> Camping: All wilderness camps are non-permanent and without facilities—water purification tablets are essential. <br/> Gear: Strong-soled boots, hydration pack, sun protection, lightweight long-sleeved clothing for thorn scrub zones. <br/> Climate: Daytime temps can hit 30°C in lower zones; summit ridge can drop to 5–10°C at night.<br/> Wildlife: Mostly birdlife and shy mammals—Moroto is less disturbed, offering rare glimpses of wild ungulates",
+    itinerary: [
+      {
+        title: "Day 1: Transfer from Kampala to Moroto (via Mbale, Soroti, & Napak)",
+        desc: "0600hrs: Departure from Kampala <br/>Route: Kampala – Jinja – Mbale – Soroti – Moroto (~570km / 10–11 hours drive)<br/> <br/> Lunch stop: Soroti or Mbale (depending on timing) <br/> 1700hrs: Arrive in Moroto town <br/> 1800hrs: Dinner and overnight at the lodge. <br/> Accommodation: Lodge (~1,400m altitude) <br/> Meal Plan: Lunch en route, Dinner at lodge <br/> Travel Insight: The long drive is rewarded with stunning scenery as you enter Karamoja. Moroto is a semi-arid savannah region nestled at the base of the volcanic Moroto Massif. The region is culturally rich and home to the Tepeth people, considered the original inhabitants of the mountain."
+      },
+      {
+        title: "Day 2: Begin Trek – Transfer to Trailhead and Hike to Suku Camp",
+        desc: `0600hrs: Early breakfast and drive to Tapac village (~1.5-hour drive, 1,750m altitude) <br/> 0730hrs: Meet Tepeth porters and UWA ranger guides <br/> 0800hrs: Begin trek through local homesteads and dry forest zone <br/> Trail terrain: Rocky outcrops, seasonal riverbeds, and thorn bush transitioning to montane forest <br/> Camp: Suku Camp (~2,200m), set on a natural clearing used by Tepeth herders <br/> Distance: 10–12 km <br/> Elevation Gain: ~500m <br/> Duration: 5–6 hours <br/> Accommodation: Tent camping (basic bush camp) <br/> Meal Plan: Packed lunch, Hot dinner prepared by trail cook <br/> Trail Highlight: Hikers pass through culturally significant Tepeth areas. Guides may share oral histories and introduce edible wild plants or medicinal herbs. Expect warm temperatures during the day, cooler nights.`
+      },
+      {
+        title: "Day 3: Ascent to Summit Ridge (Nakiloro Peak) and Overnight at Tepeth Camp",
+        desc: "0600hrs: Breakfast and set out for summit ridge trek <br/> Trail description: Steep and narrow footpaths through bamboo groves and ancient montane forest <br/> Summit: Ascend to Nakiloro Ridge (~2,800–3,083m), the highest navigable point <br/> Summit view: Sweeping views over Karamoja plains, Turkana lowlands (Kenya), and Mt Kadam in the distance <br/> Descent to: Tepeth Camp (2,500m) on the forested shoulder of the peak <br/> Distance: 14–16 km <br/> Elevation Gain: ~800m up, ~500m down <br/> Duration: 7–8 hours <br/> Accommodation: Tent camping <br/> Meal Plan: Hot breakfast, Packed lunch, Hot dinner <br/> Trail Highlight: Mount Moroto is less trafficked, so wildlife is shy but occasionally visible—especially duikers, hornbills, or even leopard tracks. The summit approach rewards hikers with panoramic wilderness and solitude."
+      },
+      {
+        title: "Day 4: Descend to Tapac & Transfer Back to Moroto",
+        desc: "0700hrs: Breakfast and begin descent to Tapac trailhead <br/> Distance: 10–12 km <br/> Elevation Loss: ~1,100m <br/>Duration: 4–5 hours <br/> 1300hrs: Return drive to Moroto town <br/>Optional afternoon: Visit Karamoja Cultural Museum or interact with local artisans through Kara-Tunga’s community programs <br/> Accommodation: Lodge (same as Day 1) <br/> Meal Plan: Breakfast on trail, Lunch in Moroto, Dinner at lodge <br/> Cultural Insight: Kara-Tunga’s social enterprise partners with local communities to preserve Karimojong culture. Optional activities include storytelling, traditional dances, or even beadwork sessions."
+      },
+      {
+        title: "Day 5: Return Transfer to Kampala",
+        desc: "0600hrs: Breakfast and depart for Kampala via same route <br/> Lunch: Stopover in Soroti or Mbale <br/> Arrival: Kampala by evening (~1800hrs depending on road condition) <br/> Meal Plan: Breakfast, Lunch en route <br/> Travel Insight: Road conditions can vary, especially during the rainy season. A 4x4 vehicle is recommended for all transfers."
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 20,
+    tag: "",
+    slideImg: ["/img/destinations/3/uganda/rwenzori-1.jpg"],
+    title: "11-Day Rwenzori Mountains",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Trail: Central Circuit via Nyakalengija  <br/> Total Trekking Days: 9 <br/> Start/End Point: Kampala – Nyakalengija – Rwenzori Circuit – Kampala<br/> Max Elevation: Margherita Peak (5,109m)<br/> 🏔️ Campsite Elevation Overview<br/> Camp	Altitude (m)<br/> Nyabitaba Hut	2,651<br/> John Matte Hut	3,414<br/> Bujuku Hut	3,962<br/> Elena Hut	4,541<br/> Margherita Peak	5,109<br/> Kitandara Hut	4,023<br/> Guy Yeoman Hut	3,261<br/> Nyabitaba (again)	2,651<br/> <br/> 🧭 Must-Carry Items for Rwenzori Hike<br/> Technical Gear<br/> Mountaineering boots (high ankle, waterproof) <br/> Ice axe & crampons (provided at Elena, confirm condition) <br/> Harness & helmet (for glacier roping) <br/> Trekking poles <br/> Headlamp with extra batteries <br/> Clothing Layers<br/> Thermal base layers (top/bottom) <br/> Fleece jacket / softshell <br/> Waterproof jacket & pants (Gore-Tex or equivalent) <br/> Down jacket (for summit day) <br/> Warm gloves (2 pairs: liner & insulated) <br/> Woolen hat + buff/balaclava <br/> Gaiters (bogs & snow protection) <br/> Camping & Sleep <br/> 4-season sleeping bag (comfort rating: -10°C or lower) <br/> Sleeping mat (self-inflating recommended) <br/> Dry bags for clothing and electronics <br/> Head net (for forest bugs) <br/> Other Essentials Refillable water bottles (2–3L) <br/> Purification tablets or filter <br/> High-energy snacks & electrolyte sachets <br/> Sunscreen & lip balm (high SPF) <br/> Personal first aid kit (Diamox, blister care, etc.) <br/> Waterproof backpack cover <br/> Travel insurance (must include high-altitude trekking)",
+    itinerary: [
+      {
+        title: "🔹 Day 1: Kampala to Kasese (Base of Rwenzoris)",
+        desc: "0600hrs: Depart Kampala via Fort Portal <br/> En route stop: Equator monument <br/> Lunch: Fort Portal <br/> 1700hrs: Arrive at Rwenzori Trekkers Hostel – Nyakalengija (1,646m) <br/> Evening briefing: Final gear check, UWA registration <br/> Dinner & Overnight: At the Lodge <br/> Insight: Nestled at the base of the “Mountains of the Moon,” Nyakalengija is the main gateway into the Rwenzori National Park. Clear days reveal glacier-capped summits beyond the rainforest edge."
+      },
+      {
+        title: "🔹 Day 2: Nyakalengija to Nyabitaba Hut",
+        desc: `Altitude: 1,646m → 2,651m <br/> Distance: 10km | 5–6 hrs <br/> Trail: Cross River Mubuku, pass through farmland, rainforest <br/> Wildlife: Black-and-white colobus, blue monkeys, Rwenzori turacos <br/> Camp: Nyabitaba Hut – set in dense forest <br/> Insight: Early exposure to the Rwenzori’s ecosystem. Prepare for humidity, leeches, and first views of Portal Peaks.`
+      },
+      {
+        title: "🔹 Day 3: Nyabitaba to John Matte Hut",
+        desc: "Altitude: 2,651m → 3,414m <br/> Distance: 7km | 6–7 hrs <br/> Trail: Steep descent to Bujuku River then ascent through bamboo and heather zone <br/> Camp: John Matte Hut – near Bujuku River, great sunset views <br/> Highlight: First encounter with giant heather trees and Afro-alpine vegetation. The zone becomes boggy—gaiters essential."
+      },
+      {
+        title: "🔹 Day 4: John Matte to Bujuku Hut",
+        desc: "Altitude: 3,414m → 3,962m <br/> Distance: 6km | 4–5 hrs <br/> Trail: Cross the Big Bog using wooden boardwalks, gradual climb to Lake Bujuku <br/> Camp: Bujuku Hut – near the glacial lake, below Mount Speke and Stanley <br/> Insight: Lake Bujuku reflects surrounding peaks. This camp is ideal for acclimatization. Optional short hike around lake basin."
+      },
+      {
+        title: "🔹 Day 5: Bujuku to Elena Hut",
+        desc: "Altitude: 3,962m → 4,541m <br/> Distance: 4.5km | 5–6 hrs <br/> Trail: Steep climb via Scott-Elliot Pass, snowfields begin appearing <br/> Camp: Elena Hut – the high-altitude base for summit day <br/> Highlight: Elena is cold, barren, and spectacular. Crampons and ice axes checked and prepared for summit attempt."
+      },
+      {
+        title: "🔹 Day 6: Summit Margherita Peak (5,109m) and Descend to Kitandara Hut",
+        desc: "Start: 0200hrs alpine start <br/> Summit Route: Elena – Stanley Plateau – Margherita Glacier – Summit <br/> Return: Back to Elena → Descend to Kitandara Hut (4,023m) <br/> Distance: ~10–11km roundtrip | 10–12 hrs <br/> Insight: Crossing the Stanley Glacier and standing atop Margherita Peak is Africa’s third-highest achievement. Expect crevasses, roped traverses, and pure exhilaration."
+      },
+      {
+        title: "🔹 Day 7: Kitandara Hut to Guy Yeoman Hut",
+        desc: "Altitude: 4,023m → 3,261m <br/>Distance: 5–6 hrs <br/>Trail: Alpine descent past Kitandara Lakes, up and over Freshfield Pass, then steep descent to Guy Yeoman <br/>Camp: Guy Yeoman Hut – dramatic cliffside location <br/>Insight: Lush scenery resumes as glaciers recede. The trail is rocky, often slippery. Use poles for stability."
+      },
+      {
+        title: "🔹 Day 8: Guy Yeoman to Nyabitaba Hut",
+        desc: "Altitude: 3,261m → 2,651m <br/> Distance: 6km | 5 hrs <br/> Trail: Pass through dense bamboo, waterfalls, and rugged bridges over river gorges <br/> Camp: Return to Nyabitaba Hut <br/> Insight: Familiar forest trail offers a sense of return, but still physically taxing. Leopard tracks often seen."
+      },
+      {
+        title: "🔹 Day 9: Final Descent – Nyabitaba to Nyakalengija",
+        desc: "Altitude: 2,651m → 1,646m <br/> Distance: 10km | 4 hrs <br/> Debriefing: Certificates issued at base camp <br/> Transfer: Short drive to post-hike lodge for hot shower and recovery"
+      },
+      {
+        title: "🔹 Day 10: Rest Day at Luxury Lodge (Post-Hike Recovery)",
+        desc: "Celebration Dinner: Local Rwenzururu cuisine with mountain views <br/>Insight: After the high-altitude challenge, a night of comfort and reflection at a beautiful eco-lodge is the perfect reset."
+      },
+      {
+        title: "🔹 Day 11: Transfer to Kampala",
+        desc: "Departure: Post-breakfast return br/> Optional stopovers: Fort Portal crater lakes or tea estates br/> Lunch en route <br/> Arrival: Evening arrival in Kampala (~8 hrs drive)"
+      },
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 21,
+    tag: "",
+    slideImg: ["/img/tours/kampala.jpeg"],
+    title: "Kampala City Tour",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "",
+    itinerary: [
+      {
+        title: "Kasubi Tombs – UNESCO World Heritage Site: 8:30 AM – 9:30 AM",
+        description:
+          "The royal burial grounds of Buganda kings and a UNESCO World Heritage Site. The architecture features traditional Ganda design with thatched structures. A guide will explain the kingdom’s history, royal succession, and spiritual rituals.",
+      },
+      {
+        title: "Gaddafi National Mosque: 10:00 AM – 11:00 AM",
+        description:
+          "Located on Old Kampala Hill, this mosque—gifted by Muammar Gaddafi—is one of East Africa’s largest. Climb the minaret for a 360° view of Kampala and learn about Islam in Uganda.",
+      },
+      {
+        title: "Uganda Museum: 11:30 AM – 12:30 PM",
+        description:
+          "Explore ethnographic exhibits, traditional instruments, and archaeological finds. The outdoor area showcases tribal huts from across Uganda.",
+      },
+      {
+        title: "Crafts Market: 12:45 PM – 1:30 PM",
+        description:
+          "Browse handmade jewelry, carvings, baskets, batik, and more at places like the National Theatre Craft Village or Buganda Road Craft Market.",
+      },
+      {
+        title: "Lunch Options: 1:45 PM – 3:00 PM",
+        description: `
+          <b>Luxury:</b> Commonwealth Resort Munyonyo – Lakeside dining with serene views and international cuisine.<br/>
+          <b>Standard:</b> CJ's Restaurant – A modern city center eatery with a diverse menu and great ambiance.
+        `,
+      },
+      {
+        title: "City Drive-Through: Landmarks Tour: 3:15 PM – 4:00 PM",
+        description: `
+          Drive past the Parliament of Uganda, the Office of the President (State House Nakasero), and stop at the Independence Monument for a photo and brief history.
+        `,
+      },
+      {
+        title: "Rest/Refresh at Lodge: 4:15 PM – 6:00 PM",
+        description: "Return to your lodge to relax and freshen up before the evening’s highlight.",
+      },
+      {
+        title: "Ndere Cultural Center – Night Show: 6:30 PM – 9:00 PM",
+        description:
+          "Enjoy a vibrant performance of Uganda’s ethnic traditions through music, dance, and storytelling. Dinner buffet available. The amphitheater offers a relaxed, open-air atmosphere.",
+      },
+      {
+        title: "Return to Lodge: 9:15 PM",
+        description: "You’ll be driven back, ending a memorable day in Kampala.",
+      },
+      {
+        title: "Optional Add-Ons (On Request)",
+        description:
+          "• Visit to Namugongo Martyrs Shrine<br/>• Visit to Makerere University’s Art Gallery<br/>• Coffee tasting or local food experience",
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 22,
+    tag: "",
+    slideImg: ["/img/destinations/3/uganda/kidepo-2.jpg"],
+    title: "4-Day Kidepo Valley National Park Expedition",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Experiencing one of Africa’s most pristine and untouched parks Staying at Kidepo Savannah Lodge, perfectly perched between wilderness and comfort, Witnessing both predators and herbivores in natural harmony, Immersing in the raw landscapes of the Karamoja region, Ending each day with golden sunsets and star-filled skies",
+    itinerary: [
+      {
+        title: "Day 1: Scenic Journey to the untamed wilderness",
+        desc: "Route: Kampala – Nakasongola – Gulu – Kidepo Valley National Park<br/> Estimated Drive Time: 10–11 hours (with stops) <br/><br/> 05:30 AM | Depart Kampala<br/> Begin your adventure with an early morning departure from Kampala, heading northwards through the lush central plains and into Uganda’s less-traveled northern landscapes. <br/><br/> 08:00 AM | Breakfast Stop – Nakasongola<br/> Enjoy a countryside breakfast stop in Nakasongola. Stretch your legs, refresh, and take in the serene rural setting before continuing the journey. <br/><br/> 12:30 PM | Lunch Break – Gulu Town<br/> Arrive in Gulu for a hearty local or continental lunch. Gulu provides a vibrant midpoint with a blend of urban bustle and northern Ugandan hospitality. <br/><br/> 01:30 PM – 05:30 PM | Transfer to Kidepo Valley National Park<br/> Continue your drive through dramatic Karamoja landscapes. As the terrain shifts to golden grasslands, distant mountains begin to rise on the horizon—an awe-inspiring prelude to what awaits. <br/> Check-in: Kidepo Savannah Lodge<br/> Nestled just outside the park gate in the Kalokudo area, Kidepo Savannah Lodge offers sweeping panoramic views of the Narus Valley and the distant Morungole mountains. The eco-friendly lodge features comfortable thatched tents and an elevated restaurant that offers 360° views of the savanna—ideal for sunset watching and stargazing. <br/><br/> 07:00 PM | Dinner at the Lodge<br/> Unwind with a freshly prepared dinner, serenaded by the wild calls of nocturnal wildlife echoing through the valley."
+      },
+      {
+        title: "Day 2: Encounters in the Wild",
+        desc: `Activities: Game Drives in Narus Valley <br/><br/>06:00 AM | Morning Game Drive – Narus Valley<br/> Set out for your first safari experience at sunrise—this is when wildlife is most active. The Narus Valley, known for its permanent water sources, is a magnet for animals. <br/>Wildlife Highlights:<br/><br/> African lions (often seen lounging on rocks or in grass) <br/> Cape buffalo in large herds <br/> Elephants, often near the valley’s waterholes <br/> Uganda kob, Jackson’s hartebeest, and bush duiker <br/> Vibrant birdlife, including the Abyssinian roller and Kori bustard <br/><br/> 11:30 AM | Lunch at Lodge<br/> Return to the lodge for a hearty lunch. Relax and enjoy the lodge’s tranquil setting. <br/><br/> 04:00 PM | Evening Game Drive<br/> As the heat subsides, venture back into the park for a golden-hour game drive. Wildlife becomes more active, offering a different perspective. <br/><br/>Evening Highlights: <br/> Cheetahs hunting on the open plains <br/> Leopards emerging from daytime hiding <br/> Hyenas and jackals beginning their nightly patrol <br/> Magical sunset lighting up the acacia-dotted landscape <br/><br/> 07:00 PM | Dinner at the Lodge<br/> Gather for dinner and share stories of your sightings beneath a starlit African sky.`
+      },
+      {
+        title: "Day 3: Final Safari & Restful Retreat",
+        desc: "08:00 AM | Breakfast at the Lodge <br/> 09:00 AM – 12:00 PM | Morning Game Drive<br/> One more chance to track elusive animals and soak in the raw beauty of Kidepo. You may venture further toward Kanangorok hot springs if desired or revisit favorite wildlife areas. This day offers excellent birding opportunities and time to observe herds and predators in less disturbed areas. <br/> 12:30 PM | Lunch at the Lodge <br/> Afternoon at Leisure<br/> Spend your afternoon at the lodge in reflection and relaxation. You might choose to enjoy a sundowner, take photos from the lookout deck, or read a book surrounded by nature’s uninterrupted rhythm. <br/>07:00 PM | Farewell Dinner at the Lodge<br/> Celebrate your final evening with a special dinner. Toast to unforgettable moments and wild encounters."
+      },
+      {
+        title: "Day 4: Return to Kampala",
+        desc: "Route: Kidepo – Gulu – Kampala <br/>06:00 AM | Departure from Kidepo<br/>Begin the return journey with early morning light illuminating the savanna one last time. <br/> 12:00 PM | Lunch Stop – Gulu Town<br/> Enjoy a refreshing lunch in Gulu, breaking the journey with good food and brief rest. <br/> 06:00 PM – 07:00 PM | Arrive in Kampala<br/> Return to Kampala with your memory cards full, hearts fuller, and a storybook of moments from Uganda’s most remote and magical national park."
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
+  {
+    id: 23,
+    tag: "",
+    slideImg: ["/img/tours/tooro-kingdom.jpg"],
+    title: "Romantic Getaway in the Heart of the Tooro Kingdom",
+    location: "Uganda",
+    duration: "168",
+    numberOfReviews: "0",
+    price: "99",
+    tourType: "Safari Tours",
+    delayAnimation: "400",
+    description: "Duration: 4 Days / 3 Nights <br/> Theme: Nature, Culture, and Intimate Discovery",
+    itinerary: [
+      {
+        title: "Day 1: Arrival into the Kingdom – Journey through the Heart of Uganda",
+        desc: "Route: Kampala – Fort Portal (via Fort Portal–Kampala Road)<br/> Estimated Travel Time: 4.5 to 5.5 hours <br/> Begin your escape with a scenic drive through Uganda’s undulating countryside—lush tea plantations, roadside markets, and the distant shadow of the Rwenzori Mountains set a perfect romantic tone. <br/> Morning:<br/> Depart from Kampala early to enjoy the serene morning light over the central highlands. Refreshments can be arranged en route for a cozy roadside picnic feel. <br/> Lunch:<br/> The Garden Restaurant – Fort Portal<br/> Nestled in the heart of Fort Portal, this garden sanctuary offers a serene, green backdrop for a leisurely lunch. Indulge in locally inspired dishes as you ease into the tranquility of the region. <br/> Afternoon:<br/> Check-in to your romantic lodge—expect mountain views, warm hospitality, and cozy, private settings perfect for unwinding together. <br/> Evening:<br/> Enjoy a quiet dinner at the lodge, perhaps by candlelight, with the misty mountains in the distance and the symphony of crickets as your evening serenade."
+      },
+      {
+        title: "Day 2: Water, Wonder & Ancient Mystique",
+        desc: `Theme: Nature Exploration & Local Legends <br/>Morning:<br/> Begin with a visit to the Amabeere ga Nyinamwiru—the “Breasts of Nyinamwiru.” A site steeped in legend and geological wonder, the dripping stalactites and hidden caves provide a perfect blend of mystery and romance. <br/>Continue to the crater lakes—a guided walk unveils breathtaking caldera landscapes, peaceful trails, and countless photo-worthy moments. <br/>A short scenic drive leads to Mahoma Falls, a secluded waterfall cascading into a verdant gorge—ideal for reflection or a quiet moment with your partner. <br/>Lunch:<br/> The Garden Restaurant (Fort Portal) – return for another memorable meal in the calming greenery. <br/>Afternoon/Evening:<br/> Enjoy the lodge's serene surroundings or book a couple’s massage if available.<br/> Dinner at the lodge, with local wine or chilled passionfruit juice to toast the day's adventures.`
+      },
+      {
+        title: "Day 3: Wild Encounters & Royal Heritage",
+        desc: "Option A: Cultural and Ecological Discovery <br/> Morning:<br/> Explore Semuliki National Park, a hidden gem bordering the Congo Basin. Known for its rich birdlife—over 440 recorded species including rare forest dwellers like the White-crested Hornbill and the elusive Nkulengu Rail—this park is a birder’s paradise. Witness the Sempaya Hot Springs, both male and female, whose steaming jets rise dramatically from the forest floor—symbolic of Tooro’s raw natural power. <br/> Lunch:<br/> Return to The Garden Restaurant for a warm meal and refreshing drinks. <br/> Afternoon:<br/> Visit the Tooro Royal Palace, perched atop Karuzika Hill. Let your guide recount tales of the young King Oyo, and enjoy sweeping views over Fort Portal—a moment to share a quiet gaze over the kingdom together. <br/> Dinner:<br/> End your day at the lodge with a final candlelit dinner, basking in the stories and serenity of Tooro. <br/> Option B (Alternative): Full-Day Safari in Queen Elizabeth National Park<br/> For couples craving a full-day wilderness experience, depart early for Queen Elizabeth National Park. <br/> Explore its Kasenyi plains, spot lions, elephants, and buffalo on a game drive. <br/> Enjoy a romantic boat cruise along the Kazinga Channel, where hippos and water birds create a cinematic safari moment. <br/> Picnic lunch provided or lunch at Mweya Safari Lodge. <br/> Return to Fort Portal in the evening for your final night at the lodge."
+      },
+      {
+        title: "Day 4: Farewell to the Kingdom",
+        desc: "Morning: Enjoy a leisurely breakfast on the veranda, with mist rolling over the hills one last time. Mid-Morning:Check-out and begin the drive back to Kampala, your hearts full of memories and your bond deepened by shared adventure."
+      },
+      
+    ],
+    inclusions: [
+      "Road transport for the entire duration of the trip.",
+      "Meals as indicated in the safari program.",
+      "An English-speaking driver/guide.",
+      "One liter of bottled water per day.",
+      "Accommodation as indicated in the safari program",
+      "The activities indicated in the safari program."
+
+    ],
+    exclusions: [
+      "Visas/entry permits to Uganda if required.",
+      "Accommodation in Kampala or Entebbe after the excursion.",
+      "Personal insurance covers.",
+      "Tips, drinks and souvenirs",
+      "All items of a personal nature"
+
+    ]
+  },
 ];
 
 export const EASafaris = [

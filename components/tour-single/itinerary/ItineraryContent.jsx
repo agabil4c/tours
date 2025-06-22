@@ -17,7 +17,7 @@ const ItineraryContent = ({itinerary}) => {
                 
                 <div className="pt-15 pb-15">
                     
-                  <div className="text-14 lh-17 mt-15">{item?.desc}</div>
+                  <div className="text-14 lh-17 mt-15" dangerouslySetInnerHTML={{ __html: item?.desc }}/>
                 </div>
                 {/* End accordion conent */}
 

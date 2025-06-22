@@ -13,7 +13,7 @@ const index = () => {
           <div className="row y-gap-40 justify-between xl:justify-start">
             <div className="col-xl-2 col-lg-3 col-sm-6">
               
-              <Image src="/img/general/riverwide_logo.png"  alt="image" />
+              <Image src="/img/general/riverwide_logo.png" width={250} height={300} alt="image" />
               <div className="mt-60">
                 <h5 className="text-16 fw-500 mb-10">
                   Follow us on social media

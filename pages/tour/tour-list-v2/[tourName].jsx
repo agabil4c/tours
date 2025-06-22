@@ -29,46 +29,14 @@ const Safari = () => {
       <section className="layout-pt-md layout-pb-lg">
         <div className="container">
           <div className="row y-gap-30">
-            <div className="col-xl-3">
-              <aside className="sidebar y-gap-40 xl:d-none">
-                <Sidebar />
-              </aside>
-              {/* End sidebar for desktop */}
-
-              <div
-                className="offcanvas offcanvas-start"
-                tabIndex="-1"
-                id="listingSidebar"
-              >
-                <div className="offcanvas-header">
-                  <h5 className="offcanvas-title" id="offcanvasLabel">
-                    Filter Tours
-                  </h5>
-                  <button
-                    type="button"
-                    className="btn-close"
-                    data-bs-dismiss="offcanvas"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                {/* End offcanvas header */}
-
-                <div className="offcanvas-body">
-                  <aside className="sidebar y-gap-40  xl:d-block">
-                    <Sidebar />
-                  </aside>
-                </div>
-                {/* End offcanvas body */}
-              </div>
-              {/* End mobile menu sidebar */}
-            </div>
+            
             {/* End col */}
 
-            <div className="col-xl-9 ">
+            <div className="col-xl-12 ">
               <TopHeaderFilter country = {countryName}/>
               <div className="mt-30"></div>
               {/* End mt--30 */}
-              <div className="row y-gap-30">
+              <div className="row y-gap-30 item_gap-x30">
                 <TourProperties tours = {tourName} />
               </div>
               {/* End .row */}
