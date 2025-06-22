@@ -28,9 +28,9 @@ const Header1 = () => {
           <div className="row justify-between items-center">
             <div className="col-auto">
               <div className="d-flex items-center">
-                <Link href="/" className="header-logo mr-50" >
-                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" width={250} height={300}/>
-                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" width={250} height={300}/>
+                <Link href="/" className="header-logo mr-50">
+                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" width={500} height={400}/>
+                  <Image src="/img/general/riverwide_logo.png"  alt="logo icon" width={500} height={400}/>
                 </Link>
                 {/* End logo */}
               </div>
