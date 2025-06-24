@@ -1,27 +1,24 @@
 import Link from "next/link";
 import BookingDetails from "./sidebar/BookingDetails";
+import { useState } from "react";
 
-const CustomerInfo = () => {
+const CustomerInfo = ({ formData, setFormData, tour }) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+ 
   return (
     <>
       <div className="col-xl-7 col-lg-8 mt-30">
-        <div className="py-15 px-20 rounded-4 text-15 bg-blue-1-05">
-          Sign in to book with your saved details or{" "}
-          <Link href="/others-pages/signup" className="text-blue-1 fw-500">
-            register
-          </Link>{" "}
-          to manage your bookings on the go!
-        </div>
-        {/* End register notify */}
-
         <h2 className="text-22 fw-500 mt-40 md:mt-24">
           Let us know who you are
         </h2>
-
         <div className="row x-gap-20 y-gap-20 pt-20">
           <div className="col-12">
             <div className="form-input ">
-              <input type="text" required />
+              <input type="text" name="name" value={formData.name}
+            onChange={handleChange} required />
               <label className="lh-1 text-16 text-light-1">Full Name</label>
             </div>
           </div>
@@ -29,7 +26,8 @@ const CustomerInfo = () => {
 
           <div className="col-md-6">
             <div className="form-input ">
-              <input type="text" required />
+              <input type="text" name="email" value={formData.email}
+            onChange={handleChange} required />
               <label className="lh-1 text-16 text-light-1">Email</label>
             </div>
           </div>
@@ -37,7 +35,8 @@ const CustomerInfo = () => {
 
           <div className="col-md-6">
             <div className="form-input ">
-              <input type="text" required />
+              <input type="text" name="phone" value={formData.phone}
+            onChange={handleChange} required />
               <label className="lh-1 text-16 text-light-1">Phone Number</label>
             </div>
           </div>
@@ -45,7 +44,8 @@ const CustomerInfo = () => {
 
           <div className="col-12">
             <div className="form-input ">
-              <input type="text" required />
+              <input type="text" name="address" value={formData.address}
+            onChange={handleChange} required />
               <label className="lh-1 text-16 text-light-1">
                 Address line 1
               </label>
@@ -55,7 +55,8 @@ const CustomerInfo = () => {
 
           <div className="col-12">
             <div className="form-input ">
-              <input type="text" required />
+              <input type="text" name="address2" value={formData.address2}
+            onChange={handleChange} required />
               <label className="lh-1 text-16 text-light-1">
                 Address line 2
               </label>
@@ -65,7 +66,8 @@ const CustomerInfo = () => {
 
           <div className="col-md-6">
             <div className="form-input ">
-              <input type="text" required />
+              <input type="text" name="state" value={formData.state}
+            onChange={handleChange} required />
               <label className="lh-1 text-16 text-light-1">
                 State/Province/Region
               </label>
@@ -75,7 +77,8 @@ const CustomerInfo = () => {
 
           <div className="col-md-6">
             <div className="form-input ">
-              <input type="text" required />
+              <input type="text" name="zip" value={formData.zip}
+            onChange={handleChange} required />
               <label className="lh-1 text-16 text-light-1">
                 ZIP code/Postal code
               </label>
@@ -85,7 +88,8 @@ const CustomerInfo = () => {
 
           <div className="col-12">
             <div className="form-input ">
-              <textarea required rows={6} defaultValue={""} />
+              <textarea required name="request" value={formData.request}
+            onChange={handleChange} rows={6} />
               <label className="lh-1 text-16 text-light-1">
                 Special Requests
               </label>
@@ -97,7 +101,7 @@ const CustomerInfo = () => {
             <div className="row y-gap-20 items-center justify-between">
               <div className="col-auto">
                 <div className="text-14 text-light-1">
-                  By proceeding with this booking, I agree to GoTrip Terms of
+                  By proceeding with this booking, I agree to Riverwide Trekkers Safaris Terms of
                   Use and Privacy Policy.
                 </div>
               </div>
@@ -112,7 +116,7 @@ const CustomerInfo = () => {
 
       <div className="col-xl-5 col-lg-4 mt-30">
         <div className="booking-sidebar">
-          <BookingDetails />
+          <BookingDetails tour={tour}/>
         </div>
       </div>
       {/*  */}

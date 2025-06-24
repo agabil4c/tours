@@ -66,7 +66,7 @@ const CallToActions = () => {
               {/* End email input */}
 
               <div>
-                <button className="button -md h-60 bg-blue-1 text-white" onClick={handleSubscribe}>
+                <button className="button -md h-60 border-white -outline-white text-white" onClick={handleSubscribe}>
                   Subscribe
                 </button>
               </div>

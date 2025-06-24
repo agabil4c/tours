@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.riverwidesafaris.com/</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Static Pages -->
+  <url>
+    <loc>https://www.riverwidesafaris.com/others-pages/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riverwidesafaris.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Example Tour Pages -->
+  <url>
+    <loc>https://www.riverwidesafaris.com/destination/Uganda</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.riverwidesafaris.com/destination/Kenya</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.riverwidesafaris.com/destination/Rwanda</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.riverwidesafaris.com/tour/tour-list-v2/uganda-safaris</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.riverwidesafaris.com/tour/tour-list-v2/kenya-safaris</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.riverwidesafaris.com/tour/tour-list-v2/rwanda-safaris</loc>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

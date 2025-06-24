@@ -14,16 +14,16 @@
   background-color: color-opac(blue-1, 0.05);
 }
 .bg-white-10 {
-  background-color: color-opac(white, 0.1);
+  background-color: color-opac("white", 0.1);
 }
 .bg-white-20 {
-  background-color: color-opac(white, 0.2);
+  background-color: color-opac("white", 0.2);
 }
 .bg-white-50 {
-  background-color: color-opac(white, 0.5);
+  background-color: color-opac("white", 0.5);
 }
 .bg-black-20 {
-  background-color: color-opac(black, 0.2);
+  background-color: color-opac("black", 0.2);
 }
 
 @each $name, $color in $colors {
@@ -36,7 +36,7 @@
   color: inherit;
 }
 .text-white-50 {
-  color: color-opac(white, 0.5);
+  color: color-opac("white", 0.5);
 }
 
 .d-none {

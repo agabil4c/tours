@@ -23,10 +23,14 @@
   }
 }
 
-@function color-opac($key, $opacity: 1, $map: $colors) {
-  $value: map-get($map, $key);
-  $value: rgba($value, $opacity);
-  @return $value;
+@function color-opac($name, $opacity: 1) {
+  @if map-has-key($colors, $name) {
+    $value: map-get($colors, $name);
+    @return rgba($value, $opacity);
+  } @else {
+    @warn "⚠️ color-opac() - `#{$name}` not found in \$colors map.";
+    @return null;
+  }
 }
 
 .ratio {

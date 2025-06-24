@@ -1,5 +1,4 @@
 const ImportantInfo = ({tour}) => {
-  console.log(tour)
   return (
     <div className="row x-gap-40 y-gap-40 justify-between pt-20">
       {tour?.inclusions?.length > 0 && (

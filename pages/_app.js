@@ -11,6 +11,7 @@ import "../styles/index.scss";
 import { Provider } from "react-redux";
 import { store } from "../app/store";
 import { appWithTranslation } from 'next-i18next';
+import nextI18NextConfig from '../next-i18next.config.js';
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
@@ -34,4 +35,4 @@ function App({ Component, pageProps }) {
   );
 }
 
-export default appWithTranslation(App);
+export default appWithTranslation(App, nextI18NextConfig);

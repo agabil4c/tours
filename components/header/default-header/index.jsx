@@ -6,8 +6,10 @@ import LanguageMegaMenu from "../LanguageMegaMenu";
 
 import MobileMenu from "../MobileMenu";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const Header1 = () => {
+  const { t } = useTranslation('common');
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
@@ -24,7 +26,7 @@ const Header1 = () => {
 
   return (
     <>
-      <header className={`header bg-white ${navbar ? "is-sticky" : ""}`}>
+      <header className={`header bg-dark-3 ${navbar ? "is-sticky" : ""}`}>
         <div className="header__container px-30 sm:px-20">
           <div className="row justify-between items-center">
             <div className="col-auto">
@@ -40,7 +42,7 @@ const Header1 = () => {
               <div className="d-flex items-center">
                 <div className="header-menu">
                   <div className="header-menu__content">
-                    <MainMenu style="text-dark-1" />
+                    <MainMenu style="text-white" />
                   </div>
                 </div>
                 
