@@ -27,48 +27,7 @@ const HotelSingleV1Dynamic = ({ place }) => {
   const router = useRouter();
   const { destinationName } = router.query;
   if (!place) return <h1>Not Found</h1>;
-  // useEffect(() => {
-  //   let data;
-  //   if (destinationName) {
-  //     // Handle the tour data based on the tourName
-  //     switch (destinationName.toLowerCase()) {
-  //       case 'uganda':
-  //         data = uganda;
-  //         break;
-  //       case 'kenya':
-  //         data = kenya;
-  //         break;
-  //       case 'rwanda':
-  //         data = rwanda;
-  //         break;
-  //       default:
-  //         data = [];
-  //         break;
-  //     }
-  //     // switch (tourName.toLowerCase()) {
-  //     //   case 'kenya-safaris':
-  //     //     data = kenyaSafaris;
-  //     //     break;
-  //     //   case 'uganda-safaris':
-  //     //     data = ugandaSafaris;
-  //     //     break;
-  //     //   case 'rwanda-safaris':
-  //     //     data = rwandaSafaris;
-  //     //     break;
-  //     //   case 'east africa-safaris':
-  //     //     data = EASafaris;
-  //     //     break;
-  //     //   default:
-  //     //     data = []; // Or handle a fallback
-  //     //     break;
-  //     // }
-  //   }
-  //   if (!placeName) <h1>Loading...</h1>;
-
-  //   else setPlace(data.find((item) => item?.location?.toLowerCase().replace(/\s+/g, "-") === placeName));
-
-  //   return () => {};
-  // }, [destinationName, placeName]);
+  
 
   return (
     <>
@@ -135,7 +94,7 @@ const HotelSingleV1Dynamic = ({ place }) => {
                             ref={ref}
                             onClick={open}
                             src={img}
-                            alt={`image ${index + 1}`}
+                            alt={`Slide image ${index + 1}`}
                             className="rounded-4"
                             width={450}
                             height={375}
@@ -169,7 +128,7 @@ const HotelSingleV1Dynamic = ({ place }) => {
                               src={place.slideImg[2]}
                               width={362}
                               height={302}
-                              alt={`image ${index + 1}`}
+                              alt={`image ${place.slideImg?.[2] ? 3 : ''}`}
                               className="rounded-4"
                               role="button"
                             />
@@ -222,20 +181,7 @@ const HotelSingleV1Dynamic = ({ place }) => {
                 </div>
                 {/* End .col */}
 
-                {/* <div className="col-auto">
-                  <div className="text-14 text-md-end">
-                    From{" "}
-                    <span className="text-22 text-dark-1 fw-500">
-                      US${place?.price}
-                    </span>
-                  </div>
-                  <a
-                    href="#"
-                    className="button h-50 px-24 -dark-1 bg-blue-1 text-white"
-                  >
-                    Select Room <div className="icon-arrow-top-right ml-15" />
-                  </a>
-                </div> */}
+                
                 {/* End .col */}
               </div>
               {/* End .row */}
@@ -246,23 +192,10 @@ const HotelSingleV1Dynamic = ({ place }) => {
                 </div>
                 {/* End col-12 */}
                 
-                {/* <div className="col-12">
-                  <h3 className="text-22 fw-500 pt-40 border-top-light">
-                    Attractions
-                  </h3>
-                  <div className="row y-gap-10 pt-20">
-                    <PopularFacilities />
-                  </div>
-                </div> */}
-                {/* End .col-12  */}
               </div>
               {/* End .col-12  Overview */}
             </div>
-            {/* End left hotel galler  */}
-            {/* <div className="container mt-40 mb-20">
-              <div className="border-top-light"></div>
-            </div> */}
-
+            
             <div>
               <SidebarRight2 place={place} />
               {/* <RatingBox place={place} /> */}
