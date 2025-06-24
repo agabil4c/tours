@@ -5,7 +5,7 @@ import DefaultFooter from "../../../components/footer/default";
 import StepperBooking from "../../../components/booking-page/stepper-booking";
 import { useRouter } from 'next/router';
 
-const index = () => {
+const TourBookingPage = () => {
   const router = useRouter();
   const bookingData = {
     tour: router.query.tour ? JSON.parse(router.query.tour) : null,
@@ -42,4 +42,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default TourBookingPage;

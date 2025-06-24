@@ -3,7 +3,7 @@ import DateSearch from "./DateSearch";
 import Link from "next/link";
 import { useState } from "react";
 
-const index = ({tour}) => {
+const FilterBox = ({tour}) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [guestInfo, setGuestInfo] = useState({
     adults: 1,
@@ -56,4 +56,4 @@ const index = ({tour}) => {
   );
 };
 
-export default index;
+export default FilterBox;

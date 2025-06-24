@@ -169,7 +169,7 @@ const HotelSingleV1Dynamic = ({ place }) => {
                               src={place.slideImg[2]}
                               width={362}
                               height={302}
-                              //alt={`image ${index + 1}`}
+                              alt={`image ${index + 1}`}
                               className="rounded-4"
                               role="button"
                             />

@@ -6,7 +6,7 @@ import StepperBooking from "../../../components/booking-page/stepper-booking";
 import { useRouter } from 'next/router';
 import { useTranslation } from "react-i18next";
 
-const index = () => {
+const HotelBookingPage = () => {
 
   const router = useRouter();
   const bookingData = {
@@ -42,4 +42,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default HotelBookingPage;
