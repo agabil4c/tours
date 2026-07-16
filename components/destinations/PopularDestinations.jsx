@@ -51,21 +51,21 @@ const PopularDestinations = () => {
                   width={300}
                   height={400}
                   src={item.img}
-                  alt="image"
+                  alt={item.city}
                   className="js-lazy"
                 />
               </div>
-              <div className="citiesCard__content d-flex flex-column justify-between text-center pt-30 pb-20 px-20">
+              <div className="citiesCard__content d-flex flex-column justify-end text-center pb-20 px-20">
                 <div className="citiesCard__bg" />
-                <div className="citiesCard__top">
-                  <div className="text-14 text-white">{item.hoverText}</div>
-                </div>
                 <div className="citiesCard__bottom">
-                  <h4 className="text-26 md:text-20 lh-13 text-white mb-20">
+                  <h4 className="text-24 md:text-20 lh-13 text-white mb-5">
                     {item.city}
                   </h4>
-                  <button className="button col-12 h-60 -blue-1 bg-white text-dark-1">
-                  {t('discover')}
+                  <div className="text-14 text-white opacity-85 mb-15">
+                    {item.hoverText}
+                  </div>
+                  <button className="button col-12 h-50 -blue-1 bg-white text-dark-1 text-14 fw-600">
+                    {t('discover')}
                   </button>
                 </div>
               </div>

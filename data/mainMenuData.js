@@ -61,7 +61,7 @@ export const pageItems = [
   },
   {
     name: "About",
-    routePath: "/others-pages/about",
+    routePath: "/about-us",
   },
   {
     name: "Become Expert",
@@ -220,7 +220,7 @@ export const categorieMegaMenuItems = [
               },
               {
                 name: "Tour List v2",
-                routePath: "/tour/tour-list-v2",
+                routePath: "/safaris",
               },
             ],
           },
@@ -509,7 +509,7 @@ export const categorieMobileItems = [
           },
           {
             name: "Tour List v2",
-            routePath: "/tour/tour-list-v2",
+            routePath: "/safaris",
           },
         ],
       },
@@ -716,14 +716,14 @@ export const activityItems = [
 export const PackagesItems = [
   {
     name: "Uganda Safaris",
-    routePath: "/tour/tour-list-v2/[tourName]",
+    routePath: "/safaris/[tourName]",
   },
   {
     name: "Kenya Safaris",
-    routePath: "/tour/tour-list-v2/[tourName]",
+    routePath: "/safaris/[tourName]",
   },
   {
     name: "Rwanda Safaris",
-    routePath: "/tour/tour-list-v2/[tourName]",
+    routePath: "/safaris/[tourName]",
   },
 ];

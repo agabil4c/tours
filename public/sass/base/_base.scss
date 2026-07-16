@@ -15,7 +15,7 @@ body {
   background-color: white;
   color: var(--color-dark-1);
   font-size: $font-size;
-  line-height: 1.875;
+  line-height: 1.6;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -33,7 +33,7 @@ textarea {
 }
 
 main {
-  overflow: hidden;
+  overflow: clip;
 }
 
 img {

@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-
+// Force rebuild save
 export default function Document() {
   return (
     <Html lang="en">
@@ -16,7 +16,7 @@ export default function Document() {
           crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
 

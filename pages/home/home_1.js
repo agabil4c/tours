@@ -4,8 +4,7 @@ import AddBanner from "../../components/add-banner/AddBanner";
 import Seo from "../../components/common/Seo";
 import PopularDestinations from "../../components/destinations/PopularDestinations";
 import DefaultFooter from "../../components/footer/default";
-import Header1 from "../../components/header/header-1";
-import TopHeader from "../../components/header/header-9/top-header";
+import DefaultHeader from "../../components/header/default-header";
 import Hero1 from "../../components/hero/hero-1";
 import BlockGuide from "../../components/block/BlockGuide";
 import Blog from "../../components/blog/Blog3";
@@ -13,8 +12,6 @@ import CallToActions from "../../components/common/CallToActions";
 import Destinations from "../../components/home/home-1/Destinations";
 import Testimonial from "../../components/home/home-1/Testimonial";
 import TestimonialLeftCol from "../../components/home/home-1/TestimonialLeftCol";
-import Hotels from "../../components/hotels/Hotels";
-import SelectFilter from "../../components/hotels/filter-tabs/SelectFilter";
 import TourCategories from "../../components/home/home-5/TourCategories";
 import Tours from "../../components/tours/Tours";
 import Tours2 from "../../components/tours/Tours2";
@@ -27,24 +24,32 @@ const Home_1 = () => {
       <Seo pageTitle="Riverwide Trekkers Safaris" />
       {/* End Page Title */}
 
-      <TopHeader />
-      {/* End Header top Banner */}
+      <DefaultHeader />
+      {/* End Default Header */}
 
-      <Header1 />
-      {/* End Header 1 */}
-      
 
       <Hero1 />
       {/* End Hero 1 */}
 
-      <section className="layout-pt-md layout-pb-md" data-aos="fade-up">
+
+      <section className="layout-pt-md layout-pb-sm">
+        <div className="container">
+          <div className="row y-gap-20">
+            <AddBanner />
+          </div>
+        </div>
+        {/* End .container */}
+      </section>
+      {/* End AddBanner */}
+
+      <section className="layout-pt-sm layout-pb-sm" data-aos="fade-up">
         <div className="container">
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
                 <h2 className="sectionTitle__title">{t('popularDestinations')}</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
-                {t('startVisitsHere')}
+                  {t('startVisitsHere')}
                 </p>
               </div>
             </div>
@@ -56,7 +61,7 @@ const Home_1 = () => {
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 {t('viewAllDestinations')}
-                
+
                 <div className="icon-arrow-top-right ml-15" />
               </a>
             </div>
@@ -72,17 +77,7 @@ const Home_1 = () => {
       </section>
       {/* End Popular Destinations */}
 
-      <section className="layout-pt-sm layout-pb-sm">
-        <div className="container">
-          <div className="row y-gap-20">
-            <AddBanner/>
-          </div>
-        </div>
-        {/* End .container */}
-      </section>
-      {/* End AddBanner */}
-
-      <section className="layout-pt-md layout-pb-md">
+      <section className="layout-pt-sm layout-pb-md">
         <div className="container">
           <div className="row y-gap-10 justify-between items-end">
             <div className="col-auto">
@@ -90,7 +85,7 @@ const Home_1 = () => {
                 <h2 className="sectionTitle__title">{t('recommendedPackages')}</h2>
                 <p className=" sectionTitle__text mt-5 sm:mt-0">
                   {t('startTourHere')}
-                  
+
                 </p>
               </div>
             </div>
@@ -99,11 +94,11 @@ const Home_1 = () => {
             </div> */}
             <div className="col-auto md:d-none">
               <Link
-                href="/tour/tour-list-v2/east africa-safaris"
+                href="/safaris/east-africa-safaris"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 {t('viewAllPackages')}
-                
+
                 <div className="icon-arrow-top-right ml-15" />
               </Link>
             </div>
@@ -174,7 +169,7 @@ const Home_1 = () => {
       </section> */}
       {/* End blog Section */}
 
-      
+
 
       {/* <section className="layout-pt-md layout-pb-lg">
         <div className="container">

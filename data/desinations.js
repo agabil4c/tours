@@ -26,25 +26,25 @@ export const destinations2 = [
     id: 1,
     hoverText: "144 mammals - 556 bird species - 51 reptiles - 51 Amphibians - 73 animals species",
     city: "Murchison Falls N.P",
-    img: "/img/destinations/1/10.jpg",
+    img: "/img/new_pics/giraffe.jpeg",
   },
   {
     id: 2,
     hoverText: "144 species of mammals - 470 bird species, 1000 Elephants - 15000 Buffalos",
     city: "Kidepo N.P",
-    img: "/img/destinations/1/9.jpg",
+    img: "/img/new_pics/kob.jpeg",
   },
   {
     id: 3,
     hoverText: "470 species of birds - 900 Lions",
     city: "Masai Mara",
-    img: "/img/destinations/1/15.jpg",
+    img: "/img/new_pics/lions_pair.jpeg",
   },
   {
     id: 4,
     hoverText: "14 Hotel - 22 Cars - 18 Tours - 95 Activity",
     city: "Queen Elizabeth N.P",
-    img: "/img/destinations/1/14.jpg",
+    img: "/img/new_pics/hippos.jpeg",
   }
 ];
 

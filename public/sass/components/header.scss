@@ -41,7 +41,11 @@
 
   &.is-sticky {
     margin: 0 !important;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(14, 19, 31, 0.85) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
   }
 
   .row {
@@ -541,4 +545,63 @@
 .header .header-menu .menu-item-has-children .subnav a,
 .header .header-menu .menu-item-has-children .mega a {
   font-weight: 400;
+}
+
+.text-emerald {
+  color: var(--color-blue-1) !important;
+  
+  a {
+    color: var(--color-blue-1) !important;
+    
+    &:hover {
+      color: var(--color-yellow-1) !important;
+    }
+  }
+}
+
+.text-white {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hover-emerald {
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-blue-1) !important;
+    text-decoration: none;
+  }
+}
+
+li.-has-mega-menu:hover {
+  > .mega {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
+
+.header .header-menu .menu .mega {
+  transition: opacity 0.25s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+// Reset dropdown link colors to ensure they display consistently across all header text states
+.header-menu .menu__nav {
+  .subnav, .mega {
+    color: var(--color-dark-1) !important;
+    
+    h5 {
+      color: var(--color-blue-1) !important;
+    }
+    
+    a {
+      color: var(--color-light-1) !important;
+      
+      &:hover {
+        color: var(--color-blue-1) !important;
+      }
+    }
+  }
 }

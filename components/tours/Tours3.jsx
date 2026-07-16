@@ -44,7 +44,7 @@ const Tours3 = () => {
               data-aos-delay={item?.delayAnimation}
             >
               <Link
-                href={`/tour/tour-single/${item.id}`}
+                href={`/safaris/east-africa-safaris/${item.title?.toLowerCase().replace(/\s+/g, "-") || item.id}`}
                 className="tourCard -type-1 rounded-4"
               >
                 <div className="tourCard__image">

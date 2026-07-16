@@ -1,4 +1,17 @@
 .featureIcon.-type-1 {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 35px 25px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 15px -5px rgba(14, 19, 31, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -10px rgba(15, 76, 58, 0.1);
+    border-color: rgba(15, 76, 58, 0.15);
+  }
+
   &.-hover-shadow {
     transition: all 0.3s $easeOutQuart;
     

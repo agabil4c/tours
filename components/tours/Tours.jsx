@@ -76,8 +76,8 @@ const Tours = () => {
             data-aos-delay={item?.delayAnimation}
           >
             <Link
-              href={`/tour/tour-single/east africa-safaris/${item?.title.toLowerCase().replace(/\s+/g, "-")}`}
-              className="tourCard -type-1 rounded-4 hover-inside-slider"
+              href={`/safaris/east-africa-safaris/${item?.title.toLowerCase().replace(/\s+/g, "-")}`}
+              className="tourCard -type-1 hover-inside-slider"
             >
               <div className="tourCard__image position-relative">
                 <div className="inside-slider">
@@ -102,47 +102,40 @@ const Tours = () => {
                     ))}
                   </Slider>
 
-                  {/* <div className="cardImage__wishlist">
-                    <button className="button -blue-1 bg-white size-30 rounded-full shadow-2">
-                      <i className="icon-heart text-12" />
-                    </button>
-                  </div> */}
-
-                  {/* <div className="cardImage__leftBadge">
-                    <div
-                      className={`py-5 px-15 rounded-right-4 text-12 lh-16 fw-500 uppercase ${
-                        isTextMatched(item?.tag, "likely to sell out*")
-                          ? "bg-dark-1 text-white"
-                          : ""
-                      } ${
-                        isTextMatched(item?.tag, "best seller")
-                          ? "bg-blue-1 text-white"
-                          : ""
-                      }  ${
-                        isTextMatched(item?.tag, "top rated")
-                          ? "bg-yellow-1 text-dark-1"
-                          : ""
-                      }`}
-                    >
-                      {item.tag}
+                  <div className="cardImage__leftBadge">
+                    <div className="py-5 px-15 rounded-right-4 text-11 lh-16 fw-600 uppercase bg-yellow-1 text-dark-1" style={{ letterSpacing: '1px' }}>
+                      {item?.tourType || 'Safari Tour'}
                     </div>
-                  </div> */}
-                </div>
-              </div>
-              {/* End .tourCard__image */}
-
-              <div className="tourCard__content mt-10">
-                <div className="d-flex items-center lh-14 mb-5">
-                  <div className="text-14 text-light-1">
-                    {item?.tourType}
                   </div>
-                  {/* <div className="size-3 bg-light-1 rounded-full ml-10 mr-10" /> */}
-                  
+
+                  <div className="tourCard__overlay-content">
+                    <div className="d-flex items-center justify-between mb-5">
+                      <div className="text-12 text-light-2 fw-500">
+                        {item?.location}
+                      </div>
+                      <div className="d-flex items-center text-yellow-1">
+                        <i className="icon-star text-10 mr-5" />
+                        <span className="text-12 fw-600 text-white">4.9</span>
+                        <span className="text-12 text-light-2 ml-5">({item?.numberOfReviews || '20'})</span>
+                      </div>
+                    </div>
+                    
+                    <h4 className="tourCard__title text-white text-16 lh-15 fw-600 mb-10" style={{ minHeight: '48px', display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      <span>{item?.title}</span>
+                    </h4>
+                    
+                    <div className="d-flex justify-between items-center pt-8 border-top-light-trans">
+                      <div className="d-flex items-center text-12 text-light-2">
+                        <i className="icon-clock text-13 mr-5 text-yellow-1" />
+                        <span>
+                          {item?.title.match(/(\d+)\s*[- ]\s*Day/i) 
+                            ? `${item.title.match(/(\d+)\s*[- ]\s*Day/i)[1]} Days` 
+                            : '7 Days'}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="tourCard__title text-dark-1 text-18 lh-16 fw-500">
-                  <span>{item?.title}</span>
-                </h4>
-                <div className="text-14 text-light-1">{item?.location}</div>
               </div>
             </Link>
           </div>

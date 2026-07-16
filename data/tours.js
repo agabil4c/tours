@@ -2035,7 +2035,10 @@ export const EASafaris = [
   {
     id: 1,
     tag: "",
-    slideImg: ["/img/tours/masai mara.jpg"],
+    slideImg: [
+      "/img/new_pics/lions_three.jpeg",
+      "/img/new_pics/lions_pair.jpeg"
+    ],
     title: "7-Day Masai Mara & Rwanda Gorilla Safari",
     location: "East Africa",
     duration: "48",
@@ -2105,7 +2108,10 @@ export const EASafaris = [
   {
     id: 2,
     tag: "",
-    slideImg: ["/img/tours/queen elizabeth.jpg"],
+    slideImg: [
+      "/img/new_pics/elephant_water.jpeg",
+      "/img/new_pics/hippos.jpeg"
+    ],
     title: "7 Day Widllife Safari in Tanzania",
     location: "Tanzania",
     duration: "72",
@@ -2151,7 +2157,9 @@ export const EASafaris = [
   {
     id: 3,
     tag: "",
-    slideImg: ["/img/tours/Mount Kenya.jpeg"],
+    slideImg: [
+      "/img/new_pics/kob.jpeg"
+    ],
     title: "9 days hiking on Kilimanjaro",
     location: "Kilimanjaro",
     duration: "72",
@@ -2208,7 +2216,9 @@ export const EASafaris = [
   {
     id: 4,
     tag: "",
-    slideImg: ["/img/tours/queen elizabeth.jpg"],
+    slideImg: [
+      "/img/new_pics/crocodile.jpeg"
+    ],
     title: "10 days safari in Uganda and Rwanda",
     location: "Uganda",
     duration: "72",

@@ -44,14 +44,24 @@
 }
 
 .tourCard.-type-1 {
+  position: relative;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
   .tourCard {
     &__image {
+      position: relative;
       overflow: hidden;
-      border-radius: 4px;
+      border-radius: 12px;
+      margin-bottom: 0;
 
       .cardImage__content .swiper-slide,
       .cardImage__content > img {
-        transition: all 0.8s $easeOutQuart;
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
       .swiper-slide-active {
@@ -59,29 +69,33 @@
         z-index: 2;
       }
     }
+  }
 
-    &__title {
-      span {
-        background-image: linear-gradient(transparent 24px, black 20px);
-        background-size: 0;
-        background-repeat: no-repeat;
-        transition: background-size 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
-      }
-    }
+  .tourCard__overlay-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 35px 20px 20px 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    z-index: 2;
+    color: #ffffff;
+    pointer-events: none; // ensure clicks pass through to link if needed
+  }
+
+  .border-top-light-trans {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    
     .tourCard {
       &__image {
         .cardImage__content > img,
         .swiper-slide {
-          transform: scale(1.15);
-        }
-      }
-
-      &__title {
-        span {
-          background-size: 100% !important;
+          transform: scale(1.06);
         }
       }
     }
@@ -89,14 +103,18 @@
 }
 
 .activityCard.-type-1 {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 16px;
+  overflow: hidden;
+
   .activityCard {
     &__image {
       overflow: hidden;
-      border-radius: 4px;
+      border-radius: 16px;
 
       .cardImage__content .swiper-slide,
       .cardImage__content > img {
-        transition: all 0.8s $easeOutQuart;
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
       .swiper-slide-active {
@@ -107,7 +125,7 @@
 
     &__title {
       span {
-        background-image: linear-gradient(transparent 24px, black 20px);
+        background-image: linear-gradient(transparent 24px, var(--color-blue-1) 20px);
         background-size: 0;
         background-repeat: no-repeat;
         transition: background-size 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
@@ -116,17 +134,20 @@
   }
 
   &:hover {
+    transform: translateY(-6px);
+
     .activityCard {
       &__image {
         .cardImage__content > img,
         .swiper-slide {
-          transform: scale(1.15);
+          transform: scale(1.08);
         }
       }
 
       &__title {
         span {
           background-size: 100% !important;
+          color: var(--color-blue-1);
         }
       }
     }
@@ -134,14 +155,18 @@
 }
 
 .rentalCard.-type-1 {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 16px;
+  overflow: hidden;
+
   .rentalCard {
     &__image {
       overflow: hidden;
-      border-radius: 4px;
+      border-radius: 16px;
 
       .cardImage__content .swiper-slide,
       .cardImage__content > img {
-        transition: all 0.8s $easeOutQuart;
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
       .swiper-slide-active {
@@ -152,7 +177,7 @@
 
     &__title {
       span {
-        background-image: linear-gradient(transparent 24px, black 20px);
+        background-image: linear-gradient(transparent 24px, var(--color-blue-1) 20px);
         background-size: 0;
         background-repeat: no-repeat;
         transition: background-size 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
@@ -161,17 +186,20 @@
   }
 
   &:hover {
+    transform: translateY(-6px);
+
     .rentalCard {
       &__image {
         .cardImage__content > img,
         .swiper-slide {
-          transform: scale(1.15);
+          transform: scale(1.08);
         }
       }
 
       &__title {
         span {
           background-size: 100% !important;
+          color: var(--color-blue-1);
         }
       }
     }

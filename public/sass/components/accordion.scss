@@ -172,3 +172,60 @@
     }
   }
 }
+
+.itinerary-accordion {
+  &__item {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+
+    &.is-active {
+      border-color: rgba(15, 76, 58, 0.2) !important;
+      box-shadow: 0 10px 25px rgba(15, 76, 58, 0.06) !important;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    user-select: none;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(245, 246, 248, 0.4);
+    }
+  }
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background-color: #f5f6f8;
+    color: #111827;
+
+    &.is-active {
+      background-color: var(--color-blue-1) !important;
+      color: #ffffff !important;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    background-color: rgba(245, 246, 248, 0.25);
+  }
+}

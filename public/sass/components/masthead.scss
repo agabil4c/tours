@@ -742,26 +742,23 @@
 
   .mainSearch-wrap {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -45px;
+    z-index: 10;
+    width: 100%;
+    max-width: 1100px;
+    background-color: transparent !important;
     display: flex;
-    justify-content: flex-end;
-    max-width: 900px;
-
-    @media (max-width: (1300px)) {
-      left: 50%;
-      transform: translateX(-50%);
-      justify-content: center;
-      width: 100%;
-      background-color: transparent !important;
-    }
+    justify-content: center;
 
     @include media-below(lg) {
+      position: relative;
+      bottom: unset;
       left: unset;
       transform: none;
-      position: relative;
-      margin-top: 50px;
+      margin-top: 30px;
+      padding: 0 15px;
     }
   }
 }

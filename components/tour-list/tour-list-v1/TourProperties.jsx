@@ -100,14 +100,10 @@ const TourProperties = () => {
                   {item?.numberOfReviews} reviews
                 </div>
 
-                <div className="text-14 text-light-1 mt-50 md:mt-20">From</div>
-                <div className="text-22 lh-12 fw-600 mt-5">
-                  US${item?.price}
-                </div>
-                <div className="text-14 text-light-1 mt-5">per adult</div>
+
 
                 <Link
-                  href={`/tour/tour-single/${item.id}`}
+                  href={`/safaris/east-africa-safaris/${item.title?.toLowerCase().replace(/\s+/g, "-") || item.id}`}
                   className="button -md -dark-1 bg-blue-1 text-white mt-24"
                 >
                   View Detail <div className="icon-arrow-top-right ml-15"></div>

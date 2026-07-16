@@ -1,6 +1,7 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import SrollTop from "../components/common/ScrollTop";
+import WhatsAppButton from "../components/common/WhatsAppButton";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -30,6 +31,7 @@ function App({ Component, pageProps }) {
       <Provider store={store}>
         <Component {...pageProps} />
         <SrollTop />
+        <WhatsAppButton />
       </Provider>
     </main>
   );

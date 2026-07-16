@@ -111,9 +111,9 @@ const MobileMenu = () => {
                   key={i}
                   component={
                     <Link
-                      href={`/tour/tour-list-v2/${item.name.replace(/\s+/g, '-').toLowerCase()}`}
+                      href={`/safaris/${item.name.replace(/\s+/g, '-').toLowerCase()}`}
                       className={
-                        isActiveLink(`/tour/tour-list-v2/${item.name.replace(/\s+/g, '-').toLowerCase()}`, router.asPath) ? "current" : ""
+                        isActiveLink(`/safaris/${item.name.replace(/\s+/g, '-').toLowerCase()}`, router.asPath) ? "current" : ""
                       }
                     />
                   }
@@ -147,9 +147,9 @@ const MobileMenu = () => {
             <MenuItem
               component={
                 <Link
-                  href="/others-pages/about"
+                  href="/about-us"
                   className={
-                    router.pathname === "/others-pages/about" ? "menu-active-link" : ""
+                    router.pathname === "/about-us" ? "menu-active-link" : ""
                   }
                 />
               }

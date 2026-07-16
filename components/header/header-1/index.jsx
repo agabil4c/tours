@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import MainMenu from "../MainMenu";
 import CurrenctyMegaMenu from "../CurrenctyMegaMenu";
 import LanguageMegaMenu from "../LanguageMegaMenu";
-import MobileMenu from "../MobileMenu";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const MobileMenu = dynamic(() => import("../MobileMenu"), { ssr: false });
 
 const Header1 = () => {
   const [navbar, setNavbar] = useState(false);
