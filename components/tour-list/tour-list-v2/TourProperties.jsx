@@ -6,31 +6,28 @@ import { EASafaris, kenyaSafaris, rwandaSafaris, ugandaSafaris } from "../../../
 import isTextMatched from "../../../utils/isTextMatched";
 import { useEffect, useState } from "react";
 
-const TourProperties = ({ tours }) => {
-  const [tourData, setTourData] = useState(null);
+const resolveToursBySlug = (tours) => {
+  switch ((tours || "").toLowerCase()) {
+    case "kenya-safaris":
+      return kenyaSafaris;
+    case "uganda-safaris":
+      return ugandaSafaris;
+    case "rwanda-safaris":
+      return rwandaSafaris;
+    case "east-africa-safaris":
+    case "east africa-safaris":
+      return EASafaris;
+    default:
+      return [];
+  }
+};
 
-  useEffect(() => {
-    if (tours) {
-      // Handle the tour data based on the tourName
-      switch (tours.toLowerCase()) {
-        case 'kenya-safaris':
-          setTourData(kenyaSafaris);
-          break;
-        case 'uganda-safaris':
-          setTourData(ugandaSafaris);
-          break;
-        case 'rwanda-safaris':
-          setTourData(rwandaSafaris);
-          break;
-        case 'east africa-safaris':
-          setTourData(EASafaris);
-          break;
-        default:
-          setTourData([]); // Or handle a fallback
-          break;
-      }
-    }
-  }, [tours]);
+const TourProperties = ({ tours }) => {
+  const tourData = resolveToursBySlug(tours);
+  const canonicalCategorySlug =
+    (tours || "").toLowerCase() === "east africa-safaris"
+      ? "east-africa-safaris"
+      : (tours || "east-africa-safaris").toLowerCase();
 
   return (
     <>
@@ -42,7 +39,7 @@ const TourProperties = ({ tours }) => {
           data-aos-delay={item?.delayAnimation}
         >
           <Link
-            href={`/safaris/${tours?.toLowerCase()}/${item?.title?.toLowerCase().replace(/\s+/g, "-")}`}
+            href={`/safaris/${canonicalCategorySlug}/${item?.title?.toLowerCase().replace(/\s+/g, "-")}`}
             className="tourCard -type-1 hover-inside-slider"
           >
             <div className="tourCard__image position-relative">
@@ -64,7 +61,7 @@ const TourProperties = ({ tours }) => {
                             height={300}
                             className="rounded-4 col-12 js-lazy"
                             src={slide}
-                            alt="image"
+                            alt={`${item?.title || "Safari Tour"} - ${item?.location || "East Africa"}`}
                           />
                         </div>
                       </div>

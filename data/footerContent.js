@@ -1,31 +1,33 @@
 module.exports = [
-  // {
-  //   id: 1,
-  //   title: "Company",
-  //   menuList: [
-  //     { name: "About Us", routerPath: "/" },
-  //     { name: "Careers", routerPath: "/" },
-  //     { name: "Blog", routerPath: "/" },
-  //     { name: "Press", routerPath: "/" },
-  //     { name: "Gift Cards", routerPath: "/" },
-  //   ],
-  // },
+  {
+    id: 1,
+    title: "Top Destinations",
+    menuList: [
+      { name: "Uganda Safaris & Parks", routerPath: "/destination/Uganda" },
+      { name: "Kenya Safaris & Reserves", routerPath: "/destination/Kenya" },
+      { name: "Rwanda Gorilla Parks", routerPath: "/destination/Rwanda" },
+      { name: "Bwindi Impenetrable Forest", routerPath: "/destination/uganda/bwindi-impenetrable-n.p" },
+      { name: "Murchison Falls N.P.", routerPath: "/destination/uganda/murchison-falls-n.p" },
+      { name: "Masai Mara National Reserve", routerPath: "/destination/kenya/maasai-mara-national-reserve" },
+    ],
+  },
   {
     id: 2,
-    title: "Support",
+    title: "Safari Packages",
     menuList: [
-      { name: "Contact", routerPath: "/" },
-      { name: "Privacy Policy", routerPath: "/" },
-      { name: "Terms and Conditions", routerPath: "/" },
+      { name: "Uganda Safari Packages", routerPath: "/safaris/uganda-safaris" },
+      { name: "Kenya Safari Packages", routerPath: "/safaris/kenya-safaris" },
+      { name: "Rwanda Gorilla Safaris", routerPath: "/safaris/rwanda-safaris" },
+      { name: "East Africa Combined Safaris", routerPath: "/safaris/east-africa-safaris" },
     ],
   },
   {
     id: 3,
-    title: "Other Services",
+    title: "Company & Support",
     menuList: [
-      { name: "Car hire", routerPath: "/" },
-      
-      
+      { name: "About Riverwide Safaris", routerPath: "/about-us" },
+      { name: "Contact Us", routerPath: "/contact" },
+      { name: "All Safari Tours", routerPath: "/safaris" },
     ],
   },
 ];

@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /others-pages/
+Disallow: /tour/
+Disallow: /blog/
+Disallow: /home/
+Disallow: /layout/
 
+Host: https://www.riverwidesafaris.com
 Sitemap: https://www.riverwidesafaris.com/sitemap.xml

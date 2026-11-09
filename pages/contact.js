@@ -16,7 +16,15 @@ const Contact = () => {
   const { t } = useTranslation('common');
   return (
     <>
-      <Seo pageTitle="Contact" />
+      <Seo
+        pageTitle="Contact Us - Book Your Uganda, Rwanda & Kenya Safari"
+        description="Contact Riverwide Trekkers Safaris in Wakiso, Kampala, Uganda to plan your custom East Africa wildlife safari, gorilla trekking permit, or Masai Mara tour. Call +(256) 702 791899 or email info@riverwidesafaris.com."
+        keywords="Contact Riverwide Trekkers Safaris, book Uganda safari, gorilla trekking inquiry, Kampala safari operator contact"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Contact Us", url: "/contact" },
+        ]}
+      />
       {/* End Page Title */}
 
       {/* <TopHeader /> */}
@@ -98,4 +106,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default dynamic(() => Promise.resolve(Contact), { ssr: false });
+export default Contact;

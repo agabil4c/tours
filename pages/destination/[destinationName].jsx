@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import CallToActions from "../../components/common/CallToActions";
-import Seo from "../../components/common/Seo";
+import Seo, { stripHtml } from "../../components/common/Seo";
 import DefaultHeader from "../../components/header/default-header";
 import DefaultFooter from "../../components/footer/default";
 import TopDestinations2 from "../../components/destinations/TopDestinations2";
@@ -20,33 +20,45 @@ const DynamicMap = dynamic(() => import("../../components/common/MapView"), {
 
 const Destination = ({ destinationData, destinationName }) => {
   const { t } = useTranslation('common');
-  // const router = useRouter();
-  // const { destinationName } = router.query; 
-  // useEffect(() => {
-  //   if (!router.isReady) return;
+  const formattedName =
+    destinationName
+      ? destinationName.charAt(0).toUpperCase() + destinationName.slice(1).toLowerCase()
+      : "East Africa";
+  const rawIntro = destinationData?.[0]?.text || "";
+  const seoDescription =
+    stripHtml(rawIntro).slice(0, 160) ||
+    `Discover the top national parks, wildlife safaris, gorilla trekking, and travel guide for ${formattedName} with Riverwide Trekkers Safaris.`;
 
-  //   if (destinationName) {
-  //     // Handle the tour data based on the tourName
-  //     switch ((destinationName || "").toLowerCase()) {
-  //       case 'uganda':
-  //         setDestinationData(ugandaInfo);
-  //         break;
-  //       case 'kenya':
-  //         setDestinationData(kenyaInfo);
-  //         break;
-  //       case 'rwanda':
-  //         setDestinationData(rwandaInfo);
-  //         break;
-  //       default:
-  //         setDestinationData([]); // Or handle a fallback
-  //         break;
-  //     }
-  //   }
-  // }, [destinationName, router.isReady]);
+  const destinationSchema = {
+    "@context": "https://schema.org",
+    "@type": "TouristDestination",
+    name: `${formattedName} Safari Destinations`,
+    description: seoDescription,
+    url: `https://www.riverwidesafaris.com/destination/${formattedName}`,
+    ...(destinationData?.[0]?.lat && destinationData?.[0]?.lng
+      ? {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: destinationData[0].lat,
+            longitude: destinationData[0].lng,
+          },
+        }
+      : {}),
+  };
 
     return (
         <>
-          <Seo pageTitle={destinationName} />
+          <Seo
+            pageTitle={`${formattedName} Safari Destinations, National Parks & Travel Guide`}
+            description={seoDescription}
+            keywords={`${formattedName} safaris, visit ${formattedName}, ${formattedName} national parks, ${formattedName} wildlife tours, ${formattedName} travel guide, Riverwide Trekkers Safaris`}
+            url={`https://www.riverwidesafaris.com/destination/${formattedName}`}
+            breadcrumbs={[
+              { name: "Home", url: "/" },
+              { name: `${formattedName} Destinations`, url: `/destination/${formattedName}` },
+            ]}
+            structuredData={destinationSchema}
+          />
           {/* End Page Title */}
     
           <div className="header-margin"></div>
@@ -218,7 +230,7 @@ const Destination = ({ destinationData, destinationName }) => {
 };
 
 export async function getStaticPaths() {
-  const destinations = ['Kenya', 'Uganda', 'Rwanda'];
+  const destinations = ['Kenya', 'Uganda', 'Rwanda', 'kenya', 'uganda', 'rwanda'];
 
   const locales = ['en', 'de', 'fr'];
   const paths = [];

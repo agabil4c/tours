@@ -9,7 +9,7 @@ import Blog1 from "../../components/blog/Blog1";
 const BlogListV1 = () => {
   return (
     <>
-      <Seo pageTitle="Blog List V1" />
+      <Seo pageTitle="Blog List V1" noindex={true} />
       {/* End Page Title */}
 
       <div className="header-margin"></div>

@@ -10,13 +10,17 @@ import { useState } from "react";
 import DefaultHeader from "../../components/header/default-header";
 
 const Index = () => {
-  const router = useRouter();
-  const { tourName } = router.query;  // Extract the tourName from the URL
-  const [tourData, setTourData] = useState(null);
-  console.log(tourName)
   return (
     <>
-      <Seo pageTitle="Tour List v2" />
+      <Seo
+        pageTitle="East Africa Safari Packages & Gorilla Trekking Tours"
+        description="Browse all Uganda, Rwanda, Kenya, and Tanzania safari packages with Riverwide Trekkers Safaris. From 2-day Bwindi gorilla trekking to 12-day East Africa wildlife expeditions."
+        keywords="East Africa safari packages, Uganda safari tours, Kenya safari packages, Rwanda gorilla tours, Riverwide Trekkers Safaris"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Safaris", url: "/safaris" },
+        ]}
+      />
       {/* End Page Title */}
 
       <div className="header-margin"></div>

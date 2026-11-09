@@ -28,7 +28,7 @@ const BlogSingleDynamic = () => {
 
   return (
     <>
-      <Seo pageTitle="Blog Single" />
+      <Seo pageTitle="Blog Single" noindex={true} />
       {/* End Page Title */}
 
       <div className="header-margin"></div>

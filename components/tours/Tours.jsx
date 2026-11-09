@@ -95,7 +95,7 @@ const Tours = () => {
                             height={300}
                             className="col-12 js-lazy"
                             src={slide}
-                            alt="image"
+                            alt={`${item?.title || "East Africa Safari"} - ${item?.location || "Safari Tour"}`}
                           />
                         </div>
                       </div>

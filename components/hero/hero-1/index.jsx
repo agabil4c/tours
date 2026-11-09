@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Parallax } from 'react-parallax';
 
+
 const Index = () => {
   const { t } = useTranslation('common');
 

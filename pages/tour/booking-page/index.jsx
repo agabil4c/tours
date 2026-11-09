@@ -17,7 +17,7 @@ const TourBookingPage = () => {
 
   return (
     <>
-      <Seo pageTitle="Hotel Booking Page" />
+      <Seo pageTitle="Hotel Booking Page" noindex={true} />
       {/* End Page Title */}
 
       <div className="header-margin"></div>

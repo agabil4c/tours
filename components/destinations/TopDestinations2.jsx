@@ -6,28 +6,21 @@ import isTextMatched from "../../utils/isTextMatched";
 import { destinations6, kenya, rwanda, uganda } from "../../data/desinations";
 import { useEffect, useState } from "react";
 
-const TopDestinations2 = ({destination}) => {
-  const [destinationData, setDestinationData] = useState(null);
-  
-    useEffect(() => {
-      if (destination) {
-        // Handle the tour data based on the tourName
-        switch (destination.toLowerCase()) {
-          case 'uganda':
-            setDestinationData(uganda);
-            break;
-          case 'kenya':
-            setDestinationData(kenya);
-            break;
-          case 'rwanda':
-            setDestinationData(rwanda);
-            break;
-          default:
-            setDestinationData([]); // Or handle a fallback
-            break;
-        }
-      }
-    }, [destination]);
+const resolveDestinationPlaces = (destination) => {
+  switch ((destination || "").toLowerCase()) {
+    case "uganda":
+      return uganda;
+    case "kenya":
+      return kenya;
+    case "rwanda":
+      return rwanda;
+    default:
+      return [];
+  }
+};
+
+const TopDestinations2 = ({ destination }) => {
+  const destinationData = resolveDestinationPlaces(destination);
 
   var settings = {
     dots: true,
@@ -122,7 +115,7 @@ const TopDestinations2 = ({destination}) => {
                       height={300}
                       className="rounded-4 col-12 js-lazy"
                       src={item.img}
-                      alt="image"
+                      alt={`${item?.location || "Safari Destination"} in ${destination || "East Africa"}`}
                     />
                   </div>
                 </div>

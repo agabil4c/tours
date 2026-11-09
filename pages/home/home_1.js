@@ -17,11 +17,51 @@ import Tours from "../../components/tours/Tours";
 import Tours2 from "../../components/tours/Tours2";
 import Link from "next/link";
 
+const HOME_STRUCTURED_DATA = [
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What are the best destinations for gorilla trekking in East Africa?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Bwindi Impenetrable National Park and Mgahinga Gorilla National Park in Uganda, as well as Volcanoes National Park in Rwanda, are the premier destinations for mountain gorilla trekking in East Africa.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "When is the best time to visit Uganda, Rwanda, and Kenya for a safari?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The dry seasons from June to October and December to February offer the best conditions for gorilla trekking, chimpanzee tracking, and Big Five wildlife viewing across Uganda, Rwanda, and Kenya, including the Great Migration in the Masai Mara.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does Riverwide Trekkers Safaris offer tailor-made East Africa safari packages?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, Riverwide Trekkers Safaris specializes in custom and scheduled safari packages across Uganda, Kenya, Rwanda, and Tanzania, including airport transfers, 4x4 safari vehicles, permits, and lodge bookings.",
+        },
+      },
+    ],
+  },
+];
+
 const Home_1 = () => {
   const { t } = useTranslation('common');
   return (
     <>
-      <Seo pageTitle="Riverwide Trekkers Safaris" />
+      <Seo
+        pageTitle="Uganda, Rwanda & Kenya Safari Tours | Gorilla Trekking"
+        description="Experience unforgettable East Africa safaris with Riverwide Trekkers Safaris. Book mountain gorilla trekking in Bwindi & Volcanoes National Park, Big Five wildlife tours in Murchison Falls, Queen Elizabeth & Masai Mara."
+        keywords="Riverwide Trekkers Safaris, Riverwide Safaris, Uganda safaris, Rwanda gorilla trekking, Kenya wildlife safaris, Bwindi gorilla trekking, Murchison Falls National Park, Queen Elizabeth National Park, Masai Mara safari, Kibale chimpanzee tracking, Kidepo Valley safari, East Africa tour operator"
+        url="https://www.riverwidesafaris.com"
+        image="/img/new_pics/gorilla_hero.jpeg"
+        structuredData={HOME_STRUCTURED_DATA}
+      />
       {/* End Page Title */}
 
       <DefaultHeader />
@@ -56,14 +96,14 @@ const Home_1 = () => {
             {/* End col-auto */}
 
             <div className="col-auto md:d-none">
-              <a
-                href="#"
+              <Link
+                href="/destination/Uganda"
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 {t('viewAllDestinations')}
 
                 <div className="icon-arrow-top-right ml-15" />
-              </a>
+              </Link>
             </div>
             {/* End col-auto */}
           </div>
@@ -200,4 +240,4 @@ const Home_1 = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(Home_1), { ssr: false });
+export default Home_1;

@@ -18,7 +18,15 @@ const About = () => {
   const { t } = useTranslation('common');
   return (
     <>
-      <Seo pageTitle="About" />
+      <Seo
+        pageTitle="About Us - East Africa Safari & Gorilla Trekking Experts"
+        description="Learn about Riverwide Trekkers Safaris, your trusted Uganda, Rwanda, and Kenya tour operator dedicated to sustainable eco-tourism, tailor-made wildlife safaris, and community empowerment."
+        keywords="About Riverwide Trekkers Safaris, Uganda tour company, sustainable safaris East Africa, eco-tourism Uganda, tailor-made African safaris"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "About Us", url: "/about-us" },
+        ]}
+      />
       {/* End Page Title */}
 
       <div className="header-margin"></div>
@@ -117,4 +125,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default dynamic(() => Promise.resolve(About), { ssr: false });
+export default About;

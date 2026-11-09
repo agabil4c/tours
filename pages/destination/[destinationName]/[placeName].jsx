@@ -7,7 +7,7 @@ import ModalVideo from "react-modal-video";
 import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { hotelsData } from "../../../data/hotels";
-import Seo from "../../../components/common/Seo";
+import Seo, { stripHtml } from "../../../components/common/Seo";
 import DefaultHeader from "../../../components/header/default-header";
 import Overview from "../../../components/destination-single/Overview";
 import TopBreadCrumb from "../../../components/destination-single/TopBreadCrumb";
@@ -21,13 +21,54 @@ import Image from "next/image";
 import { destinations6, kenya, rwanda, uganda } from "../../../data/desinations";
 import Tours2 from "../../../components/tours/Tours2";
 
-const HotelSingleV1Dynamic = ({ place }) => {
+const HotelSingleV1Dynamic = ({ place, destinationName: propDestinationName, placeName }) => {
   const { t } = useTranslation('common');
   const [isOpen, setOpen] = useState(false);
   const router = useRouter();
-  const { destinationName } = router.query;
+  const destinationName = propDestinationName || router.query.destinationName || "Uganda";
   if (!place) return <h1>Not Found</h1>;
-  
+
+  const formattedDestination =
+    destinationName.charAt(0).toUpperCase() + destinationName.slice(1).toLowerCase();
+  const placeTitle = place?.location?.replace(/\u00A0/g, " ") || "Safari Destination";
+  const overviewText = stripHtml(place?.overview || place?.attractions || "");
+  const seoDescription =
+    overviewText.slice(0, 160) ||
+    `Explore ${placeTitle} in ${formattedDestination}. Discover wildlife highlights, attractions, how to get there, and top safari packages with Riverwide Trekkers Safaris.`;
+  const highlightKeywords = Array.isArray(place?.highlight)
+    ? place.highlight.map((h) => h.replace(/[^\w\s-]/g, "").trim()).filter(Boolean)
+    : [];
+  const seoKeywords = [
+    placeTitle,
+    `${placeTitle} ${formattedDestination}`,
+    `${placeTitle} safari`,
+    `visit ${placeTitle}`,
+    ...highlightKeywords,
+    `${formattedDestination} national parks`,
+    "Riverwide Trekkers Safaris",
+  ].join(", ");
+
+  const placeSchema = {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    name: placeTitle,
+    description: seoDescription,
+    image: place?.img ? `https://www.riverwidesafaris.com${place.img}` : undefined,
+    url: `https://www.riverwidesafaris.com/destination/${destinationName.toLowerCase()}/${placeName || place?.location?.toLowerCase().replace(/\s+/g, "-")}`,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: formattedDestination,
+    },
+    ...(place?.lat && place?.lng
+      ? {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: place.lat,
+            longitude: place.lng,
+          },
+        }
+      : {}),
+  };
 
   return (
     <>
@@ -39,7 +80,21 @@ const HotelSingleV1Dynamic = ({ place }) => {
         onClose={() => setOpen(false)}
       />
 
-      <Seo pageTitle={place?.location?.slice(0, 30)} />
+      <Seo
+        pageTitle={`${placeTitle}, ${formattedDestination} - Safari Guide & Wildlife Tours`}
+        description={seoDescription}
+        keywords={seoKeywords}
+        image={place?.img}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: formattedDestination, url: `/destination/${formattedDestination}` },
+          {
+            name: placeTitle,
+            url: `/destination/${destinationName.toLowerCase()}/${placeName || place?.location?.toLowerCase().replace(/\s+/g, "-")}`,
+          },
+        ]}
+        structuredData={placeSchema}
+      />
       {/* End Page Title */}
 
       <div className="header-margin"></div>
@@ -385,6 +440,8 @@ export async function getStaticProps({ params, locale }) {
   return {
     props: {
       place,
+      destinationName,
+      placeName,
       ...(await serverSideTranslations(locale, ['common'])),
     },
   };

@@ -6,29 +6,21 @@ import { kenyaSafaris, rwandaSafaris, ugandaSafaris } from "../../data/tours";
 import { useEffect, useState } from "react";
 import isTextMatched from "../../utils/isTextMatched";
 
+const resolveDestinationTours = (destination) => {
+  switch ((destination || "").toLowerCase()) {
+    case "kenya":
+      return kenyaSafaris;
+    case "uganda":
+      return ugandaSafaris;
+    case "rwanda":
+      return rwandaSafaris;
+    default:
+      return [];
+  }
+};
+
 const Tours2 = ({ destination }) => {
-  const [tourData, setTourData] = useState(null);
-  console.log(destination)
-    useEffect(() => {
-      if (destination) {
-        // Handle the tour data based on the tourName
-        switch (destination?.toLowerCase()) {
-          case 'kenya':
-            setTourData(kenyaSafaris);
-            break;
-          case 'uganda':
-            setTourData(ugandaSafaris);
-            break;
-          case 'rwanda':
-            setTourData(rwandaSafaris);
-            break;
-          
-          default:
-            setTourData([]); // Or handle a fallback
-            break;
-        }
-      }
-    }, [destination]);
+  const tourData = resolveDestinationTours(destination);
   return (
     <>
       <Swiper
@@ -89,7 +81,7 @@ const Tours2 = ({ destination }) => {
                                 height={300}
                                 className="rounded-4 col-12 js-lazy"
                                 src={slide}
-                                alt="image"
+                                alt={`${item?.title || "Safari"} in ${item?.location || destination}`}
                               />
                             </div>
                           </div>

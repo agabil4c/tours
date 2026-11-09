@@ -9,7 +9,7 @@ import ModalVideo from "react-modal-video";
 import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import toursData, { kenyaSafaris, rwandaSafaris, ugandaSafaris, EASafaris } from "../../../data/tours";
-import Seo from "../../../components/common/Seo";
+import Seo, { stripHtml } from "../../../components/common/Seo";
 import DefaultHeader from "../../../components/header/default-header";
 import Overview from "../../../components/tour-single/Overview";
 import TourSnapShot from "../../../components/tour-single/TourSnapShot";
@@ -29,10 +29,66 @@ import ImportantInfo from "../../../components/tour-single/ImportantInfo";
 import Image from "next/image";
 import Header1 from "../../../components/header/header-11";
 
-const TourSingleV1Dynamic = ({ tour, tourName }) => {
+const TourSingleV1Dynamic = ({ tour, tourName, SafariName }) => {
   const [isOpen, setOpen] = useState(false);
 
   if (!tour) return <h1>Not Found</h1>;
+
+  const canonicalCategory =
+    (tourName || "").toLowerCase() === "east africa-safaris"
+      ? "east-africa-safaris"
+      : (tourName || "uganda-safaris").toLowerCase();
+  const safariSlug =
+    SafariName || tour?.title?.toLowerCase().replace(/\s+/g, "-");
+  const canonicalUrl = `https://www.riverwidesafaris.com/safaris/${canonicalCategory}/${safariSlug}`;
+  const cleanDesc =
+    stripHtml(tour?.description || "").slice(0, 160) ||
+    `Book the ${tour?.title} in ${tour?.location} with Riverwide Trekkers Safaris. Includes guided 4x4 safari transport, accommodation, and wildlife experiences.`;
+  const primaryImage = tour?.slideImg?.[0] || "/img/tours/bwindi.jpg";
+  const seoKeywords = [
+    tour?.title,
+    tour?.location,
+    `${tour?.location} safari`,
+    canonicalCategory.replace(/-/g, " "),
+    ...(Array.isArray(tour?.higlights) ? tour.higlights : []),
+    "Riverwide Trekkers Safaris",
+  ]
+    .filter(Boolean)
+    .join(", ");
+
+  const tourStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    name: tour?.title,
+    description: stripHtml(tour?.description || cleanDesc),
+    image: (tour?.slideImg || []).map((img) =>
+      img.startsWith("http") ? img : `https://www.riverwidesafaris.com${img}`
+    ),
+    url: canonicalUrl,
+    touristType: ["Safari Travelers", "Wildlife Enthusiasts", "Adventure Travelers"],
+    provider: {
+      "@type": "TravelAgency",
+      name: "Riverwide Trekkers Safaris",
+      url: "https://www.riverwidesafaris.com",
+    },
+    ...(Array.isArray(tour?.itinerary) && tour.itinerary.length > 0
+      ? {
+          itinerary: {
+            "@type": "ItemList",
+            numberOfItems: tour.itinerary.length,
+            itemListElement: tour.itinerary.map((step, idx) => ({
+              "@type": "ListItem",
+              position: idx + 1,
+              item: {
+                "@type": "TouristAttraction",
+                name: step.title,
+                description: stripHtml(step.desc),
+              },
+            })),
+          },
+        }
+      : {}),
+  };
 
   return (
     <>
@@ -44,7 +100,26 @@ const TourSingleV1Dynamic = ({ tour, tourName }) => {
         onClose={() => setOpen(false)}
       />
 
-      <Seo pageTitle="Tour Single" />
+      <Seo
+        pageTitle={`${tour?.title} | ${tour?.location || "East Africa Safari"}`}
+        description={cleanDesc}
+        keywords={seoKeywords}
+        url={canonicalUrl}
+        image={primaryImage}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Safaris", url: "/safaris" },
+          {
+            name: canonicalCategory
+              .split("-")
+              .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+              .join(" "),
+            url: `/safaris/${canonicalCategory}`,
+          },
+          { name: tour?.title, url: `/safaris/${canonicalCategory}/${safariSlug}` },
+        ]}
+        structuredData={tourStructuredData}
+      />
       {/* End Page Title */}
 
       <div className="header-margin"></div>
@@ -100,7 +175,7 @@ const TourSingleV1Dynamic = ({ tour, tourName }) => {
                         height={450}
                         priority
                         src={slide}
-                        alt="image"
+                        alt={`${tour?.title || "Safari Tour"} - ${tour?.location || "East Africa"}`}
                         style={{ height: "501px" }}
                         className="rounded-4 col-12 cover object-cover"
                       />
@@ -183,7 +258,7 @@ const TourSingleV1Dynamic = ({ tour, tourName }) => {
 
             <div className="col-auto">
               <Link
-                href="#"
+                href={`/safaris/${canonicalCategory}`}
                 className="button -md -blue-1 bg-blue-1-05 text-blue-1"
               >
                 More <div className="icon-arrow-top-right ml-15" />
@@ -210,6 +285,7 @@ export async function getStaticPaths() {
     'kenya-safaris': kenyaSafaris,
     'uganda-safaris': ugandaSafaris,
     'rwanda-safaris': rwandaSafaris,
+    'east-africa-safaris': EASafaris,
     'east africa-safaris': EASafaris,
   };
 
@@ -250,6 +326,7 @@ export async function getStaticProps({ params, locale }) {
     case 'rwanda-safaris':
       data = rwandaSafaris;
       break;
+    case 'east-africa-safaris':
     case 'east africa-safaris':
       data = EASafaris;
       break;
@@ -270,6 +347,7 @@ export async function getStaticProps({ params, locale }) {
     props: {
       tour,
       tourName,
+      SafariName,
       ...(await serverSideTranslations(locale, ['common'])),
     },
   };

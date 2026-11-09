@@ -10,7 +10,7 @@ import TourProperties from "../../../components/tour-list/tour-list-v3/TourPrope
 const index = () => {
   return (
     <>
-      <Seo pageTitle="Tour List v3" />
+      <Seo pageTitle="Tour List v3" noindex={true} />
       {/* End Page Title */}
 
       <div className="header-margin"></div>

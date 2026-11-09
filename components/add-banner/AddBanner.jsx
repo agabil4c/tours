@@ -51,7 +51,7 @@ const AddBanner = () => {
       img: "/img/destinations/3/kenya/tz.jpg",
       title: "Visit Tanzania",
       meta: "Enjoy Summer Deals",
-      routerPath: "/",
+      routerPath: "/safaris/east-africa-safaris",
       delayAnimation: "300",
     },
   ];
@@ -70,7 +70,7 @@ const AddBanner = () => {
               height={555}
               className="img-ratio js-lazy loaded"
               src="/img/backgrounds/12.jpg"
-              alt="image"
+              alt="Eco-tourism and sustainable wildlife safaris in East Africa"
             />
           </div>
           <div className="ctaCard__content py-70 px-70 lg:py-30 lg:px-30">
@@ -106,7 +106,7 @@ const AddBanner = () => {
                     height={455}
                     className="js-lazy img-ratio"
                     src={item.img}
-                    alt="image"
+                    alt={`${item.title} - Riverwide Trekkers Safaris`}
                   />
                 </div>
                 <div className="ctaCard__content py-50 px-50 xl:py-30 xl:px-30">
@@ -114,13 +114,9 @@ const AddBanner = () => {
 
                   <h4 className="text-20 xl:text-24 text-white">{item.title}</h4>
                   <div className="d-inline-block mt-30">
-                    {/* <Link
-                      href={item.routerPath}
-                      className="button px-48 py-15 -blue-1 -min-180 bg-white text-dark-1"
-                    >
-                      See more
-                    </Link> */}
-                    <a className="button h-50 px-24 -dark-1 bg-blue-1 text-white" href={item.routerPath}>{t('seeMore')} <div className="icon-arrow-top-right ml-15"></div></a>
+                    <Link className="button h-50 px-24 -dark-1 bg-blue-1 text-white" href={item.routerPath}>
+                      {t('seeMore')} <div className="icon-arrow-top-right ml-15"></div>
+                    </Link>
                   </div>
                 </div>
               </div>

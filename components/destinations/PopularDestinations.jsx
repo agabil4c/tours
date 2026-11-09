@@ -6,6 +6,15 @@ import { Navigation } from "swiper";
 import { Scrollbar } from "swiper";
 import { destinations2 } from "../../data/desinations";
 
+const getDestinationHref = (city = "") => {
+  const normalized = city.toLowerCase();
+  if (normalized.includes("murchison")) return "/destination/uganda/murchison-falls-n.p";
+  if (normalized.includes("kidepo")) return "/destination/uganda/kidepo-valley-n.p";
+  if (normalized.includes("mara")) return "/destination/kenya/maasai-mara-national-reserve";
+  if (normalized.includes("queen elizabeth")) return "/destination/uganda/queen-elizabeth-n.p";
+  return "/destination/Uganda";
+};
+
 const PopularDestinations = () => {
   const { t } = useTranslation('common');
   return (
@@ -42,7 +51,7 @@ const PopularDestinations = () => {
         {destinations2.map((item) => (
           <SwiperSlide key={item.id}>
             <Link
-              href="#"
+              href={item.link || getDestinationHref(item.city)}
               className="citiesCard -type-1 d-block rounded-4"
               key={item.id}
             >

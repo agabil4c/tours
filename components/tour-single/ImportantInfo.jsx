@@ -20,7 +20,7 @@ const ImportantInfo = ({ tour }) => {
                 <i className="icon-check text-10 fw-700" />
               </div>
               <h4 className="text-18 fw-600 text-dark-1" style={{ fontFamily: 'var(--font-serif)' }}>
-                What's Included
+                What&apos;s Included
               </h4>
             </div>
             
@@ -55,7 +55,7 @@ const ImportantInfo = ({ tour }) => {
                 <i className="icon-close text-8 fw-700" />
               </div>
               <h4 className="text-18 fw-600 text-dark-1" style={{ fontFamily: 'var(--font-serif)' }}>
-                What's Excluded
+                What&apos;s Excluded
               </h4>
             </div>
 
