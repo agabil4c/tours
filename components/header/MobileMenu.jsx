@@ -106,44 +106,31 @@ const MobileMenu = () => {
             {/* End  All Categories Menu */}
 
             <SubMenu label="Safaris">
-              {PackagesItems.map((item, i) => (
-                <MenuItem
-                  key={i}
-                  component={
-                    <Link
-                      href={`/safaris/${item.name.replace(/\s+/g, '-').toLowerCase()}`}
-                      className={
-                        isActiveLink(`/safaris/${item.name.replace(/\s+/g, '-').toLowerCase()}`, router.asPath) ? "current" : ""
-                      }
-                    />
-                  }
-                >
-                  {item.name}
-                </MenuItem>
-              ))}
+              {PackagesItems.map((item, i) => {
+                const routePath =
+                  item.routePath ||
+                  `/safaris/${item.name.replace(/\s+/g, "-").toLowerCase()}`;
+                return (
+                  <MenuItem
+                    key={i}
+                    component={
+                      <Link
+                        href={routePath}
+                        className={
+                          isActiveLink(routePath, router.asPath)
+                            ? "menu-active-link"
+                            : ""
+                        }
+                      />
+                    }
+                  >
+                    {item.name}
+                  </MenuItem>
+                );
+              })}
             </SubMenu>
-            {/* End  All Blog Menu */}
+            {/* End All Safaris Menu */}
 
-            {/* <SubMenu label="Activities">
-              {activityItems.map((item, i) => (
-                <MenuItem
-                  key={i}
-                  component={
-                    <Link
-                      href={item.routePath}
-                      className={
-                        isActiveLink(item.routePath, router.asPath)
-                          ? "menu-active-link"
-                          : ""
-                      }
-                    />
-                  }
-                >
-                  {item.name}
-                </MenuItem>
-              ))}
-            </SubMenu> */}
-            
             <MenuItem
               component={
                 <Link
@@ -169,30 +156,29 @@ const MobileMenu = () => {
             >
               Contact
             </MenuItem>
-            {/* End Contact  Menu */}
+            {/* End Contact Menu */}
           </Menu>
         </Sidebar>
       </ProSidebarProvider>
 
-      {/* <div className="mobile-footer px-20 py-5 border-top-light"></div>
-
-       <div className="pro-footer">
+      <div className="pro-footer border-top-light">
         <ContactInfo />
-        <div className="mt-10">
-          <h5 className="text-16 fw-500 mb-10">Follow us on social media</h5>
+        <div className="mt-15">
+          <h5 className="text-15 fw-600 mb-10">Follow us on social media</h5>
           <div className="d-flex x-gap-20 items-center">
             <Social />
           </div>
         </div>
         <div className="mt-20">
           <Link
-            className=" button -dark-1 px-30 fw-400 text-14 bg-blue-1 h-50 text-white"
-            href="/others-pages/login"
+            className="button px-24 fw-600 text-14 h-50 text-white rounded-100"
+            href="/contact"
+            style={{ backgroundColor: "var(--color-blue-1)" }}
           >
-            Become An Expert
+            Plan Your Safari
           </Link>
         </div>
-      </div> */}
+      </div>
       {/* End pro-footer */}
     </>
   );

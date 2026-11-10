@@ -233,43 +233,57 @@
 
       &__nav {
         display: flex;
+        align-items: center;
+        gap: 6px;
 
         > li {
-          padding: 25px 0;
+          padding: 20px 0;
+
+          > a {
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.1px;
+            transition: all 0.25s $easeOutQuart;
+          }
 
           &.menu-item-has-children > a .icon {
-            font-size: 7px;
+            font-size: 8px;
+            transition: transform 0.25s ease;
+          }
+
+          &.menu-item-has-children:hover > a .icon {
+            transform: rotate(180deg);
           }
 
           > .subnav::before {
             content: "";
             position: absolute;
             top: -5px;
-            left: 20px;
+            left: 28px;
             width: 10px;
             height: 10px;
             background-color: white;
             transform: rotate(45deg);
           }
         }
-
-        a {
-          padding: 0 14px;
-        }
       }
 
       .subnav {
         position: absolute;
         top: 100%;
+        left: 0;
         background-color: white;
-        border-radius: 4px;
-        color: var(--color-dark-1) !important;
-        min-width: 240px;
-        padding: 20px;
-        box-shadow: 0px 10px 60px 0px #0510360d;
+        border-radius: 16px;
+        color: var(--color-dark-1);
+        min-width: 310px;
+        padding: 16px;
+        border: 1px solid rgba(43, 114, 184, 0.12);
+        box-shadow: 0px 16px 40px rgba(11, 28, 51, 0.12);
         opacity: 0;
         pointer-events: none;
-        transition: all 0.2s $easeOutQuart;
+        transition: all 0.22s $easeOutQuart;
 
         &__backBtn {
           display: none;
@@ -282,12 +296,14 @@
 
         > li {
           > a {
-            padding: 5px 15px;
-            border-radius: 4px;
+            display: block;
+            padding: 10px 14px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
 
             &:hover {
               color: var(--color-blue-1);
-              background-color: color-opac(blue-1, 0.05);
+              background-color: var(--color-light-2);
             }
           }
         }
@@ -301,12 +317,13 @@
         position: absolute;
         top: 100%;
         background-color: white;
-        padding: 30px;
-        border-radius: 4px;
+        padding: 28px;
+        border-radius: 16px;
         color: var(--color-dark-1);
-        width: 800px;
-        box-shadow: 0px 10px 30px 0px #05103608;
-        transition: all 0.2s $easeOutQuart;
+        width: 820px;
+        border: 1px solid rgba(43, 114, 184, 0.12);
+        box-shadow: 0px 18px 45px rgba(11, 28, 51, 0.14);
+        transition: all 0.22s $easeOutQuart;
         opacity: 0;
         pointer-events: none;
 
@@ -332,11 +349,6 @@
             min-height: 300px;
             object-fit: cover;
           }
-        }
-
-        a {
-          padding-left: 0px;
-          padding-right: 0px;
         }
       }
     }
@@ -547,27 +559,47 @@
   font-weight: 400;
 }
 
-.text-emerald {
-  color: var(--color-blue-1) !important;
-  
-  a {
-    color: var(--color-blue-1) !important;
-    
+// Top-level menu states (transparent hero vs sticky/light header)
+.menu__nav.text-white {
+  > li > a {
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+
     &:hover {
-      color: var(--color-yellow-1) !important;
+      background-color: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
     }
+  }
+
+  > li.current > a {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
   }
 }
 
-.text-white {
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+.menu__nav.text-emerald {
+  > li > a {
+    color: var(--color-dark-1);
+
+    &:hover {
+      color: var(--color-blue-1);
+      background-color: var(--color-light-2);
+    }
+  }
+
+  > li.current > a {
+    color: var(--color-blue-1);
+    background-color: var(--color-blue-2);
+  }
 }
 
 .hover-emerald {
-  transition: color 0.2s ease;
+  color: var(--color-light-1);
+  transition: color 0.2s ease, transform 0.2s ease;
 
   &:hover {
     color: var(--color-blue-1) !important;
+    transform: translateX(3px);
     text-decoration: none;
   }
 }
@@ -587,21 +619,9 @@ li.-has-mega-menu:hover {
   pointer-events: none;
 }
 
-// Reset dropdown link colors to ensure they display consistently across all header text states
 .header-menu .menu__nav {
-  .subnav, .mega {
-    color: var(--color-dark-1) !important;
-    
-    h5 {
-      color: var(--color-blue-1) !important;
-    }
-    
-    a {
-      color: var(--color-light-1) !important;
-      
-      &:hover {
-        color: var(--color-blue-1) !important;
-      }
-    }
+  .subnav,
+  .mega {
+    text-shadow: none;
   }
 }

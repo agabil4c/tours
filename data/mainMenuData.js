@@ -686,15 +686,15 @@ export const categorieMobileItems = [
 export const destinationsItems = [
   {
     name: "Uganda",
-    routePath: "/destination/[destinationName]",
-  },
-  {
-    name: "Kenya",
-    routePath: "/destination/[destinationName]",
+    routePath: "/destination/Uganda",
   },
   {
     name: "Rwanda",
-    routePath: "/destination/[destinationName]",
+    routePath: "/destination/Rwanda",
+  },
+  {
+    name: "Kenya",
+    routePath: "/destination/Kenya",
   },
 ];
 
@@ -715,15 +715,28 @@ export const activityItems = [
 
 export const PackagesItems = [
   {
-    name: "Uganda Safaris",
-    routePath: "/safaris/[tourName]",
+    name: "East Africa Safaris",
+    subtitle: "Multi-country wildlife & gorilla tours",
+    routePath: "/safaris/east-africa-safaris",
   },
+  // {
+  //   name: "Gorilla Treks",
+  //   subtitle: "Bwindi & Volcanoes primate encounters",
+  //   routePath: "/safaris/gorilla-treks",
+  // },
   {
-    name: "Kenya Safaris",
-    routePath: "/safaris/[tourName]",
+    name: "Uganda Safaris",
+    subtitle: "Murchison Falls, Queen Elizabeth & Kidepo",
+    routePath: "/safaris/uganda-safaris",
   },
   {
     name: "Rwanda Safaris",
-    routePath: "/safaris/[tourName]",
+    subtitle: "Volcanoes, Nyungwe & Akagera N.P.",
+    routePath: "/safaris/rwanda-safaris",
+  },
+  {
+    name: "Kenya Safaris",
+    subtitle: "Masai Mara, Amboseli & Diani Beach",
+    routePath: "/safaris/kenya-safaris",
   },
 ];
