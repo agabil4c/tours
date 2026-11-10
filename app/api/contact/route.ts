@@ -4,7 +4,24 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
   try {
-    const { name, email, subject, message } = await req.json();
+    const {
+      name,
+      email,
+      phone,
+      country,
+      destinations,
+      safariType,
+      travelDate,
+      duration,
+      travelers,
+      accommodation,
+      subject,
+      message,
+    } = await req.json();
+
+    const destinationList = Array.isArray(destinations)
+      ? destinations.join(', ')
+      : destinations || '';
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -15,72 +32,119 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: `"${name}" <${process.env.EMAIL_USER}>`, // Using your domain email as sender
-      replyTo: email, // So replies go to the actual submitter
+      from: `"${name}" <${process.env.EMAIL_USER}>`,
+      replyTo: email,
       to: process.env.EMAIL_TO,
-      subject: `New Contact Message: ${subject || 'No Subject'}`,
+      subject: `${subject || 'New Safari Inquiry & Trip Plan'} - ${name}`,
       html: `
-  <div style="font-family: 'Segoe UI', Tahoma, Arial, sans-serif; max-width: 620px; margin: 0 auto; color: #333; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+  <div style="font-family: 'Segoe UI', Tahoma, Arial, sans-serif; max-width: 640px; margin: 0 auto; color: #0b1c33; background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
 
     <!-- Header -->
-    <div style="background-color: #0a58ca; padding: 24px; text-align: center;">
-      <h1 style="color: white; margin: 0; font-size: 22px;">New Contact Form Submission</h1>
+    <div style="background-color: #2b72b8; padding: 26px 24px; text-align: center;">
+      <h1 style="color: white; margin: 0; font-size: 22px;">New Safari Inquiry &amp; Trip Plan</h1>
+      <p style="color: #e8f3fc; margin: 6px 0 0; font-size: 14px;">Riverwide Trekkers Safaris</p>
     </div>
 
     <!-- Content -->
-    <div style="padding: 28px; background-color: #f4f7fb;">
-      <div style="background-color: #ffffff; border-radius: 6px; padding: 24px; border: 1px solid #e6e6e6;">
+    <div style="padding: 28px; background-color: #f6f9fd;">
+      <div style="background-color: #ffffff; border-radius: 8px; padding: 24px; border: 1px solid #dce6f2;">
+        <h3 style="color: #2b72b8; margin-top: 0; margin-bottom: 14px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px;">Traveler Details</h3>
         <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
           <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #eee; width: 30%;"><strong>From:</strong></td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #eee;">${name}</td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc; width: 36%;"><strong>Full Name:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${name}</td>
           </tr>
           <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>Email:</strong></td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #eee;">
-              <a href="mailto:${email}" style="color: #0a58ca; text-decoration: none;">${email}</a>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;"><strong>Email:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">
+              <a href="mailto:${email}" style="color: #2b72b8; text-decoration: none;">${email}</a>
             </td>
           </tr>
-          ${subject ? `
+          ${phone ? `
           <tr>
-            <td style="padding: 10px 0; border-bottom: 1px solid #eee;"><strong>Subject:</strong></td>
-            <td style="padding: 10px 0; border-bottom: 1px solid #eee;">${subject}</td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;"><strong>Phone / WhatsApp:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${phone}</td>
+          </tr>
+          ` : ''}
+          ${country ? `
+          <tr>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;"><strong>Country:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${country}</td>
+          </tr>
+          ` : ''}
+        </table>
+
+        <h3 style="color: #2b72b8; margin-top: 24px; margin-bottom: 14px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px;">Trip Preferences</h3>
+        <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+          ${destinationList ? `
+          <tr>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc; width: 36%;"><strong>Destinations:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${destinationList}</td>
+          </tr>
+          ` : ''}
+          ${safariType ? `
+          <tr>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;"><strong>Safari Experience:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${safariType}</td>
+          </tr>
+          ` : ''}
+          ${travelDate ? `
+          <tr>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;"><strong>Preferred Date:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${travelDate}</td>
+          </tr>
+          ` : ''}
+          ${duration ? `
+          <tr>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;"><strong>Duration:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${duration}</td>
+          </tr>
+          ` : ''}
+          ${travelers ? `
+          <tr>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;"><strong>Travelers:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${travelers}</td>
+          </tr>
+          ` : ''}
+          ${accommodation ? `
+          <tr>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;"><strong>Accommodation Style:</strong></td>
+            <td style="padding: 9px 0; border-bottom: 1px solid #eef5fc;">${accommodation}</td>
           </tr>
           ` : ''}
           <tr>
-            <td style="padding: 10px 0;"><strong>Received:</strong></td>
-            <td style="padding: 10px 0;">${new Date().toLocaleString()}</td>
+            <td style="padding: 9px 0;"><strong>Submitted On:</strong></td>
+            <td style="padding: 9px 0;">${new Date().toLocaleString()}</td>
           </tr>
         </table>
 
         <!-- Message -->
         <div style="margin-top: 24px;">
-          <h3 style="color: #0a58ca; margin-bottom: 12px; font-size: 17px;">Message</h3>
-          <div style="background: #f8f9fa; padding: 16px; border-left: 4px solid #0a58ca; border-radius: 4px; line-height: 1.6;">
-            ${message.replace(/\n/g, '<br/>')}
+          <h3 style="color: #2b72b8; margin-bottom: 12px; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px;">Safari Vision &amp; Notes</h3>
+          <div style="background: #f6f9fd; padding: 16px; border-left: 4px solid #2b72b8; border-radius: 4px; line-height: 1.6;">
+            ${(message || '').replace(/\n/g, '<br/>')}
           </div>
         </div>
       </div>
 
       <!-- Action -->
-      <div style="text-align: center; margin-top: 30px;">
-        <a href="mailto:${email}" style="background-color: #0a58ca; color: white; padding: 12px 22px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">
+      <div style="text-align: center; margin-top: 26px;">
+        <a href="mailto:${email}" style="background-color: #2b72b8; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">
           Reply to ${name}
         </a>
       </div>
     </div>
 
     <!-- Footer -->
-    <div style="background-color: #eaeaea; padding: 16px; text-align: center; font-size: 13px; color: #666;">
-      <p style="margin: 0;">This message was submitted via your website: <strong>${process.env.WEBSITE_NAME || 'your website'}</strong></p>
+    <div style="background-color: #eef5fc; padding: 16px; text-align: center; font-size: 13px; color: #4a5d73;">
+      <p style="margin: 0;">Submitted via <strong>${process.env.WEBSITE_NAME || 'Riverwide Trekkers Safaris'}</strong></p>
       <p style="margin: 5px 0 0;">
-        <a href="${process.env.WEBSITE_URL || '#'}" style="color: #0a58ca; text-decoration: underline;">Visit Website</a>
+        <a href="${process.env.WEBSITE_URL || 'https://www.riverwidesafaris.com'}" style="color: #2b72b8; text-decoration: underline;">Visit Website</a>
       </p>
     </div>
 
   </div>
-`
-
+`,
     };
 
     await transporter.sendMail(mailOptions);

@@ -2,30 +2,37 @@ const Address = () => {
   const addressContent = [
     {
       id: 1,
-      colClass: "col-lg-3",
-      title: "Address",
-      content: (
-        <>Namugongo, Nsawo estate road, Wakiso Uganda.</>
-      ),
+      colClass: "col-12",
+      title: "Office Address",
+      content: <>Namugongo, Nsawo Estate Road, Wakiso, Uganda</>,
     },
     {
       id: 2,
-      colClass: "col-auto",
-      title: "Dial Us At",
+      colClass: "col-sm-6",
+      title: "Phone / WhatsApp",
       content: (
         <>
-          <a href="tel:+4733378901">+(256) 702 791899</a>
+          <a
+            href="tel:+256702791899"
+            style={{ color: "var(--color-blue-1)" }}
+          >
+            +(256) 702 791899
+          </a>
         </>
       ),
     },
     {
       id: 3,
-      colClass: "col-auto",
-      title: "Need live support?",
+      colClass: "col-sm-6",
+      title: "Email Support",
       content: (
         <>
-          {" "}
-          <a href="mailto:info@riverwidesafaris.com">info@riverwidesafaris.com</a>
+          <a
+            href="mailto:info@riverwidesafaris.com"
+            style={{ color: "var(--color-blue-1)" }}
+          >
+            info@riverwidesafaris.com
+          </a>
         </>
       ),
     },
@@ -34,8 +41,8 @@ const Address = () => {
     <>
       {addressContent.map((item) => (
         <div className={`${item.colClass}`} key={item.id}>
-          <div className="text-14 text-light-1">{item.title}</div>
-          <div className="text-18 fw-500 mt-10">{item.content}</div>
+          <div className="text-13 text-light-1">{item.title}</div>
+          <div className="text-15 fw-600 text-dark-1 mt-4">{item.content}</div>
         </div>
       ))}
     </>

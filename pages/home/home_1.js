@@ -59,7 +59,7 @@ const Home_1 = () => {
         description="Experience unforgettable East Africa safaris with Riverwide Trekkers Safaris. Book mountain gorilla trekking in Bwindi & Volcanoes National Park, Big Five wildlife tours in Murchison Falls, Queen Elizabeth & Masai Mara."
         keywords="Riverwide Trekkers Safaris, Riverwide Safaris, Uganda safaris, Rwanda gorilla trekking, Kenya wildlife safaris, Bwindi gorilla trekking, Murchison Falls National Park, Queen Elizabeth National Park, Masai Mara safari, Kibale chimpanzee tracking, Kidepo Valley safari, East Africa tour operator"
         url="https://www.riverwidesafaris.com"
-        image="/img/new_pics/gorilla_hero.jpeg"
+        image="/img/backgrounds/bg2.jpg"
         structuredData={HOME_STRUCTURED_DATA}
       />
       {/* End Page Title */}
@@ -87,9 +87,20 @@ const Home_1 = () => {
           <div className="row y-gap-20 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">{t('popularDestinations')}</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  {t('startVisitsHere')}
+                <div
+                  className="text-12 fw-600 uppercase mb-5"
+                  style={{
+                    letterSpacing: "2px",
+                    color: "var(--color-blue-1)",
+                  }}
+                >
+                  Iconic National Parks &amp; Reserves
+                </div>
+                <h2 className="sectionTitle__title">
+                  {t("popularDestinations")}
+                </h2>
+                <p className="sectionTitle__text mt-5 sm:mt-0">
+                  {t("startVisitsHere")}
                 </p>
               </div>
             </div>
@@ -98,10 +109,9 @@ const Home_1 = () => {
             <div className="col-auto md:d-none">
               <Link
                 href="/destination/Uganda"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
+                className="button -md -blue-1 bg-blue-1-05 text-blue-1 rounded-100"
               >
-                {t('viewAllDestinations')}
-
+                {t("viewAllDestinations")}
                 <div className="icon-arrow-top-right ml-15" />
               </Link>
             </div>
@@ -122,23 +132,30 @@ const Home_1 = () => {
           <div className="row y-gap-10 justify-between items-end">
             <div className="col-auto">
               <div className="sectionTitle -md">
-                <h2 className="sectionTitle__title">{t('recommendedPackages')}</h2>
-                <p className=" sectionTitle__text mt-5 sm:mt-0">
-                  {t('startTourHere')}
-
+                <div
+                  className="text-12 fw-600 uppercase mb-5"
+                  style={{
+                    letterSpacing: "2px",
+                    color: "var(--color-blue-1)",
+                  }}
+                >
+                  Handcrafted Itineraries
+                </div>
+                <h2 className="sectionTitle__title">
+                  {t("recommendedPackages")}
+                </h2>
+                <p className="sectionTitle__text mt-5 sm:mt-0">
+                  {t("startTourHere")}
                 </p>
               </div>
             </div>
-            {/* <div className="col-sm-auto">
-              <SelectFilter />
-            </div> */}
+
             <div className="col-auto md:d-none">
               <Link
                 href="/safaris/east-africa-safaris"
-                className="button -md -blue-1 bg-blue-1-05 text-blue-1"
+                className="button -md -blue-1 bg-blue-1-05 text-blue-1 rounded-100"
               >
-                {t('viewAllPackages')}
-
+                {t("viewAllPackages")}
                 <div className="icon-arrow-top-right ml-15" />
               </Link>
             </div>
@@ -153,33 +170,33 @@ const Home_1 = () => {
       </section>
       {/* Recommended Properties */}
 
-      {/* <section className="layout-pt-lg layout-pb-lg bg-blue-2">
+      <section
+        className="layout-pt-md layout-pb-lg"
+        style={{ backgroundColor: "#f6f9fd" }}
+      >
         <div className="container">
-          <div className="row y-gap-40 justify-between">
-            <div className="col-xl-5 col-lg-6" data-aos="fade-up">
-              <TestimonialLeftCol />
-            </div>
-            
-
-            <div className="col-lg-6">
-              <div
-                className="overflow-hidden js-testimonials-slider-3"
-                data-aos="fade-up"
-                data-aos-delay="50"
-              >
-                <Testimonial />
+          <div className="row justify-center text-center">
+            <div className="col-auto">
+              <div className="sectionTitle -md">
+                <div
+                  className="text-12 fw-600 uppercase mb-5"
+                  style={{
+                    letterSpacing: "2px",
+                    color: "var(--color-blue-1)",
+                  }}
+                >
+                  Why Travel With Riverwide
+                </div>
+                <h2 className="sectionTitle__title">Our Core Safari Values</h2>
+                <p className="sectionTitle__text mt-5 sm:mt-0">
+                  Committed to sustainable wildlife conservation, local
+                  communities, and seamless safari excellence
+                </p>
               </div>
             </div>
           </div>
-          
-        </div>
-        
-      </section> */}
-      {/* End testimonial Section */}
 
-      <section className="layout-pt-md layout-pb-lg">
-        <div className="container">
-          <div className="row y-gap-20 justify-between">
+          <div className="row y-gap-30 pt-40 sm:pt-20 justify-between">
             <BlockGuide />
           </div>
         </div>

@@ -43,9 +43,9 @@
     margin: 0 !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    background: rgba(14, 19, 31, 0.85) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.96) !important;
+    border-bottom: 1px solid rgba(43, 114, 184, 0.12);
+    box-shadow: 0 10px 30px -10px rgba(11, 28, 51, 0.08);
   }
 
   .row {
@@ -226,7 +226,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 500;
         transition: all 0.2s $easeOutQuart;
       }
@@ -254,7 +254,7 @@
         }
 
         a {
-          padding: 0 10px;
+          padding: 0 14px;
         }
       }
 
